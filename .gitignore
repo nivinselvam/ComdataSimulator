@@ -41,6 +41,7 @@ hs_err_pid*
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
+.idea/gradle.xml
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
@@ -104,3 +105,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#Message logs
+*.log

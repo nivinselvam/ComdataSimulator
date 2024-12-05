@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- Console Appender -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n</Pattern>
+            </PatternLayout>
+        </Console>
+
+        <!-- File Appender -->
+        <File name="File" fileName="logs/messages.log">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n</Pattern>
+            </PatternLayout>
+        </File>
+
+<!--        &lt;!&ndash; Rolling File Appender (Optional for log rotation) &ndash;&gt;-->
+<!--        <RollingFile name="RollingFile" fileName="logs/messages.log"-->
+<!--                     filePattern="logs/messages-%d{MM-dd-yy}.%i.log">-->
+<!--            <PatternLayout>-->
+<!--                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n</Pattern>-->
+<!--            </PatternLayout>-->
+<!--            <Policies>-->
+<!--                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>-->
+<!--                <SizeBasedTriggeringPolicy size="10MB"/>-->
+<!--            </Policies>-->
+<!--        </RollingFile>-->
+    </Appenders>
+
+    <Loggers>
+        <!-- Root Logger Configuration -->
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+<!--            <AppenderRef ref="RollingFile"/>-->
+        </Root>
+    </Loggers>
+</Configuration>
