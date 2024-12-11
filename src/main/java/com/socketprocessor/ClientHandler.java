@@ -35,7 +35,7 @@ public class ClientHandler extends Thread {
             logger.log(Level.INFO, "                       Start of Transaction                          ");
             logger.log(Level.INFO, "---------------------------------------------------------------------");
             String transactionRequestPacket = readDataFromSocket();
-
+            logger.log(Level.INFO, transactionRequestPacket);
             logger.log(Level.INFO, "---------------------------------------------------------------------");
             logger.log(Level.INFO, "                         End of Transaction                          ");
             logger.log(Level.INFO, "---------------------------------------------------------------------");

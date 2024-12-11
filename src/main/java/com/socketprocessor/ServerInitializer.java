@@ -18,11 +18,11 @@ public class ServerInitializer extends Thread {
     @Override
     public void run() {
         try {
-            ServerSocket serverSocket = new ServerSocket(Main.simulatorProperties.getPortNumber());
-            logger.log(Level.INFO, "Server started");
+            Main.variables.serverSocket = new ServerSocket(Main.simulatorProperties.getPortNumber());
+            logger.log(Level.INFO, "Server started on the port number "+ Main.simulatorProperties.getPortNumber());
             logger.log(Level.INFO,"Waiting for client to connect...");
             while (true) {
-                Socket socket = serverSocket.accept();
+                Socket socket = Main.variables.serverSocket.accept();
                 ClientHandler clientHandler = new ClientHandler(socket);
                 clientHandler.start();
             }

@@ -2,7 +2,7 @@ package com.utilities;
 
 import com.base.Constants;
 import com.base.Main;
-import com.base.SimulatorProperties;
+import com.properties.SimulatorProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.apache.logging.log4j.Level;

@@ -1,5 +1,8 @@
 package com.base;
 
+import com.properties.SimulatorProperties;
+import com.socketprocessor.ServerInitializer;
+import com.utilities.Converter;
 import com.utilities.JsonProcessor;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -10,7 +13,9 @@ import java.io.IOException;
 
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
+    public static Converter converter = new Converter();
     public static SimulatorProperties simulatorProperties;
+    public static Variables variables = new Variables();
 
 
     public static void main(String[] args) {
@@ -18,6 +23,8 @@ public class Main {
         JsonProcessor jsonProcessor = new JsonProcessor();
         jsonProcessor.loadSimulatorProperties();
 
+        variables.server = new ServerInitializer();
+        variables.server.start();
     }
 
     /*

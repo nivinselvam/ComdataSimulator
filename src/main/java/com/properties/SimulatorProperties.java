@@ -1,4 +1,4 @@
-package com.base;
+package com.properties;
 
 public class SimulatorProperties {
 
