@@ -14,7 +14,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
-import java.util.LinkedHashMap;
 
 public class ClientHandler extends Thread {
     private static final Logger logger = LogManager.getLogger(ClientHandler.class);
@@ -55,34 +54,35 @@ public class ClientHandler extends Thread {
         dataInputStream = new DataInputStream(socket.getInputStream());
         //For monitoring the socket continuously and read data whenever available.
         while (true) {
-            logger.info("Waiting for client data...");
+            logger.log(Level.INFO, "Waiting for client data...");
             while (dataInputStream.available() == 0) {
                 try {
                     Thread.sleep(1);
                 } catch (InterruptedException e) {
-                    logger.error(e.toString());
+                    logger.log(Level.ERROR, e.toString());
                 }
             }
 
-            logger.debug("Trying to read data from the socket.");
+            logger.log(Level.DEBUG, "Trying to read data from the socket.");
             int socketDataLength = dataInputStream.available();
             byteArray = new byte[socketDataLength];
             dataInputStream.read(byteArray);
             String requestPacket = new String(byteArray, StandardCharsets.UTF_8);
-            logger.debug("Request received: " + requestPacket);
+            logger.log(Level.DEBUG, "Request received: " + requestPacket);
             return requestPacket;
         }
     }
 
     /**
      * This method is used for closing the socket along with the input and output streams.
+     *
      * @param stringDataToBeSent
      */
     private void writeToSocket(String stringDataToBeSent) {
-        logger.debug("Data to be written into the socket: \n" + stringDataToBeSent);
+        logger.log(Level.DEBUG, "Data to be written into the socket: \n" + stringDataToBeSent);
         try {
             dataOutputStream = new DataOutputStream(socket.getOutputStream());
-            logger.debug("Trying to write data into the socket");
+            logger.log(Level.DEBUG, "Trying to write data into the socket");
             byteArray = Main.converter.convertStringToBytes(stringDataToBeSent);
             if (byteArray != null) {
                 dataOutputStream.write(byteArray);
@@ -90,7 +90,7 @@ public class ClientHandler extends Thread {
             }
 
         } catch (IOException e) {
-            logger.error("Error during conversion from string to bytes\n" + e.toString());
+            logger.log(Level.ERROR, "Error during conversion from string to bytes\n" + e.toString());
         }
     }
 

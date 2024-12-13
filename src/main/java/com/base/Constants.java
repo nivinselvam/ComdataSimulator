@@ -23,6 +23,6 @@ public class Constants {
     /*
     -----------------------------------    Path     -----------------------------------------
      */
-    public static final String PATH_LOG_PROPERTIES_FILE = FOLDER_PROPERTY_FILES + "/" + FILE_LOG_PROPERTIES;
-    public static final String PATH_SIMULATOR_CONFIG = Main.getApplicationPath() + "/" + FOLDER_CONFIGURATION_FILES + "/" + FILE_SIMULATOR_PROPERTIES;
+    public static final String PATH_LOG_PROPERTIES_FILE = "%s/%s".formatted(FOLDER_PROPERTY_FILES, FILE_LOG_PROPERTIES);
+    public static final String PATH_SIMULATOR_CONFIG = "%s/%s/%s".formatted(Main.getApplicationPath(), FOLDER_CONFIGURATION_FILES, FILE_SIMULATOR_PROPERTIES);
 }
