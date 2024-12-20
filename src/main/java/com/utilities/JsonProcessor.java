@@ -31,7 +31,7 @@ public class JsonProcessor {
     }
 
     public void loadPreAuthEditProperties() {
-        File file = new File("C:\\Users\\nivinp1\\OneDrive - Verifone\\Desktop\\Documents\\Tools\\Test\\src\\main\\java\\com\\base\\RequestResponse.json");
+        File file = new File(Constants.PATH_PRE_AUTH_EDIT_PROPERTIES);
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             Main.variables.preAuthEdit = objectMapper.readValue(file, PreAuthEdit.class);

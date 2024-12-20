@@ -1,7 +1,9 @@
 package com.base;
 
 import com.properties.SimulatorProperties;
+import com.requestResponses.Request;
 import com.socketprocessor.ServerInitializer;
+import com.transactionDetails.PreAuthEdit;
 import com.utilities.Converter;
 import com.utilities.JsonProcessor;
 import org.apache.logging.log4j.Level;
@@ -22,9 +24,6 @@ public class Main {
         logger.log(Level.INFO, "Comdata Simulator is starting...");
         JsonProcessor jsonProcessor = new JsonProcessor();
         jsonProcessor.loadPreAuthEditProperties();
-        System.out.println(variables.preAuthEdit.getRequest().getReportNumber());
-
-
 
 
 //
