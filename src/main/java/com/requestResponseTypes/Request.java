@@ -1,17 +1,18 @@
-package com.requestResponses;
+package com.requestResponseTypes;
 
-import com.transactionDetails.TransactionFields;
+import com.transactionDetails.TransactionFieldProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Response {
+import java.util.Map;
+
+public class Request {
 
     @JsonProperty("reportNumber")
     private String reportNumber;
 
     @JsonProperty("transactionFields")
-    private TransactionFields transactionFields;
+    private Map<String, TransactionFieldProperties> transactionFields;
 
-    // Getters and Setters
     public String getReportNumber() {
         return reportNumber;
     }
@@ -20,11 +21,14 @@ public class Response {
         this.reportNumber = reportNumber;
     }
 
-    public TransactionFields getTransactionFields() {
+    public Map<String, TransactionFieldProperties> getTransactionFields() {
         return transactionFields;
     }
 
-    public void setTransactionFields(TransactionFields transactionFields) {
+    public void setTransactionFields(Map<String, TransactionFieldProperties> transactionFields) {
         this.transactionFields = transactionFields;
     }
+
+
+
 }

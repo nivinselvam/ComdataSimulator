@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-public class TransactionField {
+public class TransactionFieldProperties {
 
     @JsonProperty("name")
     private String name;

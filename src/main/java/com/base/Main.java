@@ -1,9 +1,7 @@
 package com.base;
 
 import com.properties.SimulatorProperties;
-import com.requestResponses.Request;
-import com.socketprocessor.ServerInitializer;
-import com.transactionDetails.PreAuthEdit;
+import com.transactionDetails.TransactionFieldProperties;
 import com.utilities.Converter;
 import com.utilities.JsonProcessor;
 import org.apache.logging.log4j.Level;
@@ -12,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Map;
 
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
@@ -24,6 +23,13 @@ public class Main {
         logger.log(Level.INFO, "Comdata Simulator is starting...");
         JsonProcessor jsonProcessor = new JsonProcessor();
         jsonProcessor.loadPreAuthEditProperties();
+
+
+
+        for (Map.Entry<String, TransactionFieldProperties> entry : variables.preAuthEdit.getErrorResponse().getTransactionFields().entrySet()) {
+            System.out.println(entry.getKey());
+
+        }
 
 
 //
