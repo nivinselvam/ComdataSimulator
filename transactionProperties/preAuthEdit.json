@@ -1,0 +1,22 @@
+{
+  "transactionFields": {
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationCode": {
+      "name": "Location Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    }
+  }
+}

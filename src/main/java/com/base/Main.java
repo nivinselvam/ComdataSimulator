@@ -21,10 +21,17 @@ public class Main {
     public static void main(String[] args) {
         logger.log(Level.INFO, "Comdata Simulator is starting...");
         JsonProcessor jsonProcessor = new JsonProcessor();
-        jsonProcessor.loadSimulatorProperties();
+        jsonProcessor.loadPreAuthEditProperties();
+        System.out.println(variables.preAuthEdit.getRequest().getReportNumber());
 
-        variables.server = new ServerInitializer();
-        variables.server.start();
+
+
+
+//
+//        variables.server = new ServerInitializer();
+//        variables.server.start();
+
+
     }
 
     /*
