@@ -26,8 +26,12 @@ public class Main {
 
 
 
-        for (Map.Entry<String, TransactionFieldProperties> entry : variables.preAuthEdit.getErrorResponse().getTransactionFields().entrySet()) {
-            System.out.println(entry.getKey());
+        for (Map.Entry<String, TransactionFieldProperties> entry : variables.preAuthEdit.getResponse().getTransactionFields().entrySet()) {
+            System.out.println(entry.getValue().getName());
+            System.out.println("    "+entry.getValue().getType());
+            System.out.println("    "+entry.getValue().getLength());
+            System.out.println("    "+entry.getValue().getPresetOptions());
+            System.out.println("    "+entry.getValue().isRequired());
 
         }
 
