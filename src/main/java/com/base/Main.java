@@ -32,6 +32,7 @@ public class Main {
             System.out.println("    "+entry.getValue().getLength());
             System.out.println("    "+entry.getValue().getPresetOptions());
             System.out.println("    "+entry.getValue().isRequired());
+            System.out.println("    "+entry.getValue().getPresetOptions());
 
         }
 

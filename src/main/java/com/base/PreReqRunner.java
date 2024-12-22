@@ -7,7 +7,13 @@
 
 package com.base;
 
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class PreReqRunner {
+
+    private static final Logger logger = LogManager.getLogger(PreReqRunner.class);
 
     /*
     This method is used to set the file path of the logger in the log4j properties file.
@@ -16,6 +22,7 @@ public class PreReqRunner {
      */
     public void configureLoggerFilePath() {
         System.setProperty("log4j.configuration", Constants.PATH_LOG_PROPERTIES_FILE);
+        logger.log(Level.DEBUG, "Logger configured successfully");
     }
 
 

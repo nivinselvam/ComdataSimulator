@@ -31,12 +31,14 @@ public class JsonProcessor {
     }
 
     public void loadPreAuthEditProperties() {
-        File file = new File(Constants.PATH_PRE_AUTH_EDIT_PROPERTIES);
+        logger.log(Level.DEBUG, "Trying to open the preAuthEdit.json preAuthEditJsonFile");
+        File preAuthEditJsonFile = new File(Constants.PATH_PRE_AUTH_EDIT_PROPERTIES);
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            Main.variables.preAuthEdit = objectMapper.readValue(file, PreAuthEdit.class);
+            logger.log(Level.DEBUG, "Converting the json into Java object");
+            Main.variables.preAuthEdit = objectMapper.readValue(preAuthEditJsonFile, PreAuthEdit.class);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            logger.log(Level.ERROR, "Unable to load the pre auth edit properties due to error "+e.toString());
         }
     }
 
