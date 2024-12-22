@@ -1,646 +1,637 @@
 {
   "request": {
-    "reportNumber": "SP00007",
-    "transactionFields": {
-      "openBracket": {
-        "name": "Open Bracket",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "{"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "locationCode": {
-        "name": "Location Code",
-        "type": "C",
-        "length": 5,
-        "required": true,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "subId": {
-        "name": "Sub Id",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "deviceType": {
-        "name": "Device Type",
-        "type": "C",
-        "length": 4,
-        "required": true,
-        "presetOptions": [
-          "TCPI",
-          "TCPJ"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "reportSystemId": {
-        "name": "Report System ID",
-        "type": "C",
-        "length": 2,
-        "required": true,
-        "presetOptions": [
-          "SP"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "reportNumber": {
-        "name": "Report Number",
-        "type": "N",
-        "length": 5,
-        "required": true,
-        "presetOptions": [
-          "00007"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "fieldSeparator": {
-        "name": "Field Separator",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "/"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "requestCode": {
-        "name": "Request Code",
-        "type": "N",
-        "length": 5,
-        "required": true,
-        "presetOptions": [
-          "00036"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "fieldSeparator": {
-        "name": "Field Separator",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "/"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "writeControlCharacter": {
-        "name": "Write Control Character",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "A",
-          "@",
-          "P"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "cardNumber": {
-        "name": "Card Number",
-        "type": "C",
-        "length": 40,
-        "required": true,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "fieldSeparator": {
-        "name": "Field Separator",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "/"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "unitNumber": {
-        "name": "Unit Number",
-        "type": "C",
-        "length": 10,
-        "required": true,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "closeBracket": {
-        "name": "Close Bracket",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "}"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      }
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "{"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationCode": {
+      "name": "Location Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subId": {
+      "name": "Sub Id",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "deviceType": {
+      "name": "Device Type",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [
+        "TCPI",
+        "TCPJ"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportSystemId": {
+      "name": "Report System ID",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [
+        "SP"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportNumber": {
+      "name": "Report Number",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00007"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "requestCode": {
+      "name": "Request Code",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00036"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "writeControlCharacter": {
+      "name": "Write Control Character",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "A",
+        "@",
+        "P"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "cardNumber": {
+      "name": "Card Number",
+      "type": "C",
+      "length": 40,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator3": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "unitNumber": {
+      "name": "Unit Number",
+      "type": "C",
+      "length": 10,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "justification": "left",
+      "paddingWith": " "
     }
   },
   "response": {
-    "reportNumber": "SP00007",
-    "transactionFields": {
-      "openBracket": {
-        "name": "Open Bracket",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "{"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "locationCode": {
-        "name": "Location Code",
-        "type": "C",
-        "length": 5,
-        "required": true,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "subId": {
-        "name": "Sub Id",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "deviceType": {
-        "name": "Device Type",
-        "type": "C",
-        "length": 4,
-        "required": true,
-        "presetOptions": [
-          "TCPI",
-          "TCPJ"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "reportSystemId": {
-        "name": "Report System ID",
-        "type": "C",
-        "length": 2,
-        "required": true,
-        "presetOptions": [
-          "SP"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "reportNumber": {
-        "name": "Report Number",
-        "type": "N",
-        "length": 5,
-        "required": true,
-        "presetOptions": [
-          "00007"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "fieldSeparator": {
-        "name": "Field Separator",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "/"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "responseCode": {
-        "name": "Response Code",
-        "type": "N",
-        "length": 5,
-        "required": true,
-        "presetOptions": [
-          "00000"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "fieldSeparator": {
-        "name": "Field Separator",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "/"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "driverNumberIndicator": {
-        "name": "Driver Number Indicator",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "C",
-          "E",
-          "V",
-          "N",
-          "O",
-          "X"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "driverNumber": {
-        "name": "Driver Number",
-        "type": "C",
-        "length": 16,
-        "required": false,
-        "presetOptions": [
-          "#",
-          "@",
-          "*",
-          "letter or number"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "trailerNumberIndicator": {
-        "name": "Trailer Number Indicator",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "C",
-          "E",
-          "V",
-          "N",
-          "O",
-          "X"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "trailerNumber": {
-        "name": "Trailer Number",
-        "type": "C",
-        "length": 10,
-        "required": false,
-        "presetOptions": [
-          "#",
-          "@",
-          "*",
-          "letter or number"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "hubIndicator": {
-        "name": "Hub Indicator",
-        "type": "N",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "C",
-          "N",
-          "R"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "hubLowReading": {
-        "name": "HubLowReading",
-        "type": "N",
-        "length": 6,
-        "required": false,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "hubHighReading": {
-        "name": "Hub High Reading",
-        "type": "N",
-        "length": 6,
-        "required": false,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "trailerHubIndicator": {
-        "name": "Tailer Hub Indicator",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "C",
-          "N"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "trailerHoursIndicator": {
-        "name": "Trailer Hours Indicator",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "C",
-          "E",
-          "V",
-          "N",
-          "O",
-          "X"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "tripNumberIndicator": {
-        "name": "Trip Number Indicator",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "C",
-          "E",
-          "V",
-          "N",
-          "O",
-          "X"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "tripNumberMaxLength": {
-        "name": "Trip Number Max Length",
-        "type": "N",
-        "length": 2,
-        "required": false,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "tripNumber": {
-        "name": "Trip Number",
-        "type": "C",
-        "length": 10,
-        "required": false,
-        "presetOptions": [
-          "#",
-          "@",
-          "*",
-          "letter or number"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "dlNumberIndicator": {
-        "name": "DL Number Indicator",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "C",
-          "E",
-          "V",
-          "N",
-          "O",
-          "X"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "dlNumber": {
-        "name": "DL Number",
-        "type": "C",
-        "length": 20,
-        "required": false,
-        "presetOptions": [
-          "#",
-          "@",
-          "*",
-          "letter or number"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "dlState": {
-        "name": "DL State",
-        "type": "C",
-        "length": 2,
-        "required": false,
-        "presetOptions": [
-          "#",
-          "@",
-          "*",
-          "letter or number"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "poNumberIndicator": {
-        "name": "PO Number Indicator",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "C",
-          "E",
-          "V",
-          "N",
-          "O",
-          "X"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "poNumber": {
-        "name": "PO Number",
-        "type": "C",
-        "length": 10,
-        "required": true,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "lastName": {
-        "name": "Last Name",
-        "type": "C",
-        "length": 20,
-        "required": true,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "firstName": {
-        "name": "First Name",
-        "type": "C",
-        "length": 15,
-        "required": true,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "customerSpecificFlag": {
-        "name": "Customer Specific Flag",
-        "type": "C",
-        "length": 1,
-        "required": false,
-        "presetOptions": [
-          "Y",
-          "N"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "closeBracket": {
-        "name": "Close Bracket",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "}"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      }
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "{"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationCode": {
+      "name": "Location Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subId": {
+      "name": "Sub Id",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "deviceType": {
+      "name": "Device Type",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [
+        "TCPI",
+        "TCPJ"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportSystemId": {
+      "name": "Report System ID",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [
+        "SP"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportNumber": {
+      "name": "Report Number",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00007"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "responseCode": {
+      "name": "Response Code",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00000"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "driverNumberIndicator": {
+      "name": "Driver Number Indicator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "C",
+        "E",
+        "V",
+        "N",
+        "O",
+        "X"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "driverNumber": {
+      "name": "Driver Number",
+      "type": "C",
+      "length": 16,
+      "required": false,
+      "presetOptions": [
+        "#",
+        "@",
+        "*",
+        "letter or number"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "trailerNumberIndicator": {
+      "name": "Trailer Number Indicator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "C",
+        "E",
+        "V",
+        "N",
+        "O",
+        "X"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "trailerNumber": {
+      "name": "Trailer Number",
+      "type": "C",
+      "length": 10,
+      "required": false,
+      "presetOptions": [
+        "#",
+        "@",
+        "*",
+        "letter or number"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "hubIndicator": {
+      "name": "Hub Indicator",
+      "type": "N",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "C",
+        "N",
+        "R"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "hubLowReading": {
+      "name": "HubLowReading",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "hubHighReading": {
+      "name": "Hub High Reading",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "trailerHubIndicator": {
+      "name": "Tailer Hub Indicator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "C",
+        "N"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "trailerHoursIndicator": {
+      "name": "Trailer Hours Indicator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "C",
+        "E",
+        "V",
+        "N",
+        "O",
+        "X"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "tripNumberIndicator": {
+      "name": "Trip Number Indicator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "C",
+        "E",
+        "V",
+        "N",
+        "O",
+        "X"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "tripNumberMaxLength": {
+      "name": "Trip Number Max Length",
+      "type": "N",
+      "length": 2,
+      "required": false,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "tripNumber": {
+      "name": "Trip Number",
+      "type": "C",
+      "length": 10,
+      "required": false,
+      "presetOptions": [
+        "#",
+        "@",
+        "*",
+        "letter or number"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "dlNumberIndicator": {
+      "name": "DL Number Indicator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "C",
+        "E",
+        "V",
+        "N",
+        "O",
+        "X"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "dlNumber": {
+      "name": "DL Number",
+      "type": "C",
+      "length": 20,
+      "required": false,
+      "presetOptions": [
+        "#",
+        "@",
+        "*",
+        "letter or number"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "dlState": {
+      "name": "DL State",
+      "type": "C",
+      "length": 2,
+      "required": false,
+      "presetOptions": [
+        "#",
+        "@",
+        "*",
+        "letter or number"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "poNumberIndicator": {
+      "name": "PO Number Indicator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "C",
+        "E",
+        "V",
+        "N",
+        "O",
+        "X"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "poNumber": {
+      "name": "PO Number",
+      "type": "C",
+      "length": 10,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "lastName": {
+      "name": "Last Name",
+      "type": "C",
+      "length": 20,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "firstName": {
+      "name": "First Name",
+      "type": "C",
+      "length": 15,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "customerSpecificFlag": {
+      "name": "Customer Specific Flag",
+      "type": "C",
+      "length": 1,
+      "required": false,
+      "presetOptions": [
+        "Y",
+        "N"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "justification": "left",
+      "paddingWith": " "
     }
   },
   "errorResponse": {
-    "reportNumber": "SP00007",
-    "transactionFields": {
-      "openBracket": {
-        "name": "Open Bracket",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "{"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "locationCode": {
-        "name": "Location Code",
-        "type": "C",
-        "length": 5,
-        "required": true,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "subId": {
-        "name": "Sub Id",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "deviceType": {
-        "name": "Device Type",
-        "type": "C",
-        "length": 4,
-        "required": true,
-        "presetOptions": [
-          "TCPI",
-          "TCPJ"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "reportSystemId": {
-        "name": "Report System ID",
-        "type": "C",
-        "length": 2,
-        "required": true,
-        "presetOptions": [
-          "SP"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "reportNumber": {
-        "name": "Report Number",
-        "type": "N",
-        "length": 5,
-        "required": true,
-        "presetOptions": [
-          "00007"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "fieldSeparator": {
-        "name": "Field Separator",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "/"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "responseCode": {
-        "name": "Response Code",
-        "type": "N",
-        "length": 5,
-        "required": true,
-        "presetOptions": [
-          "00007"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "fieldSeparator": {
-        "name": "Field Separator",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "/"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "message": {
-        "name": "Message",
-        "type": "C",
-        "length": 99,
-        "required": false,
-        "presetOptions": [],
-        "justification": "left",
-        "paddingWith": " "
-      },
-      "closeBracket": {
-        "name": "Close Bracket",
-        "type": "C",
-        "length": 1,
-        "required": true,
-        "presetOptions": [
-          "}"
-        ],
-        "justification": "left",
-        "paddingWith": " "
-      }
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "{"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationCode": {
+      "name": "Location Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subId": {
+      "name": "Sub Id",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "deviceType": {
+      "name": "Device Type",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [
+        "TCPI",
+        "TCPJ"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportSystemId": {
+      "name": "Report System ID",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [
+        "SP"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportNumber": {
+      "name": "Report Number",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00007"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "responseCode": {
+      "name": "Response Code",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00007"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "message": {
+      "name": "Message",
+      "type": "C",
+      "length": 99,
+      "required": false,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "justification": "left",
+      "paddingWith": " "
     }
   }
 }

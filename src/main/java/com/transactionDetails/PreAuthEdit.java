@@ -1,43 +1,35 @@
 package com.transactionDetails;
 
-import com.requestResponseTypes.ErrorResponse;
-import com.requestResponseTypes.Request;
-import com.requestResponseTypes.Response;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.Map;
 
 public class PreAuthEdit {
-
-    @JsonProperty("request")
-    private Request request;
-
-    @JsonProperty("response")
-    private Response response;
-
-    @JsonProperty("errorResponse")
-    private ErrorResponse errorResponse;
+    private Map<String, TransactionFieldProperties> request;
+    private Map<String, TransactionFieldProperties> response;
+    private Map<String, TransactionFieldProperties> errorResponse;
 
     // Getters and Setters
-    public Request getRequest() {
+
+    public Map<String, TransactionFieldProperties> getRequest() {
         return request;
     }
 
-    public void setRequest(Request request) {
+    public void setRequest(Map<String, TransactionFieldProperties> request) {
         this.request = request;
     }
 
-    public Response getResponse() {
+    public Map<String, TransactionFieldProperties> getResponse() {
         return response;
     }
 
-    public void setResponse(Response response) {
+    public void setResponse(Map<String, TransactionFieldProperties> response) {
         this.response = response;
     }
 
-    public ErrorResponse getErrorResponse() {
+    public Map<String, TransactionFieldProperties> getErrorResponse() {
         return errorResponse;
     }
 
-    public void setErrorResponse(ErrorResponse errorResponse) {
+    public void setErrorResponse(Map<String, TransactionFieldProperties> errorResponse) {
         this.errorResponse = errorResponse;
     }
 }

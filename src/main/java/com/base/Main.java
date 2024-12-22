@@ -25,16 +25,13 @@ public class Main {
         jsonProcessor.loadPreAuthEditProperties();
 
 
-
-        for (Map.Entry<String, TransactionFieldProperties> entry : variables.preAuthEdit.getResponse().getTransactionFields().entrySet()) {
+        for (Map.Entry<String, TransactionFieldProperties> entry : variables.preAuthEdit.getErrorResponse().entrySet()) {
             System.out.println(entry.getValue().getName());
-            System.out.println("    "+entry.getValue().getType());
-            System.out.println("    "+entry.getValue().getLength());
-            System.out.println("    "+entry.getValue().getPresetOptions());
-            System.out.println("    "+entry.getValue().isRequired());
-            System.out.println("    "+entry.getValue().getPresetOptions());
-
         }
+
+
+
+
 
 
 //
