@@ -36,7 +36,7 @@ public class JsonProcessor {
         File headerJsonFile = new File(Constants.PATH_HEADER_PROPERTIES);
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            logger.log(Level.DEBUG, "Converting the json into Java object");
+            logger.log(Level.DEBUG, "Converting the header json into Java object");
             Main.variables.header = objectMapper.readValue(headerJsonFile, Header.class);
         } catch (IOException e) {
             logger.log(Level.ERROR, "Unable to load the header properties due to error "+e.toString());
@@ -48,7 +48,7 @@ public class JsonProcessor {
         File preAuthEditJsonFile = new File(Constants.PATH_PRE_AUTH_EDIT_PROPERTIES);
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            logger.log(Level.DEBUG, "Converting the json into Java object");
+            logger.log(Level.DEBUG, "Converting the pre auth edit json into Java object");
             Main.variables.preAuthEdit = objectMapper.readValue(preAuthEditJsonFile, PreAuthEdit.class);
         } catch (IOException e) {
             logger.log(Level.ERROR, "Unable to load the pre auth edit properties due to error "+e.toString());

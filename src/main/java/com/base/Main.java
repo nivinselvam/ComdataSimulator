@@ -2,6 +2,7 @@ package com.base;
 
 import com.properties.SimulatorProperties;
 import com.transactionDetails.TransactionFieldProperties;
+import com.transactionProcessor.ResponseGenerator;
 import com.utilities.Converter;
 import com.utilities.JsonProcessor;
 import org.apache.logging.log4j.Level;
@@ -21,14 +22,17 @@ public class Main {
 
     public static void main(String[] args) {
         logger.log(Level.INFO, "Comdata Simulator is starting...");
-        JsonProcessor jsonProcessor = new JsonProcessor();
-        jsonProcessor.loadPreAuthEditProperties();
-        jsonProcessor.loadHeaderProperties();
+        PreReqRunner preReqRunner = new PreReqRunner();
+        preReqRunner.configureLoggerFilePath();
+        preReqRunner.loadTransactionProperties();
+
+        String request = "{EX777 TCPISP00007/00036/A5600171620532277=49121201271/22}";
+        ResponseGenerator responseGenerator = new ResponseGenerator(request);
+        responseGenerator.generateResponse();
 
 
-        for (Map.Entry<String, TransactionFieldProperties> entry : variables.header.getRequest().entrySet()) {
-            System.out.println(entry.getValue().getName());
-        }
+
+
 
 
 

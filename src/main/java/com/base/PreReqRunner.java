@@ -7,6 +7,7 @@
 
 package com.base;
 
+import com.utilities.JsonProcessor;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,6 +24,16 @@ public class PreReqRunner {
     public void configureLoggerFilePath() {
         System.setProperty("log4j.configuration", Constants.PATH_LOG_PROPERTIES_FILE);
         logger.log(Level.DEBUG, "Logger configured successfully");
+    }
+
+    /*
+    This method is used for loading all the transaction property JSONS.
+     */
+    public void loadTransactionProperties(){
+        JsonProcessor jsonProcessor = new JsonProcessor();
+        jsonProcessor.loadPreAuthEditProperties();
+        jsonProcessor.loadHeaderProperties();
+
     }
 
 
