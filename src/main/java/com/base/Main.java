@@ -23,9 +23,10 @@ public class Main {
         logger.log(Level.INFO, "Comdata Simulator is starting...");
         JsonProcessor jsonProcessor = new JsonProcessor();
         jsonProcessor.loadPreAuthEditProperties();
+        jsonProcessor.loadHeaderProperties();
 
 
-        for (Map.Entry<String, TransactionFieldProperties> entry : variables.preAuthEdit.getErrorResponse().entrySet()) {
+        for (Map.Entry<String, TransactionFieldProperties> entry : variables.header.getRequest().entrySet()) {
             System.out.println(entry.getValue().getName());
         }
 

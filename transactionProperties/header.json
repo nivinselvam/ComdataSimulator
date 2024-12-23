@@ -1,0 +1,100 @@
+{
+  "request": {
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "{"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationAccountCode": {
+      "name": "Location or Account Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subId": {
+      "name": "Sub Id",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "deviceType": {
+      "name": "Device Type",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [
+        "TCPI",
+        "TCPJ"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportSystemId": {
+      "name": "Report System ID",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [
+        "SP"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportNumber": {
+      "name": "Report Number",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00007"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "requestCode": {
+      "name": "Request Code",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00036"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "justification": "left",
+      "paddingWith": " "
+    }
+  }
+}
