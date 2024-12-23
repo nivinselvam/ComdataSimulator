@@ -95,6 +95,20 @@
       ],
       "justification": "left",
       "paddingWith": " "
+    },
+    "writeControlCharacter": {
+      "name": "Write Control Character",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "A",
+        "@",
+        "P"
+      ],
+      "justification": "left",
+      "paddingWith": " "
     }
   }
+
 }

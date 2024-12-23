@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Map;
 
 
 public class ResponseGenerator {
@@ -22,8 +23,10 @@ public class ResponseGenerator {
         logger.log(Level.DEBUG, requestPacket);
         Decoder decoder = new Decoder();
         decoder.decodeRequestPacket(requestPacket);
-
-
+        logger.log(Level.INFO, "Request Packet");
+        for(Map.Entry<String, String> entry : Main.variables.requestPacketFields.entrySet()){
+            logger.log(Level.INFO, "%s  :   %s".formatted(entry.getKey(), entry.getValue()));
+        }
         return "";
     }
 

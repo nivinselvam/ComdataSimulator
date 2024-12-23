@@ -29,16 +29,6 @@ public class Main {
         String request = "{EX777 TCPISP00007/00036/A5600171620532277=49121201271/22}";
         ResponseGenerator responseGenerator = new ResponseGenerator(request);
         responseGenerator.generateResponse();
-
-
-
-
-
-
-
-
-
-
 //
 //        variables.server = new ServerInitializer();
 //        variables.server.start();

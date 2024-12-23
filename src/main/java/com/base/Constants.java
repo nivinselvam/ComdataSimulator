@@ -42,11 +42,19 @@ public class Constants {
     public static final String rn_preAuthEdit = "00007";
     public static final String rn_fuelPurchaseRequestForceSale = "00011";
     public static final String rn_preAuthorization = "00014";
-        /*
-    -----------------------------------Key Fields name----------------------------------------
+    /*
+    -----------------------------------Operators----------------------------------------
      */
-    public static final String fld_name_reportNumber = "Report Number";
+    public static final String openBracket = "{";
+    public static final String fieldOperator = "/";
+    public static final String closeBracket = "}";
 
+    /*
+    -----------------------------------Key Fields name----------------------------------------
+   */
+    public static final String fld_name_reportNumber = "Report Number";
+    public static final String fld_name_fieldSeparator = "Field Separator";
+    public static final String fld_name_closeBracket = "Close Bracket";
 
 
 }
