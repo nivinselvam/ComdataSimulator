@@ -4,6 +4,7 @@ package com.base;
 import com.socketprocessor.ServerInitializer;
 import com.transactionDetails.Header;
 import com.transactionDetails.PreAuthEdit;
+import com.transactionProcessor.PreAuthEditProcessor;
 
 
 import java.net.ServerSocket;
@@ -17,6 +18,7 @@ public class Variables {
     public List<String> exclusionFieldsList = new ArrayList<>(Arrays.asList("{", "/", "}"));
     public Header header;
     public PreAuthEdit preAuthEdit;
+    public PreAuthEditProcessor preAuthEditProcessor = new PreAuthEditProcessor();
 
 
 }

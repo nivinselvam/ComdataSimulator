@@ -53,8 +53,8 @@
       "justification": "left",
       "paddingWith": " "
     },
-    "locationCode": {
-      "name": "Location Code",
+    "locationAccountCode": {
+      "name": "Location or Account Code",
       "type": "C",
       "length": 5,
       "required": true,
@@ -419,8 +419,8 @@
       "justification": "left",
       "paddingWith": " "
     },
-    "locationCode": {
-      "name": "Location Code",
+    "locationAccountCode": {
+      "name": "Location or Account Code",
       "type": "C",
       "length": 5,
       "required": true,

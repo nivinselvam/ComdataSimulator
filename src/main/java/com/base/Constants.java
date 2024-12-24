@@ -46,7 +46,7 @@ public class Constants {
     -----------------------------------Operators----------------------------------------
      */
     public static final String openBracket = "{";
-    public static final String fieldOperator = "/";
+    public static final String fieldSeparator = "/";
     public static final String closeBracket = "}";
 
     /*

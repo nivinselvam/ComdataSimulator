@@ -1,7 +1,7 @@
 package com.transactionProcessor;
 
+import com.base.Constants;
 import com.base.Main;
-import com.transactionDetails.TransactionFieldProperties;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,12 +24,43 @@ public class ResponseGenerator {
         Decoder decoder = new Decoder();
         decoder.decodeRequestPacket(requestPacket);
         logger.log(Level.INFO, "Request Packet");
-        for(Map.Entry<String, String> entry : Main.variables.requestPacketFields.entrySet()){
+        for (Map.Entry<String, String> entry : Main.variables.requestPacketFields.entrySet()) {
+            if (!Main.variables.exclusionFieldsList.contains(entry.getValue())) {
+                logger.log(Level.INFO, "%s  :   %s".formatted(entry.getKey(), entry.getValue()));
+            }
+        }
+        generateResponseFields();
+        Encoder encoder = new Encoder();
+        for (Map.Entry<String, String> entry : Main.variables.responsePacketFields.entrySet()) {
             logger.log(Level.INFO, "%s  :   %s".formatted(entry.getKey(), entry.getValue()));
         }
         return "";
     }
 
+    private static void generateResponseFields() {
+        String transactionType = Main.variables.requestPacketFields.get(Constants.fld_name_reportNumber);
+        switch (transactionType) {
+            case Constants.rn_fuelPurchaseSale:
+                break;
+            case Constants.rn_fuelPurchaseCancel:
+                break;
+            case Constants.rn_settlement:
+                break;
+            case Constants.rn_expressCheckEncashment:
+                break;
+            case Constants.rn_checkAuthorizationUpdateCheck:
+                break;
+            case Constants.rn_fuelPriceUpdate:
+                break;
+            case Constants.rn_preAuthEdit:
+                Main.variables.preAuthEditProcessor.generateResponseFields();
+                break;
+            case Constants.rn_fuelPurchaseRequestForceSale:
+                break;
+            case Constants.rn_preAuthorization:
+                break;
+        }
+    }
 
 
 }
