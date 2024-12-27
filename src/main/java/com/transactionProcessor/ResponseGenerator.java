@@ -42,26 +42,26 @@ public class ResponseGenerator {
     }
 
     private void processBasedOnTransaction() {
-        String transactionType = Main.variables.requestPacketFields.get(Constants.fld_name_reportNumber);
+        String transactionType = Main.variables.requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
         switch (transactionType) {
-            case Constants.rn_fuelPurchaseSale:
+            case Constants.RN_FUELPURCHASESALE:
                 break;
-            case Constants.rn_fuelPurchaseCancel:
+            case Constants.RN_FUELPURCHASECANCEL:
                 break;
-            case Constants.rn_settlement:
+            case Constants.RN_SETTLEMENT:
                 break;
-            case Constants.rn_expressCheckEncashment:
+            case Constants.RN_EXPRESSCHECKENCASHMENT:
                 break;
-            case Constants.rn_checkAuthorizationUpdateCheck:
+            case Constants.RN_CHECKAUTHORIZATIONUPDATECHECK:
                 break;
-            case Constants.rn_fuelPriceUpdate:
+            case Constants.RN_FUELPRICEUPDATE:
                 break;
-            case Constants.rn_preAuthEdit:
-                generateResponseFields(Constants.transaction_type_preAuthEdit, Main.variables.preAuthEdit.getResponse());
+            case Constants.RN_PREAUTHEDIT:
+                generateResponseFields(Constants.TRANSACTION_NAME_PREAUTHEDIT, Main.variables.preAuthEdit.getResponse());
                 break;
-            case Constants.rn_fuelPurchaseRequestForceSale:
+            case Constants.RN_FUELPURCHASEREQUESTFORCESALE:
                 break;
-            case Constants.rn_preAuthorization:
+            case Constants.RN_PREAUTHORIZATION:
                 break;
         }
     }

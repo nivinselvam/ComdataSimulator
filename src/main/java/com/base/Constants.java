@@ -33,31 +33,31 @@ public class Constants {
     /*
     -----------------------------------Report Numbers----------------------------------------
      */
-    public static final String rn_fuelPurchaseSale = "00001";
-    public static final String rn_fuelPurchaseCancel = "00002";
-    public static final String rn_settlement = "00003";
-    public static final String rn_expressCheckEncashment = "00004";
-    public static final String rn_checkAuthorizationUpdateCheck = "00005";
-    public static final String rn_fuelPriceUpdate = "00006";
-    public static final String rn_preAuthEdit = "00007";
-    public static final String rn_fuelPurchaseRequestForceSale = "00011";
-    public static final String rn_preAuthorization = "00014";
+    public static final String RN_FUELPURCHASESALE = "00001";
+    public static final String RN_FUELPURCHASECANCEL = "00002";
+    public static final String RN_SETTLEMENT = "00003";
+    public static final String RN_EXPRESSCHECKENCASHMENT = "00004";
+    public static final String RN_CHECKAUTHORIZATIONUPDATECHECK = "00005";
+    public static final String RN_FUELPRICEUPDATE = "00006";
+    public static final String RN_PREAUTHEDIT = "00007";
+    public static final String RN_FUELPURCHASEREQUESTFORCESALE = "00011";
+    public static final String RN_PREAUTHORIZATION = "00014";
     /*
     -----------------------------------Operators----------------------------------------
      */
-    public static final String openBracket = "{";
-    public static final String fieldSeparator = "/";
-    public static final String closeBracket = "}";
+    public static final String OPENBRACKET = "{";
+    public static final String FIELDSEPARATOR = "/";
+    public static final String CLOSEBRACKET = "}";
 
     /*
     -----------------------------------Key Fields name----------------------------------------
    */
-    public static final String fld_name_reportNumber = "Report Number";
-    public static final String fld_name_fieldSeparator = "Field Separator";
-    public static final String fld_name_closeBracket = "Close Bracket";
+    public static final String FLD_NAME_REPORTNUMBER = "Report Number";
+    public static final String FLD_NAME_FIELDSEPARATOR = "Field Separator";
+    public static final String FLD_NAME_CLOSEBRACKET = "Close Bracket";
     /*
     -----------------------------------Transaction Type names----------------------------------
    */
-    public static final String transaction_type_preAuthEdit = "Pre Auth Edit";
+    public static final String TRANSACTION_NAME_PREAUTHEDIT = "Pre Auth Edit";
 
 }

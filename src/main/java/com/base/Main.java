@@ -1,10 +1,8 @@
 package com.base;
 
 import com.properties.SimulatorProperties;
-import com.transactionDetails.TransactionFieldProperties;
 import com.transactionProcessor.ResponseGenerator;
 import com.utilities.Converter;
-import com.utilities.JsonProcessor;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

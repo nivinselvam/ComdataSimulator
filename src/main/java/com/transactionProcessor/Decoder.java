@@ -20,30 +20,30 @@ public class Decoder {
     public void decodeRequestPacket(String requestPacket) {
         processHeader(requestPacket);
         String pendingString = requestPacket.substring(endPosition, requestPacket.length() - 1);
-        pendingFields = List.of(pendingString.split(Constants.fieldSeparator));
+        pendingFields = List.of(pendingString.split(Constants.FIELDSEPARATOR));
 
         String transactionType;
-        transactionType = Main.variables.requestPacketFields.get(Constants.fld_name_reportNumber);
+        transactionType = Main.variables.requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
         logger.log(Level.DEBUG, "Request is of transaction type %s".formatted(transactionType));
         switch (transactionType) {
-            case Constants.rn_fuelPurchaseSale:
+            case Constants.RN_FUELPURCHASESALE:
                 break;
-            case Constants.rn_fuelPurchaseCancel:
+            case Constants.RN_FUELPURCHASECANCEL:
                 break;
-            case Constants.rn_settlement:
+            case Constants.RN_SETTLEMENT:
                 break;
-            case Constants.rn_expressCheckEncashment:
+            case Constants.RN_EXPRESSCHECKENCASHMENT:
                 break;
-            case Constants.rn_checkAuthorizationUpdateCheck:
+            case Constants.RN_CHECKAUTHORIZATIONUPDATECHECK:
                 break;
-            case Constants.rn_fuelPriceUpdate:
+            case Constants.RN_FUELPRICEUPDATE:
                 break;
-            case Constants.rn_preAuthEdit:
-                processTransactionBody(Constants.transaction_type_preAuthEdit, Main.variables.preAuthEdit.getRequest());
+            case Constants.RN_PREAUTHEDIT:
+                processTransactionBody(Constants.TRANSACTION_NAME_PREAUTHEDIT, Main.variables.preAuthEdit.getRequest());
                 break;
-            case Constants.rn_fuelPurchaseRequestForceSale:
+            case Constants.RN_FUELPURCHASEREQUESTFORCESALE:
                 break;
-            case Constants.rn_preAuthorization:
+            case Constants.RN_PREAUTHORIZATION:
                 break;
         }
     }
@@ -78,10 +78,10 @@ public class Decoder {
         for (Map.Entry<String, TransactionFieldProperties> entry : transactionProperties.entrySet()) {
             currentField = entry.getValue().getName();
             logger.log(Level.DEBUG, "Adding the value of %s to the request packet map".formatted(currentField));
-            if (currentField.equals(Constants.fld_name_fieldSeparator)) {
-                currentFieldValue = Constants.fieldSeparator;
-            } else if (currentField.equals(Constants.fld_name_closeBracket)) {
-                currentFieldValue = Constants.closeBracket;
+            if (currentField.equals(Constants.FLD_NAME_FIELDSEPARATOR)) {
+                currentFieldValue = Constants.FIELDSEPARATOR;
+            } else if (currentField.equals(Constants.FLD_NAME_CLOSEBRACKET)) {
+                currentFieldValue = Constants.CLOSEBRACKET;
             } else {
                 lengthOfField = ((int) entry.getValue().getLength());
                 logger.log(Level.DEBUG, "Length of %s is %s".formatted(currentField, lengthOfField));
