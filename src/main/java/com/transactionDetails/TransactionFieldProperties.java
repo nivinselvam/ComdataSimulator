@@ -21,6 +21,9 @@ public class TransactionFieldProperties {
     @JsonProperty("presetOptions")
     private List<String> presetOptions;
 
+    @JsonProperty("defaultValue")
+    private String defaultValue;
+
     @JsonProperty("justification")
     private String justification;
 
@@ -66,6 +69,14 @@ public class TransactionFieldProperties {
 
     public void setPresetOptions(List<String> presetOptions) {
         this.presetOptions = presetOptions;
+    }
+
+    public String getDefaultValue() {
+        return defaultValue;
+    }
+
+    public void setDefaultValue(String defaultValue) {
+        this.defaultValue = defaultValue;
     }
 
     public String getJustification() {

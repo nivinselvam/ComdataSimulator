@@ -1,11 +1,12 @@
 {
   "request": {
-      "cardNumber": {
+    "cardNumber": {
       "name": "Card Number",
       "type": "C",
       "length": 40,
       "required": true,
       "presetOptions": [],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -17,6 +18,7 @@
       "presetOptions": [
         "/"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -26,6 +28,7 @@
       "length": 10,
       "required": true,
       "presetOptions": [],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -37,6 +40,7 @@
       "presetOptions": [
         "}"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     }
@@ -50,6 +54,7 @@
       "presetOptions": [
         "{"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -59,6 +64,7 @@
       "length": 5,
       "required": true,
       "presetOptions": [],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -68,6 +74,7 @@
       "length": 1,
       "required": true,
       "presetOptions": [],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -80,6 +87,7 @@
         "TCPI",
         "TCPJ"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -91,6 +99,7 @@
       "presetOptions": [
         "SP"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -102,6 +111,7 @@
       "presetOptions": [
         "00007"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -113,6 +123,7 @@
       "presetOptions": [
         "/"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -124,6 +135,7 @@
       "presetOptions": [
         "00000"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -135,6 +147,7 @@
       "presetOptions": [
         "/"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -151,6 +164,7 @@
         "O",
         "X"
       ],
+      "defaultValue": "C",
       "justification": "left",
       "paddingWith": " "
     },
@@ -165,6 +179,7 @@
         "*",
         "letter or number"
       ],
+      "defaultValue": "#",
       "justification": "left",
       "paddingWith": " "
     },
@@ -181,6 +196,7 @@
         "O",
         "X"
       ],
+      "defaultValue": "C",
       "justification": "left",
       "paddingWith": " "
     },
@@ -195,6 +211,7 @@
         "*",
         "letter or number"
       ],
+      "defaultValue": "#",
       "justification": "left",
       "paddingWith": " "
     },
@@ -208,6 +225,7 @@
         "N",
         "R"
       ],
+      "defaultValue": "C",
       "justification": "left",
       "paddingWith": " "
     },
@@ -217,6 +235,7 @@
       "length": 6,
       "required": false,
       "presetOptions": [],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -226,6 +245,7 @@
       "length": 6,
       "required": false,
       "presetOptions": [],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -238,6 +258,7 @@
         "C",
         "N"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -254,6 +275,7 @@
         "O",
         "X"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -270,6 +292,7 @@
         "O",
         "X"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -279,6 +302,7 @@
       "length": 2,
       "required": false,
       "presetOptions": [],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -293,6 +317,7 @@
         "*",
         "letter or number"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -309,6 +334,7 @@
         "O",
         "X"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -323,6 +349,7 @@
         "*",
         "letter or number"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -337,6 +364,7 @@
         "*",
         "letter or number"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -353,6 +381,7 @@
         "O",
         "X"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -362,6 +391,7 @@
       "length": 10,
       "required": true,
       "presetOptions": [],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -371,6 +401,7 @@
       "length": 20,
       "required": true,
       "presetOptions": [],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -380,6 +411,7 @@
       "length": 15,
       "required": true,
       "presetOptions": [],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -392,6 +424,7 @@
         "Y",
         "N"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -403,6 +436,7 @@
       "presetOptions": [
         "}"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     }
@@ -416,6 +450,7 @@
       "presetOptions": [
         "{"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -425,6 +460,7 @@
       "length": 5,
       "required": true,
       "presetOptions": [],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -434,6 +470,7 @@
       "length": 1,
       "required": true,
       "presetOptions": [],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -446,6 +483,7 @@
         "TCPI",
         "TCPJ"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -457,6 +495,7 @@
       "presetOptions": [
         "SP"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -468,6 +507,7 @@
       "presetOptions": [
         "00007"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -479,6 +519,7 @@
       "presetOptions": [
         "/"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -490,6 +531,7 @@
       "presetOptions": [
         "00007"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -501,6 +543,7 @@
       "presetOptions": [
         "/"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -510,6 +553,7 @@
       "length": 99,
       "required": false,
       "presetOptions": [],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -521,6 +565,7 @@
       "presetOptions": [
         "}"
       ],
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     }

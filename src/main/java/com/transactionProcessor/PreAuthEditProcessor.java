@@ -22,7 +22,7 @@ public class PreAuthEditProcessor {
         for (Map.Entry<String, TransactionFieldProperties> entry : Main.variables.preAuthEdit.getRequest().entrySet()) {
             currentField = entry.getValue().getName();
             logger.log(Level.DEBUG, "Adding the value of %s to the request packet map".formatted(currentField));
-            if(currentField.equals(Constants.fld_name_fieldSeparator)){
+            if (currentField.equals(Constants.fld_name_fieldSeparator)) {
                 currentFieldValue = Constants.fieldSeparator;
             } else if (currentField.equals(Constants.fld_name_closeBracket)) {
                 currentFieldValue = Constants.closeBracket;
@@ -45,22 +45,18 @@ public class PreAuthEditProcessor {
         String currentFieldValue = "";
         for (Map.Entry<String, TransactionFieldProperties> entry : Main.variables.preAuthEdit.getResponse().entrySet()) {
             currentField = entry.getValue().getName();
-            if(entry.getValue().isRequired()){
+            if (entry.getValue().isRequired()) {
                 if (Main.variables.requestPacketFields.containsKey(currentField)) {
                     currentFieldValue = Main.variables.requestPacketFields.get(currentField);
                 } else {
-                    if(entry.getValue().getPresetOptions().isEmpty()){
-                        currentFieldValue = "";
-                    }else{
-                        currentFieldValue = entry.getValue().getPresetOptions().getFirst();
-                    }
+                    currentFieldValue = entry.getValue().getDefaultValue();
                 }
                 Main.variables.transactionPacketField = new TransactionPacketField();
                 Main.variables.transactionPacketField.setFieldName(currentField);
                 Main.variables.transactionPacketField.setFieldValue(currentFieldValue);
                 Main.variables.responsePacketFields.add(Main.variables.transactionPacketField);
                 logger.log(Level.DEBUG, "%s with value %s is added to the response packet fields map".formatted(currentField, currentFieldValue));
-            }else{
+            } else {
                 logger.log(Level.DEBUG, "%s is not required for this transaction as per configuration.".formatted(currentField));
             }
 
