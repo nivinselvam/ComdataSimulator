@@ -45,14 +45,25 @@ public class PreAuthEditProcessor {
         String currentFieldValue = "";
         for (Map.Entry<String, TransactionFieldProperties> entry : Main.variables.preAuthEdit.getResponse().entrySet()) {
             currentField = entry.getValue().getName();
-            if (Main.variables.requestPacketFields.containsKey(currentField)) {
-                currentFieldValue = Main.variables.requestPacketFields.get(currentField);
-            } else {
-                currentFieldValue = Main.variables.preAuthEdit.getResponse().get(currentField).getPresetOptions().getFirst();
+            if(entry.getValue().isRequired()){
+                if (Main.variables.requestPacketFields.containsKey(currentField)) {
+                    currentFieldValue = Main.variables.requestPacketFields.get(currentField);
+                } else {
+                    if(entry.getValue().getPresetOptions().isEmpty()){
+                        currentFieldValue = "";
+                    }else{
+                        currentFieldValue = entry.getValue().getPresetOptions().getFirst();
+                    }
+                }
+                Main.variables.transactionPacketField = new TransactionPacketField();
+                Main.variables.transactionPacketField.setFieldName(currentField);
+                Main.variables.transactionPacketField.setFieldValue(currentFieldValue);
+                Main.variables.responsePacketFields.add(Main.variables.transactionPacketField);
+                logger.log(Level.DEBUG, "%s with value %s is added to the response packet fields map".formatted(currentField, currentFieldValue));
+            }else{
+                logger.log(Level.DEBUG, "%s is not required for this transaction as per configuration.".formatted(currentField));
             }
-            Main.variables.responsePacketFields.put(currentField, currentFieldValue);
 
-            logger.log(Level.DEBUG, "%s with value %s is added to the response packet fields map".formatted(currentField, currentFieldValue));
         }
     }
 }

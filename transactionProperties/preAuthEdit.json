@@ -212,7 +212,7 @@
       "paddingWith": " "
     },
     "hubLowReading": {
-      "name": "HubLowReading",
+      "name": "Hub Low Reading",
       "type": "N",
       "length": 6,
       "required": false,

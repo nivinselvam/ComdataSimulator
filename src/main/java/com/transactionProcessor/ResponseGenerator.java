@@ -30,10 +30,13 @@ public class ResponseGenerator {
             }
         }
         generateResponseFields();
-        Encoder encoder = new Encoder();
-        for (Map.Entry<String, String> entry : Main.variables.responsePacketFields.entrySet()) {
-            logger.log(Level.INFO, "%s  :   %s".formatted(entry.getKey(), entry.getValue()));
+        logger.log(Level.INFO, "Response Packet");
+        for(TransactionPacketField currentTransactionField : Main.variables.responsePacketFields){
+            if (!Main.variables.exclusionFieldsList.contains(currentTransactionField.getFieldValue())) {
+                logger.log(Level.INFO, "%s  :   %s".formatted(currentTransactionField.getFieldName(), currentTransactionField.getFieldValue()));
+            }
         }
+        Encoder encoder = new Encoder();
         return "";
     }
 

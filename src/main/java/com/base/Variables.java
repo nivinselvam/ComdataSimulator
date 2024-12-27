@@ -15,8 +15,8 @@ public class Variables {
     public ServerInitializer server;
     public ServerSocket serverSocket;
     public Map<String, String> requestPacketFields = new LinkedHashMap<String, String>();
-    public Map<String, String> responsePacketFields = new LinkedHashMap<String, String>();
-//    public List<TransactionPacketField> requestPacketFields = new ArrayList<>();
+    public TransactionPacketField transactionPacketField;
+    public List<TransactionPacketField> responsePacketFields = new ArrayList<>();
     public List<String> exclusionFieldsList = new ArrayList<>(Arrays.asList("{", "/", "}"));
     public Header header;
     public PreAuthEdit preAuthEdit;
