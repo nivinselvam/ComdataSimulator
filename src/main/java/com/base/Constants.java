@@ -55,6 +55,9 @@ public class Constants {
     public static final String fld_name_reportNumber = "Report Number";
     public static final String fld_name_fieldSeparator = "Field Separator";
     public static final String fld_name_closeBracket = "Close Bracket";
-
+    /*
+    -----------------------------------Transaction Type names----------------------------------
+   */
+    public static final String transaction_type_preAuthEdit = "Pre Auth Edit";
 
 }

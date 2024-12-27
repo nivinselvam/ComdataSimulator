@@ -14,12 +14,13 @@ public class Decoder {
     private static final Logger logger = LogManager.getLogger(Decoder.class);
     private int startPosition;
     private int endPosition;
+    private List<String> pendingFields;
 
 
     public void decodeRequestPacket(String requestPacket) {
         processHeader(requestPacket);
         String pendingString = requestPacket.substring(endPosition, requestPacket.length() - 1);
-        List<String> pendingFields = List.of(pendingString.split(Constants.fieldSeparator));
+        pendingFields = List.of(pendingString.split(Constants.fieldSeparator));
 
         String transactionType;
         transactionType = Main.variables.requestPacketFields.get(Constants.fld_name_reportNumber);
@@ -38,7 +39,7 @@ public class Decoder {
             case Constants.rn_fuelPriceUpdate:
                 break;
             case Constants.rn_preAuthEdit:
-                Main.variables.preAuthEditProcessor.decodePreAuthEdit(pendingFields);
+                processTransactionBody(Constants.transaction_type_preAuthEdit, Main.variables.preAuthEdit.getRequest());
                 break;
             case Constants.rn_fuelPurchaseRequestForceSale:
                 break;
@@ -65,6 +66,32 @@ public class Decoder {
             Main.variables.requestPacketFields.put(currentField, currentFieldValue);
             logger.log(Level.DEBUG, "%s is added to request packet map".formatted(currentField));
             startPosition = endPosition;
+        }
+    }
+
+    private void processTransactionBody(String transactionType, Map<String, TransactionFieldProperties> transactionProperties){
+        String currentField = "";
+        String currentFieldValue = "";
+        int lengthOfField = 0;
+        logger.log(Level.DEBUG, "Starting to add the %s fields into the request packet map".formatted(transactionType));
+        int position = 0;
+        for (Map.Entry<String, TransactionFieldProperties> entry : transactionProperties.entrySet()) {
+            currentField = entry.getValue().getName();
+            logger.log(Level.DEBUG, "Adding the value of %s to the request packet map".formatted(currentField));
+            if (currentField.equals(Constants.fld_name_fieldSeparator)) {
+                currentFieldValue = Constants.fieldSeparator;
+            } else if (currentField.equals(Constants.fld_name_closeBracket)) {
+                currentFieldValue = Constants.closeBracket;
+            } else {
+                lengthOfField = ((int) entry.getValue().getLength());
+                logger.log(Level.DEBUG, "Length of %s is %s".formatted(currentField, lengthOfField));
+                currentFieldValue = pendingFields.get(position);
+                position = position + 1;
+            }
+            logger.log(Level.DEBUG, "Value of %s is %s".formatted(currentField, currentFieldValue));
+            Main.variables.requestPacketFields.put(currentField, currentFieldValue);
+            logger.log(Level.DEBUG, "%s is added to request packet map".formatted(currentField));
+
         }
     }
 }

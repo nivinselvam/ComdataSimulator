@@ -2,6 +2,7 @@ package com.transactionProcessor;
 
 import com.base.Constants;
 import com.base.Main;
+import com.transactionDetails.TransactionFieldProperties;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -29,7 +30,7 @@ public class ResponseGenerator {
                 logger.log(Level.INFO, "%s  :   %s".formatted(entry.getKey(), entry.getValue()));
             }
         }
-        generateResponseFields();
+        processBasedOnTransaction();
         logger.log(Level.INFO, "Response Packet");
         for(TransactionPacketField currentTransactionField : Main.variables.responsePacketFields){
             if (!Main.variables.exclusionFieldsList.contains(currentTransactionField.getFieldValue())) {
@@ -40,7 +41,7 @@ public class ResponseGenerator {
         return "";
     }
 
-    private static void generateResponseFields() {
+    private void processBasedOnTransaction() {
         String transactionType = Main.variables.requestPacketFields.get(Constants.fld_name_reportNumber);
         switch (transactionType) {
             case Constants.rn_fuelPurchaseSale:
@@ -56,12 +57,36 @@ public class ResponseGenerator {
             case Constants.rn_fuelPriceUpdate:
                 break;
             case Constants.rn_preAuthEdit:
-                Main.variables.preAuthEditProcessor.generateResponseFields();
+                generateResponseFields(Constants.transaction_type_preAuthEdit, Main.variables.preAuthEdit.getResponse());
                 break;
             case Constants.rn_fuelPurchaseRequestForceSale:
                 break;
             case Constants.rn_preAuthorization:
                 break;
+        }
+    }
+
+    private void generateResponseFields(String transactionType, Map<String, TransactionFieldProperties> transactionProperties) {
+        logger.log(Level.DEBUG, "Starting to generate the response fields for %s".formatted(transactionType));
+        String currentField = "";
+        String currentFieldValue = "";
+        for (Map.Entry<String, TransactionFieldProperties> entry : transactionProperties.entrySet()) {
+            currentField = entry.getValue().getName();
+            if (entry.getValue().isRequired()) {
+                if (Main.variables.requestPacketFields.containsKey(currentField)) {
+                    currentFieldValue = Main.variables.requestPacketFields.get(currentField);
+                } else {
+                    currentFieldValue = entry.getValue().getDefaultValue();
+                }
+                Main.variables.transactionPacketField = new TransactionPacketField();
+                Main.variables.transactionPacketField.setFieldName(currentField);
+                Main.variables.transactionPacketField.setFieldValue(currentFieldValue);
+                Main.variables.responsePacketFields.add(Main.variables.transactionPacketField);
+                logger.log(Level.DEBUG, "%s with value %s is added to the response packet fields map".formatted(currentField, currentFieldValue));
+            } else {
+                logger.log(Level.DEBUG, "%s is not required for this transaction as per configuration.".formatted(currentField));
+            }
+
         }
     }
 
