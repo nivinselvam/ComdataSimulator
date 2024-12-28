@@ -20,14 +20,16 @@ public class Constants {
     public static final String FILE_LOG_PROPERTIES = "log4j2.xml";
     public static final String FILE_APPLICATION_LOG = "messages.log";
     public static final String FILE_SIMULATOR_PROPERTIES = "simulatorConfig.json";
+    public static final String FILE_DEFAULT_ERROR_PROPERTIES = "defaultError.json";
     public static final String FILE_HEADER_PROPERTIES = "header.json";
-    public static final String FILE_PRE_AUTH_EDIT_PROPERTIES = "PreAuthEdit.json";
+    public static final String FILE_PRE_AUTH_EDIT_PROPERTIES = "preAuthEdit.json";
 
     /*
     -----------------------------------    Path     -----------------------------------------
      */
     public static final String PATH_LOG_PROPERTIES_FILE = "%s\\%s".formatted(FOLDER_PROPERTY_FILES, FILE_LOG_PROPERTIES);
     public static final String PATH_SIMULATOR_CONFIG = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_CONFIGURATION_FILES, FILE_SIMULATOR_PROPERTIES);
+    public static final String PATH_DEFAULT_ERROR_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_DEFAULT_ERROR_PROPERTIES);
     public static final String PATH_HEADER_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_HEADER_PROPERTIES);
     public static final String PATH_PRE_AUTH_EDIT_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_PRE_AUTH_EDIT_PROPERTIES);
     /*
@@ -58,6 +60,7 @@ public class Constants {
     /*
     -----------------------------------Transaction Type names----------------------------------
    */
+    public static final String TRANSACTION_NAME_DEFAULTERROR = "Default Error";
     public static final String TRANSACTION_NAME_PREAUTHEDIT = "Pre Auth Edit";
 
 }

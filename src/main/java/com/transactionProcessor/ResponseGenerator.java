@@ -2,7 +2,7 @@ package com.transactionProcessor;
 
 import com.base.Constants;
 import com.base.Main;
-import com.transactionDetails.TransactionFieldProperties;
+import com.transactiondetails.TransactionFieldProperties;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -20,25 +20,32 @@ public class ResponseGenerator {
     }
 
     public String generateResponse() {
-        logger.log(Level.DEBUG, "Processing the below transaction packet");
-        logger.log(Level.DEBUG, requestPacket);
-        Decoder decoder = new Decoder();
-        decoder.decodeRequestPacket(requestPacket);
-        logger.log(Level.INFO, "Request Packet");
-        for (Map.Entry<String, String> entry : Main.variables.requestPacketFields.entrySet()) {
-            if (!Main.variables.exclusionFieldsList.contains(entry.getValue())) {
-                logger.log(Level.INFO, "%s  :   %s".formatted(entry.getKey(), entry.getValue()));
+        try {
+            int a = 10 / 0;
+            logger.log(Level.DEBUG, "Processing the below transaction packet");
+            logger.log(Level.DEBUG, requestPacket);
+            Decoder decoder = new Decoder();
+            decoder.decodeRequestPacket(requestPacket);
+            logger.log(Level.INFO, "Request Packet");
+            for (Map.Entry<String, String> entry : Main.variables.requestPacketFields.entrySet()) {
+                if (!Main.variables.exclusionFieldsList.contains(entry.getValue())) {
+                    logger.log(Level.INFO, "%s  :   %s".formatted(entry.getKey(), entry.getValue()));
+                }
             }
+            processBasedOnTransaction();
+
+        } catch (Exception e) {
+            generateResponseFields(Constants.TRANSACTION_NAME_DEFAULTERROR, Main.variables.defaultError.getResponse());
         }
-        processBasedOnTransaction();
         logger.log(Level.INFO, "Response Packet");
-        for(TransactionPacketField currentTransactionField : Main.variables.responsePacketFields){
+        for (TransactionPacketField currentTransactionField : Main.variables.responsePacketFields) {
             if (!Main.variables.exclusionFieldsList.contains(currentTransactionField.getFieldValue())) {
                 logger.log(Level.INFO, "%s  :   %s".formatted(currentTransactionField.getFieldName(), currentTransactionField.getFieldValue()));
             }
         }
         Encoder encoder = new Encoder();
         return "";
+
     }
 
     private void processBasedOnTransaction() {
@@ -63,6 +70,8 @@ public class ResponseGenerator {
                 break;
             case Constants.RN_PREAUTHORIZATION:
                 break;
+            default:
+                generateResponseFields(Constants.TRANSACTION_NAME_DEFAULTERROR, Main.variables.defaultError.getResponse());
         }
     }
 
@@ -73,9 +82,13 @@ public class ResponseGenerator {
         for (Map.Entry<String, TransactionFieldProperties> entry : transactionProperties.entrySet()) {
             currentField = entry.getValue().getName();
             if (entry.getValue().isRequired()) {
-                if (Main.variables.requestPacketFields.containsKey(currentField)) {
-                    currentFieldValue = Main.variables.requestPacketFields.get(currentField);
-                } else {
+                try {
+                    if (Main.variables.requestPacketFields.containsKey(currentField)) {
+                        currentFieldValue = Main.variables.requestPacketFields.get(currentField);
+                    } else {
+                        currentFieldValue = entry.getValue().getDefaultValue();
+                    }
+                } catch (Exception e) {
                     currentFieldValue = entry.getValue().getDefaultValue();
                 }
                 Main.variables.transactionPacketField = new TransactionPacketField();
@@ -83,6 +96,7 @@ public class ResponseGenerator {
                 Main.variables.transactionPacketField.setFieldValue(currentFieldValue);
                 Main.variables.responsePacketFields.add(Main.variables.transactionPacketField);
                 logger.log(Level.DEBUG, "%s with value %s is added to the response packet fields map".formatted(currentField, currentFieldValue));
+
             } else {
                 logger.log(Level.DEBUG, "%s is not required for this transaction as per configuration.".formatted(currentField));
             }

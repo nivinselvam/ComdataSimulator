@@ -31,9 +31,9 @@ public class PreReqRunner {
      */
     public void loadTransactionProperties(){
         JsonProcessor jsonProcessor = new JsonProcessor();
+        jsonProcessor.loadDefaultErrorProperties();
         jsonProcessor.loadPreAuthEditProperties();
         jsonProcessor.loadHeaderProperties();
-
     }
 
 

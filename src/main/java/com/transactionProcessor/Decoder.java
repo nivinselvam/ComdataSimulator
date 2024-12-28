@@ -2,7 +2,7 @@ package com.transactionProcessor;
 
 import com.base.Constants;
 import com.base.Main;
-import com.transactionDetails.TransactionFieldProperties;
+import com.transactiondetails.TransactionFieldProperties;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -45,6 +45,7 @@ public class Decoder {
                 break;
             case Constants.RN_PREAUTHORIZATION:
                 break;
+            default: throw new RuntimeException();
         }
     }
 

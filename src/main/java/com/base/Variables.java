@@ -2,8 +2,9 @@ package com.base;
 
 
 import com.socketprocessor.ServerInitializer;
-import com.transactionDetails.Header;
-import com.transactionDetails.PreAuthEdit;
+import com.transactiondetails.DefaultError;
+import com.transactiondetails.Header;
+import com.transactiondetails.PreAuthEdit;
 import com.transactionProcessor.PreAuthEditProcessor;
 import com.transactionProcessor.TransactionPacketField;
 
@@ -19,6 +20,7 @@ public class Variables {
     public List<TransactionPacketField> responsePacketFields = new ArrayList<>();
     public List<String> exclusionFieldsList = new ArrayList<>(Arrays.asList("{", "/", "}"));
     public Header header;
+    public DefaultError defaultError;
     public PreAuthEdit preAuthEdit;
     public PreAuthEditProcessor preAuthEditProcessor = new PreAuthEditProcessor();
 

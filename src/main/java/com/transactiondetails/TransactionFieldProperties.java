@@ -1,4 +1,4 @@
-package com.transactionDetails;
+package com.transactiondetails;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

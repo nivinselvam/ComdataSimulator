@@ -6,8 +6,9 @@ import com.properties.SimulatorProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 
-import com.transactionDetails.Header;
-import com.transactionDetails.PreAuthEdit;
+import com.transactiondetails.DefaultError;
+import com.transactiondetails.Header;
+import com.transactiondetails.PreAuthEdit;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -28,6 +29,18 @@ public class JsonProcessor {
             logger.log(Level.DEBUG, "Simulator properties successfully loaded from the Simulator config file");
         } catch (IOException e) {
             logger.log(Level.FATAL, "Unable to load the Simulator properties from Simulator config file");
+        }
+    }
+
+    public void loadDefaultErrorProperties() {
+        logger.log(Level.DEBUG, "Trying to open the defaultError.json file");
+        File defaultErrorJsonFile = new File(Constants.PATH_DEFAULT_ERROR_PROPERTIES);
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            logger.log(Level.DEBUG, "Converting the default error json into Java object");
+            Main.variables.defaultError = objectMapper.readValue(defaultErrorJsonFile, DefaultError.class);
+        } catch (IOException e) {
+            logger.log(Level.ERROR, "Unable to load the default error properties due to error "+e.toString());
         }
     }
 
