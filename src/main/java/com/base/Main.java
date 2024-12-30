@@ -9,7 +9,6 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Map;
 
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
@@ -22,7 +21,7 @@ public class Main {
         logger.log(Level.INFO, "Comdata Simulator is starting...");
         PreReqRunner preReqRunner = new PreReqRunner();
         preReqRunner.configureLoggerFilePath();
-        preReqRunner.loadTransactionProperties();
+        preReqRunner.loadUserConfigurations();
 
         String request = "{EX777 TCPISP00007/00036/A5600171620532277=49121201271/22}";
         ResponseGenerator responseGenerator = new ResponseGenerator(request);

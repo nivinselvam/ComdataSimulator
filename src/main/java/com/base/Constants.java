@@ -33,6 +33,12 @@ public class Constants {
     public static final String PATH_HEADER_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_HEADER_PROPERTIES);
     public static final String PATH_PRE_AUTH_EDIT_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_PRE_AUTH_EDIT_PROPERTIES);
     /*
+    -----------------------------------Justification----------------------------------------
+     */
+    public static final String justification_right = "right";
+    public static final String justification_left = "left";
+
+    /*
     -----------------------------------Report Numbers----------------------------------------
      */
     public static final String RN_FUELPURCHASESALE = "00001";
@@ -62,5 +68,10 @@ public class Constants {
    */
     public static final String TRANSACTION_NAME_DEFAULTERROR = "Default Error";
     public static final String TRANSACTION_NAME_PREAUTHEDIT = "Pre Auth Edit";
+    /*
+    -----------------------------------Response Type names----------------------------------
+   */
+    public static final String RESPONSE_TYPE_RESPONSE = "response";
+    public static final String RESPONSE_TYPE_ERROR_RESPONSE = "errorResponse";
 
 }

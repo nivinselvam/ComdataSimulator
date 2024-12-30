@@ -3,6 +3,7 @@ package com.properties;
 public class SimulatorProperties {
 
     private int portNumber;
+    private String preAuthEditResponse;
 
     public int getPortNumber() {
         return portNumber;
@@ -12,4 +13,11 @@ public class SimulatorProperties {
         this.portNumber = portNumber;
     }
 
+    public String getPreAuthEditResponse() {
+        return preAuthEditResponse;
+    }
+
+    public void setPreAuthEditResponse(String preAuthEditResponse) {
+        this.preAuthEditResponse = preAuthEditResponse;
+    }
 }

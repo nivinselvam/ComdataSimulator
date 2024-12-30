@@ -5,6 +5,7 @@ Each client gets handled in a separate thread.
 package com.socketprocessor;
 
 import com.base.Main;
+import com.transactionProcessor.ResponseGenerator;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -34,6 +35,9 @@ public class ClientHandler extends Thread {
             logger.log(Level.INFO, "                       Start of Transaction                          ");
             logger.log(Level.INFO, "---------------------------------------------------------------------");
             String transactionRequestPacket = readDataFromSocket();
+            ResponseGenerator responseGenerator = new ResponseGenerator(transactionRequestPacket);
+            responseGenerator.generateResponse();
+            writeToSocket(Main.variables.responsePacket);
             logger.log(Level.INFO, transactionRequestPacket);
             logger.log(Level.INFO, "---------------------------------------------------------------------");
             logger.log(Level.INFO, "                         End of Transaction                          ");

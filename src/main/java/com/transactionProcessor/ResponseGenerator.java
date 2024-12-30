@@ -19,9 +19,8 @@ public class ResponseGenerator {
         this.requestPacket = requestPacket;
     }
 
-    public String generateResponse() {
+    public void generateResponse() {
         try {
-            int a = 10 / 0;
             logger.log(Level.DEBUG, "Processing the below transaction packet");
             logger.log(Level.DEBUG, requestPacket);
             Decoder decoder = new Decoder();
@@ -44,8 +43,7 @@ public class ResponseGenerator {
             }
         }
         Encoder encoder = new Encoder();
-        return "";
-
+        encoder.encodeResponse();
     }
 
     private void processBasedOnTransaction() {
@@ -64,7 +62,7 @@ public class ResponseGenerator {
             case Constants.RN_FUELPRICEUPDATE:
                 break;
             case Constants.RN_PREAUTHEDIT:
-                generateResponseFields(Constants.TRANSACTION_NAME_PREAUTHEDIT, Main.variables.preAuthEdit.getResponse());
+                generateResponseFields(Constants.TRANSACTION_NAME_PREAUTHEDIT, Main.variables.preAuthEditProcessor.selectResponseType());
                 break;
             case Constants.RN_FUELPURCHASEREQUESTFORCESALE:
                 break;
@@ -84,8 +82,10 @@ public class ResponseGenerator {
             if (entry.getValue().isRequired()) {
                 try {
                     if (Main.variables.requestPacketFields.containsKey(currentField)) {
+                        logger.log(Level.DEBUG, "Adding value from the request packet for %s".formatted(currentField));
                         currentFieldValue = Main.variables.requestPacketFields.get(currentField);
                     } else {
+                        logger.log(Level.DEBUG, "Adding value from the user configuration for %s".formatted(currentField));
                         currentFieldValue = entry.getValue().getDefaultValue();
                     }
                 } catch (Exception e) {

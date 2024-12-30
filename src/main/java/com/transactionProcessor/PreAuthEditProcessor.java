@@ -1,14 +1,31 @@
 package com.transactionProcessor;
 
 
+import com.base.Constants;
+import com.base.Main;
+import com.transactiondetails.TransactionFieldProperties;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Map;
 
 
 public class PreAuthEditProcessor {
     private static final Logger logger = LogManager.getLogger(PreAuthEditProcessor.class);
 
+    public Map<String, TransactionFieldProperties> selectResponseType() {
+        logger.log(Level.DEBUG, "Selecting the response based on the configuration");
+        if (Main.simulatorProperties.getPreAuthEditResponse().equals(Constants.RESPONSE_TYPE_RESPONSE)) {
+            logger.log(Level.DEBUG, "Processing Approval response as configured.");
+            Main.variables.configuredTransactionResponse = Main.variables.preAuthEdit.getResponse();
+        } else if (Main.simulatorProperties.getPreAuthEditResponse().equals(Constants.RESPONSE_TYPE_ERROR_RESPONSE)) {
+            logger.log(Level.DEBUG, "Processing error response as configured.");
+            Main.variables.configuredTransactionResponse = Main.variables.preAuthEdit.getErrorResponse();
+        } else {
+            Main.variables.configuredTransactionResponse = null;
+        }
+        return Main.variables.configuredTransactionResponse;
+    }
 
 }
