@@ -2,12 +2,10 @@ package com.base;
 
 
 import com.socketprocessor.ServerInitializer;
-import com.transactiondetails.DefaultError;
-import com.transactiondetails.Header;
-import com.transactiondetails.PreAuthEdit;
+import com.transactionProcessor.PreAuthProcessor;
+import com.transactiondetails.*;
 import com.transactionProcessor.PreAuthEditProcessor;
 import com.transactionProcessor.TransactionPacketField;
-import com.transactiondetails.TransactionFieldProperties;
 
 
 import java.net.ServerSocket;
@@ -20,12 +18,12 @@ public class Variables {
     public Map<String, TransactionFieldProperties> configuredTransactionResponse;
     public TransactionPacketField transactionPacketField;
     public List<TransactionPacketField> responsePacketFields = new ArrayList<>();
+    public String responsePacket;
     public List<String> exclusionFieldsList = new ArrayList<>(Arrays.asList("{", "/", "}"));
     public Header header;
     public DefaultError defaultError;
     public PreAuthEdit preAuthEdit;
+    public PreAuth preAuth;
     public PreAuthEditProcessor preAuthEditProcessor = new PreAuthEditProcessor();
-    public String responsePacket;
-
-
+    public PreAuthProcessor preAuthProcessor = new PreAuthProcessor();
 }

@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import com.transactiondetails.DefaultError;
 import com.transactiondetails.Header;
+import com.transactiondetails.PreAuth;
 import com.transactiondetails.PreAuthEdit;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -65,6 +66,18 @@ public class JsonProcessor {
             Main.variables.preAuthEdit = objectMapper.readValue(preAuthEditJsonFile, PreAuthEdit.class);
         } catch (IOException e) {
             logger.log(Level.ERROR, "Unable to load the pre auth edit properties due to error "+e.toString());
+        }
+    }
+
+    public void loadPreAuthProperties() {
+        logger.log(Level.DEBUG, "Trying to open the preAuth.json file");
+        File preAuthJsonFile = new File(Constants.PATH_PRE_AUTH_PROPERTIES);
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            logger.log(Level.DEBUG, "Converting the pre auth json into Java object");
+            Main.variables.preAuth = objectMapper.readValue(preAuthJsonFile, PreAuth.class);
+        } catch (IOException e) {
+            logger.log(Level.ERROR, "Unable to load the pre auth properties due to error "+e.toString());
         }
     }
 

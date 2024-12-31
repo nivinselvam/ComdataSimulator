@@ -67,6 +67,7 @@ public class ResponseGenerator {
             case Constants.RN_FUELPURCHASEREQUESTFORCESALE:
                 break;
             case Constants.RN_PREAUTHORIZATION:
+                generateResponseFields(Constants.TRANSACTION_NAME_PREAUTH, Main.variables.preAuthProcessor.selectResponseType());
                 break;
             default:
                 generateResponseFields(Constants.TRANSACTION_NAME_DEFAULTERROR, Main.variables.defaultError.getResponse());

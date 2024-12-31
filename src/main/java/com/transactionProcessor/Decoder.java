@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -20,7 +21,7 @@ public class Decoder {
     public void decodeRequestPacket(String requestPacket) {
         processHeader(requestPacket);
         String pendingString = requestPacket.substring(endPosition, requestPacket.length() - 1);
-        pendingFields = List.of(pendingString.split(Constants.FIELDSEPARATOR));
+        pendingFields = List.of(pendingString.split(Constants.FIELDSEPARATOR, -1));
 
         String transactionType;
         transactionType = Main.variables.requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
@@ -44,6 +45,7 @@ public class Decoder {
             case Constants.RN_FUELPURCHASEREQUESTFORCESALE:
                 break;
             case Constants.RN_PREAUTHORIZATION:
+                processTransactionBody(Constants.TRANSACTION_NAME_PREAUTH, Main.variables.preAuth.getRequest());
                 break;
             default: throw new RuntimeException();
         }

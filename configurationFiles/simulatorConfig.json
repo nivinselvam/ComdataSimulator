@@ -1,4 +1,5 @@
 {
   "portNumber": "15031",
-  "preAuthEditResponse": "response"
+  "preAuthEditResponse": "response",
+  "preAuthResponse": "response"
 }

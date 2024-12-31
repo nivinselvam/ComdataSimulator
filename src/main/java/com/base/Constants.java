@@ -23,6 +23,7 @@ public class Constants {
     public static final String FILE_DEFAULT_ERROR_PROPERTIES = "defaultError.json";
     public static final String FILE_HEADER_PROPERTIES = "header.json";
     public static final String FILE_PRE_AUTH_EDIT_PROPERTIES = "preAuthEdit.json";
+    public static final String FILE_PRE_AUTH_PROPERTIES = "preAuth.json";
 
     /*
     -----------------------------------    Path     -----------------------------------------
@@ -32,6 +33,7 @@ public class Constants {
     public static final String PATH_DEFAULT_ERROR_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_DEFAULT_ERROR_PROPERTIES);
     public static final String PATH_HEADER_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_HEADER_PROPERTIES);
     public static final String PATH_PRE_AUTH_EDIT_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_PRE_AUTH_EDIT_PROPERTIES);
+    public static final String PATH_PRE_AUTH_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_PRE_AUTH_PROPERTIES);
     /*
     -----------------------------------Justification----------------------------------------
      */
@@ -68,6 +70,7 @@ public class Constants {
    */
     public static final String TRANSACTION_NAME_DEFAULTERROR = "Default Error";
     public static final String TRANSACTION_NAME_PREAUTHEDIT = "Pre Auth Edit";
+    public static final String TRANSACTION_NAME_PREAUTH = "Pre Auth";
     /*
     -----------------------------------Response Type names----------------------------------
    */

@@ -33,8 +33,9 @@ public class PreReqRunner {
         JsonProcessor jsonProcessor = new JsonProcessor();
         jsonProcessor.loadSimulatorProperties();
         jsonProcessor.loadDefaultErrorProperties();
-        jsonProcessor.loadPreAuthEditProperties();
         jsonProcessor.loadHeaderProperties();
+        jsonProcessor.loadPreAuthEditProperties();
+        jsonProcessor.loadPreAuthProperties();
     }
 
 

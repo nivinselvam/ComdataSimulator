@@ -23,7 +23,7 @@ public class Main {
         preReqRunner.configureLoggerFilePath();
         preReqRunner.loadUserConfigurations();
 
-        String request = "{EX777 TCPISP00007/00036/A5600171620532277=49121201271/22}";
+        String request = "{EX777 TCPISP00014/00085/A5600171620532277=49121201271/2277/22/123ABC/11111//5/////P/056/P/819/P/019//////////////}";
         ResponseGenerator responseGenerator = new ResponseGenerator(request);
         responseGenerator.generateResponse();
 //

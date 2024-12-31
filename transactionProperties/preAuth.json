@@ -1,0 +1,1504 @@
+{
+  "request": {
+    "cardNumber": {
+      "name": "Card Number",
+      "type": "C",
+      "length": 40,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator3": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "driverNumber": {
+      "name": "Driver Number",
+      "type": "C",
+      "length": 16,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "123456",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator4": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "unitNumber": {
+      "name": "Unit Number",
+      "type": "C",
+      "length": 10,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator5": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "trailerNumber": {
+      "name": "Trailer Number",
+      "type": "C",
+      "length": 10,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator6": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "hubReading": {
+      "name": "Hub Reading",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator7": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "trailerHubReading": {
+      "name": "Trailer Hub Reading",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator8": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "trailerHours": {
+      "name": "Trailer Hours",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator9": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "tripNumber": {
+      "name": "Trip Number",
+      "type": "C",
+      "length": 10,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator10": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "driversLicenseNumber": {
+      "name": "Drivers License Number",
+      "type": "C",
+      "length": 20,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator11": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "driverLicenseState": {
+      "name": "Driver License State",
+      "type": "C",
+      "length": 2,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator12": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "poNumber": {
+      "name": "PO Number",
+      "type": "C",
+      "length": 10,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator13": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode1Indicator": {
+      "name": "Sub Product Code 1 Indicator",
+      "type": "C",
+      "length": 1,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator14": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode1": {
+      "name": "Sub Product Code 1",
+      "type": "C",
+      "length": 3,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator15": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode2Indicator": {
+      "name": "Sub Product Code 2 Indicator",
+      "type": "C",
+      "length": 1,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator16": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode2": {
+      "name": "Sub Product Code 2",
+      "type": "C",
+      "length": 3,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator17": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode3Indicator": {
+      "name": "Sub Product Code 3 Indicator",
+      "type": "C",
+      "length": 1,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator18": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode3": {
+      "name": "Sub Product Code 3",
+      "type": "C",
+      "length": 3,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator19": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode4Indicator": {
+      "name": "Sub Product Code 4 Indicator",
+      "type": "C",
+      "length": 1,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator20": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode4": {
+      "name": "Sub Product Code 4",
+      "type": "C",
+      "length": 3,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator21": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode5Indicator": {
+      "name": "Sub Product Code 5 Indicator",
+      "type": "C",
+      "length": 1,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator22": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode5": {
+      "name": "Sub Product Code 5",
+      "type": "C",
+      "length": 3,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator23": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode6Indicator": {
+      "name": "Sub Product Code 6 Indicator",
+      "type": "C",
+      "length": 1,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator24": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode6": {
+      "name": "Sub Product Code 6",
+      "type": "C",
+      "length": 3,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator25": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode7Indicator": {
+      "name": "Sub Product Code 7 Indicator",
+      "type": "C",
+      "length": 1,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator26": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode7": {
+      "name": "Sub Product Code 7",
+      "type": "C",
+      "length": 3,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator27": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode8Indicator": {
+      "name": "Sub Product Code 8 Indicator",
+      "type": "C",
+      "length": 1,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator28": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode8": {
+      "name": "Sub Product Code 8",
+      "type": "C",
+      "length": 3,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator29": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode9Indicator": {
+      "name": "Sub Product Code 9 Indicator",
+      "type": "C",
+      "length": 1,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator30": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode9": {
+      "name": "Sub Product Code 9",
+      "type": "C",
+      "length": 3,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator31": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode10Indicator": {
+      "name": "Sub Product Code 10 Indicator",
+      "type": "C",
+      "length": 1,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator32": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProductCode10": {
+      "name": "Sub Product Code 10",
+      "type": "C",
+      "length": 3,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    }
+  },
+  "response": {
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "{"
+      ],
+      "defaultValue": "{",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationAccountCode": {
+      "name": "Location or Account Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subId": {
+      "name": "Sub Id",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "deviceType": {
+      "name": "Device Type",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [
+        "TCPI",
+        "TCPJ"
+      ],
+      "defaultValue": "TCPI",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportSystemId": {
+      "name": "Report System ID",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [
+        "SP"
+      ],
+      "defaultValue": "SP",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportNumber": {
+      "name": "Report Number",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00014"
+      ],
+      "defaultValue": "00014",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "responseCode": {
+      "name": "Response Code",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00000"
+      ],
+      "defaultValue": "00000",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "maxPurchaseDollarLimit": {
+      "name": "Max Purchase Dollar Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseQuantityLimit": {
+      "name": "Max Purchase Quantity Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxCashAvailable": {
+      "name": "Max Cash Available",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "5000",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseOilDollarLimit": {
+      "name": "Max Purchase Oil Dollar Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "9000",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseOilQuantityLimit": {
+      "name": "Max Purchase Oil Quantity Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "1200",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseDiesel#2DollarLimit": {
+      "name": "Max Purchase Diesel #2 Dollar Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseDiesel#2QuantityLimit": {
+      "name": "Max Purchase Diesel #2 Quantity Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseReeferDollarLimit": {
+      "name": "Max Purchase Reefer Dollar Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseReeferQuantityLimit3": {
+      "name": "Max Purchase Reefer Quantity Limit3",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "2",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseOtherFuelDollarLimit": {
+      "name": "Max Purchase Other Fuel Dollar Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "3056",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseOtherFuelQuantityLimit": {
+      "name": "Max Purchase Other Fuel Quantity Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseComdataProductsDollarLimit": {
+      "name": "Max Purchase Comdata Products Dollar Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory1": {
+      "name": "Purchase Category1",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode1": {
+      "name": "Sub Product Code1",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit1": {
+      "name": "Max Dollar Limit1",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit1": {
+      "name": "Max Quantity Limit1",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory2": {
+      "name": "Purchase Category2",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode2": {
+      "name": "Sub Product Code2",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit2": {
+      "name": "Max Dollar Limit2",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit2": {
+      "name": "Max Quantity Limit2",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory3": {
+      "name": "Purchase Category3",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode3": {
+      "name": "Sub Product Code3",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit3": {
+      "name": "Max Dollar Limit3",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit3": {
+      "name": "Max Quantity Limit3",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory4": {
+      "name": "Purchase Category4",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode4": {
+      "name": "Sub Product Code4",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit4": {
+      "name": "Max Dollar Limit4",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit4": {
+      "name": "Max Quantity Limit4",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory5": {
+      "name": "Purchase Category5",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode5": {
+      "name": "Sub Product Code5",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit5": {
+      "name": "Max Dollar Limit5",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit5": {
+      "name": "Max Quantity Limit5",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory6": {
+      "name": "Purchase Category6",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode6": {
+      "name": "Sub Product Code6",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit6": {
+      "name": "Max Dollar Limit6",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit6": {
+      "name": "Max Quantity Limit6",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory7": {
+      "name": "Purchase Category7",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode7": {
+      "name": "Sub Product Code7",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit7": {
+      "name": "Max Dollar Limit7",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit7": {
+      "name": "Max Quantity Limit7",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory8": {
+      "name": "Purchase Category8",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode8": {
+      "name": "Sub Product Code8",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit8": {
+      "name": "Max Dollar Limit8",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit8": {
+      "name": "Max Quantity Limit8",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory9": {
+      "name": "Purchase Category9",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode9": {
+      "name": "Sub Product Code9",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit9": {
+      "name": "Max Dollar Limit9",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit9": {
+      "name": "Max Quantity Limit9",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory10": {
+      "name": "Purchase Category10",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode10": {
+      "name": "Sub Product Code10",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit10": {
+      "name": "Max Dollar Limit10",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit10": {
+      "name": "Max Quantity Limit10",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "constantCustomer": {
+      "name": "Constant ~CUST",
+      "type": "C",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "CUST:",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "CustomerName": {
+      "name": "Customer_Name",
+      "type": "C",
+      "length": 25,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "GK SOFTWARE",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "customerCity": {
+      "name": "Customer_City",
+      "type": "C",
+      "length": 15,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "RALEIGH",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "customerState": {
+      "name": "Customer_State",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "customerID": {
+      "name": "Customer_ID",
+      "type": "C",
+      "length": 10,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "defaultValue": "}",
+      "justification": "left",
+      "paddingWith": " "
+    }
+  },
+  "errorResponse": {
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "{"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationAccountCode": {
+      "name": "Location or Account Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subId": {
+      "name": "Sub Id",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "deviceType": {
+      "name": "Device Type",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [
+        "TCPI",
+        "TCPJ"
+      ],
+      "defaultValue": "TCPI",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportSystemId": {
+      "name": "Report System ID",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [
+        "SP"
+      ],
+      "defaultValue": "SP",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportNumber": {
+      "name": "Report Number",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00007"
+      ],
+      "defaultValue": "00007",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "responseCode": {
+      "name": "Response Code",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00007"
+      ],
+      "defaultValue": "00007",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "message": {
+      "name": "Message",
+      "type": "C",
+      "length": 99,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "Error response configured.",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    }
+  }
+}
