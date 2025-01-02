@@ -23,10 +23,9 @@ public class Decoder {
         String pendingString = requestPacket.substring(endPosition, requestPacket.length() - 1);
         pendingFields = List.of(pendingString.split(Constants.FIELDSEPARATOR, -1));
 
-        String transactionType;
-        transactionType = Main.variables.requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
-        logger.log(Level.DEBUG, "Request is of transaction type %s".formatted(transactionType));
-        switch (transactionType) {
+        Main.variables.transactionName = Main.variables.requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
+        logger.log(Level.DEBUG, "Request is of transaction type %s".formatted(Main.variables.transactionName));
+        switch (Main.variables.transactionName) {
             case Constants.RN_FUELPURCHASESALE:
                 break;
             case Constants.RN_FUELPURCHASECANCEL:

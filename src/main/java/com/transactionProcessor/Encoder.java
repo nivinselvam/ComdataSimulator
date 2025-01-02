@@ -31,7 +31,7 @@ public class Encoder {
         int requiredPadding = 0;
         String padding = "";
         String justfication = "left";
-        for (Map.Entry<String, TransactionFieldProperties> entry : Main.variables.preAuthEditProcessor.selectResponseType().entrySet()) {
+        for (Map.Entry<String, TransactionFieldProperties> entry : selectTransactionResponse().entrySet()) {
             if (entry.getValue().getName().equals(field)) {
                 requiredPadding = entry.getValue().getLength() - value.length();
                 padding = entry.getValue().getPaddingWith();
@@ -47,5 +47,30 @@ public class Encoder {
             }
         }
         return value;
+    }
+
+    private Map<String, TransactionFieldProperties> selectTransactionResponse(){
+        switch (Main.variables.transactionName) {
+            case Constants.RN_FUELPURCHASESALE:
+                break;
+            case Constants.RN_FUELPURCHASECANCEL:
+                break;
+            case Constants.RN_SETTLEMENT:
+                break;
+            case Constants.RN_EXPRESSCHECKENCASHMENT:
+                break;
+            case Constants.RN_CHECKAUTHORIZATIONUPDATECHECK:
+                break;
+            case Constants.RN_FUELPRICEUPDATE:
+                break;
+            case Constants.RN_PREAUTHEDIT:
+                return Main.variables.preAuthEditProcessor.selectResponseType();
+            case Constants.RN_FUELPURCHASEREQUESTFORCESALE:
+                break;
+            case Constants.RN_PREAUTHORIZATION:
+                return Main.variables.preAuthProcessor.selectResponseType();
+            default: throw new RuntimeException();
+        }
+        return Main.variables.defaultError.getResponse();
     }
 }

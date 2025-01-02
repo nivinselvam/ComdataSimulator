@@ -19,6 +19,7 @@ public class Variables {
     public TransactionPacketField transactionPacketField;
     public List<TransactionPacketField> responsePacketFields = new ArrayList<>();
     public String responsePacket;
+    public String transactionName;
     public List<String> exclusionFieldsList = new ArrayList<>(Arrays.asList("{", "/", "}"));
     public Header header;
     public DefaultError defaultError;
