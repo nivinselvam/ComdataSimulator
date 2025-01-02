@@ -1373,6 +1373,7 @@
     }
   },
   "errorResponse": {
+
     "openBracket": {
       "name": "Open Bracket",
       "type": "C",
@@ -1381,7 +1382,7 @@
       "presetOptions": [
         "{"
       ],
-      "defaultValue": "",
+      "defaultValue": "{",
       "justification": "left",
       "paddingWith": " "
     },
@@ -1436,9 +1437,9 @@
       "length": 5,
       "required": true,
       "presetOptions": [
-        "00007"
+        "00014"
       ],
-      "defaultValue": "00007",
+      "defaultValue": "00014",
       "justification": "left",
       "paddingWith": " "
     },
@@ -1478,15 +1479,525 @@
       "justification": "left",
       "paddingWith": " "
     },
-    "message": {
-      "name": "Message",
-      "type": "C",
-      "length": 99,
+    "maxPurchaseDollarLimit": {
+      "name": "Max Purchase Dollar Limit",
+      "type": "N",
+      "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "Error response configured.",
-      "justification": "left",
-      "paddingWith": " "
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseQuantityLimit": {
+      "name": "Max Purchase Quantity Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxCashAvailable": {
+      "name": "Max Cash Available",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "5000",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseOilDollarLimit": {
+      "name": "Max Purchase Oil Dollar Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "9000",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseOilQuantityLimit": {
+      "name": "Max Purchase Oil Quantity Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "1200",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseDiesel#2DollarLimit": {
+      "name": "Max Purchase Diesel #2 Dollar Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseDiesel#2QuantityLimit": {
+      "name": "Max Purchase Diesel #2 Quantity Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseReeferDollarLimit": {
+      "name": "Max Purchase Reefer Dollar Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseReeferQuantityLimit3": {
+      "name": "Max Purchase Reefer Quantity Limit3",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "2",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseOtherFuelDollarLimit": {
+      "name": "Max Purchase Other Fuel Dollar Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "3056",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseOtherFuelQuantityLimit": {
+      "name": "Max Purchase Other Fuel Quantity Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseComdataProductsDollarLimit": {
+      "name": "Max Purchase Comdata Products Dollar Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory1": {
+      "name": "Purchase Category1",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode1": {
+      "name": "Sub Product Code1",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit1": {
+      "name": "Max Dollar Limit1",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit1": {
+      "name": "Max Quantity Limit1",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory2": {
+      "name": "Purchase Category2",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode2": {
+      "name": "Sub Product Code2",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit2": {
+      "name": "Max Dollar Limit2",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit2": {
+      "name": "Max Quantity Limit2",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory3": {
+      "name": "Purchase Category3",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode3": {
+      "name": "Sub Product Code3",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit3": {
+      "name": "Max Dollar Limit3",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit3": {
+      "name": "Max Quantity Limit3",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory4": {
+      "name": "Purchase Category4",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode4": {
+      "name": "Sub Product Code4",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit4": {
+      "name": "Max Dollar Limit4",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit4": {
+      "name": "Max Quantity Limit4",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory5": {
+      "name": "Purchase Category5",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode5": {
+      "name": "Sub Product Code5",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit5": {
+      "name": "Max Dollar Limit5",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit5": {
+      "name": "Max Quantity Limit5",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory6": {
+      "name": "Purchase Category6",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode6": {
+      "name": "Sub Product Code6",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit6": {
+      "name": "Max Dollar Limit6",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit6": {
+      "name": "Max Quantity Limit6",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory7": {
+      "name": "Purchase Category7",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode7": {
+      "name": "Sub Product Code7",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit7": {
+      "name": "Max Dollar Limit7",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit7": {
+      "name": "Max Quantity Limit7",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory8": {
+      "name": "Purchase Category8",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode8": {
+      "name": "Sub Product Code8",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit8": {
+      "name": "Max Dollar Limit8",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit8": {
+      "name": "Max Quantity Limit8",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory9": {
+      "name": "Purchase Category9",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode9": {
+      "name": "Sub Product Code9",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit9": {
+      "name": "Max Dollar Limit9",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit9": {
+      "name": "Max Quantity Limit9",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "purchaseCategory10": {
+      "name": "Purchase Category10",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "20004",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "subProductCode10": {
+      "name": "Sub Product Code10",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "819",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxDollarLimit10": {
+      "name": "Max Dollar Limit10",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxQuantityLimit10": {
+      "name": "Max Quantity Limit10",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
     },
     "closeBracket": {
       "name": "Close Bracket",
@@ -1496,7 +2007,7 @@
       "presetOptions": [
         "}"
       ],
-      "defaultValue": "",
+      "defaultValue": "}",
       "justification": "left",
       "paddingWith": " "
     }
