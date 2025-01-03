@@ -50,6 +50,7 @@ public class ResponseGenerator {
         String transactionType = Main.variables.requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
         switch (transactionType) {
             case Constants.RN_FUELPURCHASESALE:
+                generateResponseFields(Constants.TRANSACTION_NAME_FUEL_PURCHASE_REQUEST, Main.variables.fuelPurchaseRequestProcessor.selectResponseType());
                 break;
             case Constants.RN_FUELPURCHASECANCEL:
                 break;

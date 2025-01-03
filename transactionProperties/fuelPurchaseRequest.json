@@ -1033,281 +1033,214 @@
       "justification": "left",
       "paddingWith": " "
     },
-    "driverNumberIndicator": {
-      "name": "Driver Number Indicator",
+    "fixedMessageHeader": {
+      "name": "Fixed Message Header",
       "type": "C",
-      "length": 1,
-      "required": true,
-      "presetOptions": [
-        "C",
-        "E",
-        "V",
-        "N",
-        "O",
-        "X"
-      ],
-      "defaultValue": "C",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "driverNumber": {
-      "name": "Driver Number",
-      "type": "C",
-      "length": 16,
-      "required": true,
-      "presetOptions": [
-        "#",
-        "@",
-        "*",
-        "letter or number"
-      ],
-      "defaultValue": "",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "trailerNumberIndicator": {
-      "name": "Trailer Number Indicator",
-      "type": "C",
-      "length": 1,
-      "required": true,
-      "presetOptions": [
-        "C",
-        "E",
-        "V",
-        "N",
-        "O",
-        "X"
-      ],
-      "defaultValue": "C",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "trailerNumber": {
-      "name": "Trailer Number",
-      "type": "C",
-      "length": 10,
+      "length": 18,
       "required": false,
-      "presetOptions": [
-        "#",
-        "@",
-        "*",
-        "letter or number"
-      ],
-      "defaultValue": "#",
+      "presetOptions": [],
+      "defaultValue": "OK: DRV. MSG...> ",
       "justification": "left",
       "paddingWith": " "
     },
-    "hubIndicator": {
-      "name": "Hub Indicator",
-      "type": "N",
+    "driverMessage": {
+      "name": "Driver Message",
+      "type": "C",
+      "length": 80,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "This is driver message.",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal1": {
+      "name": "Literal",
+      "type": "C",
       "length": 1,
-      "required": true,
-      "presetOptions": [
-        "C",
-        "N",
-        "R"
-      ],
-      "defaultValue": "C",
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": " ",
       "justification": "left",
       "paddingWith": " "
     },
-    "hubLowReading": {
-      "name": "Hub Low Reading",
+    "literal2": {
+      "name": "Literal",
+      "type": "C",
+      "length": 4,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "CTL#",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "controlNumber": {
+      "name": "Control Number",
       "type": "N",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "123456",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "bridge": {
+      "name": "Bridge",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": ["DB", "DBF", "RC", "RCF", " "],
+      "defaultValue": "DB",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "dollarSign": {
+      "name": "Dollar Sign",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": ["$"],
+      "defaultValue": "$",
+      "justification": "right",
+      "paddingWith": " "
+    },
+    "invoiceTotal": {
+      "name": "Invoice Total",
+      "type": "N",
+      "length": 9,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "9.99",
+      "justification": "right",
+      "paddingWith": " "
+    },
+    "literal3": {
+      "name": "Literal",
+      "type": "C",
       "length": 6,
       "required": false,
       "presetOptions": [],
-      "defaultValue": "",
+      "defaultValue": "TAX -",
       "justification": "left",
       "paddingWith": " "
     },
-    "hubHighReading": {
-      "name": "Hub High Reading",
+    "taxTotal": {
+      "name": "Tax Total",
       "type": "N",
+      "length": 8,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "9.99",
+      "justification": "right",
+      "paddingWith": " "
+    },
+    "literal4": {
+      "name": "Literal",
+      "type": "C",
       "length": 6,
       "required": false,
       "presetOptions": [],
-      "defaultValue": "",
+      "defaultValue": "CUST:",
       "justification": "left",
       "paddingWith": " "
     },
-    "trailerHubIndicator": {
-      "name": "Tailer Hub Indicator",
+    "customerName": {
+      "name": "Customer Name",
       "type": "C",
-      "length": 1,
-      "required": true,
-      "presetOptions": [
-        "C",
-        "N"
-      ],
-      "defaultValue": "C",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "trailerHoursIndicator": {
-      "name": "Trailer Hours Indicator",
-      "type": "C",
-      "length": 1,
-      "required": true,
-      "presetOptions": [
-        "C",
-        "E",
-        "V",
-        "N",
-        "O",
-        "X"
-      ],
-      "defaultValue": "C",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "tripNumberIndicator": {
-      "name": "Trip Number Indicator",
-      "type": "C",
-      "length": 1,
-      "required": true,
-      "presetOptions": [
-        "C",
-        "E",
-        "V",
-        "N",
-        "O",
-        "X"
-      ],
-      "defaultValue": "C",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "tripNumberMaxLength": {
-      "name": "Trip Number Max Length",
-      "type": "N",
-      "length": 2,
+      "length": 25,
       "required": false,
       "presetOptions": [],
-      "defaultValue": "",
+      "defaultValue": "Test Customer name",
       "justification": "left",
       "paddingWith": " "
     },
-    "tripNumber": {
-      "name": "Trip Number",
-      "type": "C",
-      "length": 10,
-      "required": false,
-      "presetOptions": [
-        "#",
-        "@",
-        "*",
-        "letter or number"
-      ],
-      "defaultValue": "",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "dlNumberIndicator": {
-      "name": "DL Number Indicator",
-      "type": "C",
-      "length": 1,
-      "required": true,
-      "presetOptions": [
-        "C",
-        "E",
-        "V",
-        "N",
-        "O",
-        "X"
-      ],
-      "defaultValue": "C",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "dlNumber": {
-      "name": "DL Number",
-      "type": "C",
-      "length": 20,
-      "required": false,
-      "presetOptions": [
-        "#",
-        "@",
-        "*",
-        "letter or number"
-      ],
-      "defaultValue": "",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "dlState": {
-      "name": "DL State",
-      "type": "C",
-      "length": 2,
-      "required": false,
-      "presetOptions": [
-        "#",
-        "@",
-        "*",
-        "letter or number"
-      ],
-      "defaultValue": "",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "poNumberIndicator": {
-      "name": "PO Number Indicator",
-      "type": "C",
-      "length": 1,
-      "required": true,
-      "presetOptions": [
-        "C",
-        "E",
-        "V",
-        "N",
-        "O",
-        "X"
-      ],
-      "defaultValue": "C",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "poNumber": {
-      "name": "PO Number",
-      "type": "C",
-      "length": 10,
-      "required": true,
-      "presetOptions": [],
-      "defaultValue": "",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "lastName": {
-      "name": "Last Name",
-      "type": "C",
-      "length": 20,
-      "required": true,
-      "presetOptions": [],
-      "defaultValue": "QATESTONE",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "firstName": {
-      "name": "First Name",
+    "customerCity": {
+      "name": "Customer City",
       "type": "C",
       "length": 15,
-      "required": true,
+      "required": false,
       "presetOptions": [],
-      "defaultValue": "GKSOFTWARE",
+      "defaultValue": "Test City",
       "justification": "left",
       "paddingWith": " "
     },
-    "customerSpecificFlag": {
-      "name": "Customer Specific Flag",
+    "customerState": {
+      "name": "Customer State",
       "type": "C",
-      "length": 1,
-      "required": true,
-      "presetOptions": [
-        "Y",
-        "N"
-      ],
-      "defaultValue": "N",
+      "length": 2,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "ST",
       "justification": "left",
+      "paddingWith": " "
+    },
+    "customerID": {
+      "name": "Customer ID",
+      "type": "C",
+      "length": 5,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal5": {
+      "name": "Literal",
+      "type": "C",
+      "length": 5,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": " ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal6": {
+      "name": "Literal",
+      "type": "C",
+      "length": 2,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": " ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal7": {
+      "name": "Literal",
+      "type": "C",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "DATE:",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "variable": {
+      "name": "Variable",
+      "type": "C",
+      "length": 10,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "YYYY-MM-DD",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal8": {
+      "name": "Literal",
+      "type": "C",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "SUR -",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "merchantSurcharge": {
+      "name": "Merchant Surcharge",
+      "type": "C",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "9.99",
+      "justification": "right",
       "paddingWith": " "
     },
     "closeBracket": {

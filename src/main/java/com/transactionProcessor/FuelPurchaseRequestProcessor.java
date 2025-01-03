@@ -18,10 +18,10 @@ public class FuelPurchaseRequestProcessor {
         logger.log(Level.DEBUG, "Selecting the response based on the configuration");
         if (Main.simulatorProperties.getFuelPurchaseRequestResponse().equals(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER)) {
             logger.log(Level.DEBUG, "Processing Approval response as configured.");
-            Main.variables.configuredTransactionResponse = Main.variables.preAuth.getResponse();
-        } else if (Main.simulatorProperties.getPreAuthResponse().equals(Constants.RESPONSE_TYPE_ERROR_RESPONSE)) {
+            Main.variables.configuredTransactionResponse = Main.variables.fuelPurchaseRequest.getTruckStopServiceCenterResponse();
+        } else if (Main.simulatorProperties.getFuelPurchaseRequestResponse().equals(Constants.RESPONSE_TYPE_ERROR_RESPONSE)) {
             logger.log(Level.DEBUG, "Processing error response as configured.");
-            Main.variables.configuredTransactionResponse = Main.variables.preAuth.getErrorResponse();
+            Main.variables.configuredTransactionResponse = Main.variables.fuelPurchaseRequest.getErrorResponse();
         } else {
             Main.variables.configuredTransactionResponse = null;
         }
