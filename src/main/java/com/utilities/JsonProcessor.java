@@ -6,10 +6,7 @@ import com.properties.SimulatorProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 
-import com.transactiondetails.DefaultError;
-import com.transactiondetails.Header;
-import com.transactiondetails.PreAuth;
-import com.transactiondetails.PreAuthEdit;
+import com.transactiondetails.*;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -78,6 +75,18 @@ public class JsonProcessor {
             Main.variables.preAuth = objectMapper.readValue(preAuthJsonFile, PreAuth.class);
         } catch (IOException e) {
             logger.log(Level.ERROR, "Unable to load the pre auth properties due to error "+e.toString());
+        }
+    }
+
+    public void loadFuelPurchaseRequestProperties() {
+        logger.log(Level.DEBUG, "Trying to open the fuelPurchaseRequest.json file");
+        File fuelPurchaseRequestJsonFile = new File(Constants.PATH_FUEL_PURCHASE_REQUEST_PROPERTIES);
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            logger.log(Level.DEBUG, "Converting the fuel purchase request json into Java object");
+            Main.variables.fuelPurchaseRequest = objectMapper.readValue(fuelPurchaseRequestJsonFile, FuelPurchaseRequest.class);
+        } catch (IOException e) {
+            logger.log(Level.ERROR, "Unable to load the fuel purchase request properties due to error "+e.toString());
         }
     }
 

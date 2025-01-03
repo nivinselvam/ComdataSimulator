@@ -2,6 +2,7 @@ package com.base;
 
 
 import com.socketprocessor.ServerInitializer;
+import com.transactionProcessor.FuelPurchaseRequestProcessor;
 import com.transactionProcessor.PreAuthProcessor;
 import com.transactiondetails.*;
 import com.transactionProcessor.PreAuthEditProcessor;
@@ -25,6 +26,8 @@ public class Variables {
     public DefaultError defaultError;
     public PreAuthEdit preAuthEdit;
     public PreAuth preAuth;
+    public FuelPurchaseRequest fuelPurchaseRequest;
     public PreAuthEditProcessor preAuthEditProcessor = new PreAuthEditProcessor();
     public PreAuthProcessor preAuthProcessor = new PreAuthProcessor();
+    public FuelPurchaseRequestProcessor fuelPurchaseRequestProcessor = new FuelPurchaseRequestProcessor();
 }

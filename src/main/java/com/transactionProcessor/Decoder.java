@@ -27,6 +27,7 @@ public class Decoder {
         logger.log(Level.DEBUG, "Request is of transaction type %s".formatted(Main.variables.transactionName));
         switch (Main.variables.transactionName) {
             case Constants.RN_FUELPURCHASESALE:
+                processTransactionBody(Constants.TRANSACTION_NAME_FUEL_PURCHASE_REQUEST, Main.variables.fuelPurchaseRequest.getRequest());
                 break;
             case Constants.RN_FUELPURCHASECANCEL:
                 break;

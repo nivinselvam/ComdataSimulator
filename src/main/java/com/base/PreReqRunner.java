@@ -36,6 +36,7 @@ public class PreReqRunner {
         jsonProcessor.loadHeaderProperties();
         jsonProcessor.loadPreAuthEditProperties();
         jsonProcessor.loadPreAuthProperties();
+        jsonProcessor.loadFuelPurchaseRequestProperties();
     }
 
 

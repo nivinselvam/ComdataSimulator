@@ -1,5 +1,6 @@
 {
   "portNumber": "15031",
   "preAuthEditResponse": "response",
-  "preAuthResponse": "response"
+  "preAuthResponse": "response",
+  "fuelPurchaseRequestResponse": "truckStopServiceCenterResponse"
 }
