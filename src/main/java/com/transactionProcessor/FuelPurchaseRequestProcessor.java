@@ -17,8 +17,11 @@ public class FuelPurchaseRequestProcessor {
     public Map<String, TransactionFieldProperties> selectResponseType() {
         logger.log(Level.DEBUG, "Selecting the response based on the configuration");
         if (Main.simulatorProperties.getFuelPurchaseRequestResponse().equals(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER)) {
-            logger.log(Level.DEBUG, "Processing Approval response as configured.");
+            logger.log(Level.DEBUG, "Processing %s Approval response as configured.".formatted(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER));
             Main.variables.configuredTransactionResponse = Main.variables.fuelPurchaseRequest.getTruckStopServiceCenterResponse();
+        } else if (Main.simulatorProperties.getFuelPurchaseRequestResponse().equals(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER_DUPLICATE_AUTH)) {
+            logger.log(Level.DEBUG, "Processing %s Approval response as configured.".formatted(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER_DUPLICATE_AUTH));
+            Main.variables.configuredTransactionResponse = Main.variables.fuelPurchaseRequest.getTruckStopServiceCenterDuplicateAuthResponse();
         } else if (Main.simulatorProperties.getFuelPurchaseRequestResponse().equals(Constants.RESPONSE_TYPE_ERROR_RESPONSE)) {
             logger.log(Level.DEBUG, "Processing error response as configured.");
             Main.variables.configuredTransactionResponse = Main.variables.fuelPurchaseRequest.getErrorResponse();

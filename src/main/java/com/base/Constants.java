@@ -80,5 +80,6 @@ public class Constants {
     public static final String RESPONSE_TYPE_RESPONSE = "response";
     public static final String RESPONSE_TYPE_ERROR_RESPONSE = "errorResponse";
     public static final String RESPONSE_TRUCK_STOP_SERVICE_CENTER = "truckStopServiceCenterResponse";
+    public static final String RESPONSE_TRUCK_STOP_SERVICE_CENTER_DUPLICATE_AUTH = "truckStopServiceCenterDuplicateAuthResponse";
 
 }

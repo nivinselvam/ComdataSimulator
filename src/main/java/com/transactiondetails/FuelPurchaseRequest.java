@@ -5,6 +5,7 @@ import java.util.Map;
 public class FuelPurchaseRequest {
     private Map<String, TransactionFieldProperties> request;
     private Map<String, TransactionFieldProperties> truckStopServiceCenterResponse;
+    private Map<String, TransactionFieldProperties> truckStopServiceCenterDuplicateAuthResponse;
     private Map<String, TransactionFieldProperties> errorResponse;
 
     // Getters and Setters
@@ -23,6 +24,14 @@ public class FuelPurchaseRequest {
 
     public void setTruckStopServiceCenterResponse(Map<String, TransactionFieldProperties> truckStopServiceCenterResponse) {
         this.truckStopServiceCenterResponse = truckStopServiceCenterResponse;
+    }
+
+    public Map<String, TransactionFieldProperties> getTruckStopServiceCenterDuplicateAuthResponse() {
+        return truckStopServiceCenterDuplicateAuthResponse;
+    }
+
+    public void setTruckStopServiceCenterDuplicateAuthResponse(Map<String, TransactionFieldProperties> truckStopServiceCenterDuplicateAuthResponse) {
+        this.truckStopServiceCenterDuplicateAuthResponse = truckStopServiceCenterDuplicateAuthResponse;
     }
 
     public Map<String, TransactionFieldProperties> getErrorResponse() {
