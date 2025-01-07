@@ -28,4 +28,35 @@ public class PreAuthEditProcessor {
         return Main.variables.configuredTransactionResponse;
     }
 
+    public void generateResponseFields(String transactionType, Map<String, TransactionFieldProperties> transactionProperties) {
+        logger.log(Level.DEBUG, "Starting to generate the response fields for %s".formatted(transactionType));
+        String currentField = "";
+        String currentFieldValue = "";
+        for (Map.Entry<String, TransactionFieldProperties> entry : transactionProperties.entrySet()) {
+            currentField = entry.getValue().getName();
+            if (entry.getValue().isRequired()) {
+                try {
+                    if (Main.variables.requestPacketFields.containsKey(currentField)) {
+                        logger.log(Level.DEBUG, "Adding value from the request packet for %s".formatted(currentField));
+                        currentFieldValue = Main.variables.requestPacketFields.get(currentField);
+                    } else {
+                        logger.log(Level.DEBUG, "Adding value from the user configuration for %s".formatted(currentField));
+                        currentFieldValue = entry.getValue().getDefaultValue();
+                    }
+                } catch (Exception e) {
+                    currentFieldValue = entry.getValue().getDefaultValue();
+                }
+                Main.variables.transactionPacketField = new TransactionPacketField();
+                Main.variables.transactionPacketField.setFieldName(currentField);
+                Main.variables.transactionPacketField.setFieldValue(currentFieldValue);
+                Main.variables.responsePacketFields.add(Main.variables.transactionPacketField);
+                logger.log(Level.DEBUG, "%s with value %s is added to the response packet fields map".formatted(currentField, currentFieldValue));
+
+            } else {
+                logger.log(Level.DEBUG, "%s is not required for this transaction as per configuration.".formatted(currentField));
+            }
+
+        }
+    }
+
 }
