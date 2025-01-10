@@ -18,17 +18,17 @@ public class FuelPurchaseRequestProcessor {
         logger.log(Level.DEBUG, "Selecting the response based on the configuration");
         if (Main.simulatorProperties.getFuelPurchaseRequestResponse().equals(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER)) {
             logger.log(Level.DEBUG, "Processing %s Approval response as configured.".formatted(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER));
-            Main.variables.configuredTransactionResponse = Main.variables.fuelPurchaseRequest.getTruckStopServiceCenterResponse();
+            Main.processVariables.configuredTransactionResponse = Main.processVariables.fuelPurchaseRequest.getTruckStopServiceCenterResponse();
         } else if (Main.simulatorProperties.getFuelPurchaseRequestResponse().equals(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER_DUPLICATE_AUTH)) {
             logger.log(Level.DEBUG, "Processing %s Approval response as configured.".formatted(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER_DUPLICATE_AUTH));
-            Main.variables.configuredTransactionResponse = Main.variables.fuelPurchaseRequest.getTruckStopServiceCenterDuplicateAuthResponse();
+            Main.processVariables.configuredTransactionResponse = Main.processVariables.fuelPurchaseRequest.getTruckStopServiceCenterDuplicateAuthResponse();
         } else if (Main.simulatorProperties.getFuelPurchaseRequestResponse().equals(Constants.RESPONSE_TYPE_ERROR_RESPONSE)) {
             logger.log(Level.DEBUG, "Processing error response as configured.");
-            Main.variables.configuredTransactionResponse = Main.variables.fuelPurchaseRequest.getErrorResponse();
+            Main.processVariables.configuredTransactionResponse = Main.processVariables.fuelPurchaseRequest.getErrorResponse();
         } else {
-            Main.variables.configuredTransactionResponse = null;
+            Main.processVariables.configuredTransactionResponse = null;
         }
-        return Main.variables.configuredTransactionResponse;
+        return Main.processVariables.configuredTransactionResponse;
     }
 
     public void generateResponseFields(String transactionType, Map<String, TransactionFieldProperties> transactionProperties) {
@@ -39,9 +39,9 @@ public class FuelPurchaseRequestProcessor {
             currentField = entry.getValue().getName();
             if (entry.getValue().isRequired()) {
                 try {
-                    if (Main.variables.requestPacketFields.containsKey(currentField)) {
+                    if (Main.processVariables.requestPacketFields.containsKey(currentField)) {
                         logger.log(Level.DEBUG, "Adding value from the request packet for %s".formatted(currentField));
-                        currentFieldValue = Main.variables.requestPacketFields.get(currentField);
+                        currentFieldValue = Main.processVariables.requestPacketFields.get(currentField);
                     } else {
                         logger.log(Level.DEBUG, "Adding value from the user configuration for %s".formatted(currentField));
                         currentFieldValue = entry.getValue().getDefaultValue();
@@ -49,10 +49,10 @@ public class FuelPurchaseRequestProcessor {
                 } catch (Exception e) {
                     currentFieldValue = entry.getValue().getDefaultValue();
                 }
-                Main.variables.transactionPacketField = new TransactionPacketField();
-                Main.variables.transactionPacketField.setFieldName(currentField);
-                Main.variables.transactionPacketField.setFieldValue(currentFieldValue);
-                Main.variables.responsePacketFields.add(Main.variables.transactionPacketField);
+                Main.processVariables.transactionPacketField = new TransactionPacketField();
+                Main.processVariables.transactionPacketField.setFieldName(currentField);
+                Main.processVariables.transactionPacketField.setFieldValue(currentFieldValue);
+                Main.processVariables.responsePacketFields.add(Main.processVariables.transactionPacketField);
                 logger.log(Level.DEBUG, "%s with value %s is added to the response packet fields map".formatted(currentField, currentFieldValue));
 
             } else {

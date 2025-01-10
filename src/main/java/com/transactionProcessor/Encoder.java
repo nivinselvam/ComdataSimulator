@@ -14,17 +14,17 @@ public class Encoder {
 
     public void encodeResponse() {
         logger.log(Level.DEBUG, "Encoding the response packet");
-        Main.variables.responsePacket = "";
+        Main.processVariables.responsePacket = "";
         String currentField = "";
         String currentValue = "";
-        for (TransactionPacketField transactionField : Main.variables.responsePacketFields) {
+        for (TransactionPacketField transactionField : Main.processVariables.responsePacketFields) {
             currentField = transactionField.getFieldName();
             currentValue = transactionField.getFieldValue();
             currentValue = addPadding(currentField, currentValue);
-            Main.variables.responsePacket = Main.variables.responsePacket + currentValue;
+            Main.processVariables.responsePacket = Main.processVariables.responsePacket + currentValue;
             logger.log(Level.DEBUG, "%s with value %s added to the response packet to be encoded".formatted(currentField, currentValue));
         }
-        logger.log(Level.DEBUG, Main.variables.responsePacket);
+        logger.log(Level.DEBUG, Main.processVariables.responsePacket);
     }
 
     private String addPadding(String field, String value) {
@@ -50,9 +50,9 @@ public class Encoder {
     }
 
     private Map<String, TransactionFieldProperties> selectTransactionResponse(){
-        switch (Main.variables.transactionName) {
+        switch (Main.processVariables.transactionName) {
             case Constants.RN_FUELPURCHASESALE:
-                return Main.variables.fuelPurchaseRequestProcessor.selectResponseType();
+                return Main.processVariables.fuelPurchaseRequestProcessor.selectResponseType();
             case Constants.RN_FUELPURCHASECANCEL:
                 break;
             case Constants.RN_SETTLEMENT:
@@ -64,13 +64,13 @@ public class Encoder {
             case Constants.RN_FUELPRICEUPDATE:
                 break;
             case Constants.RN_PREAUTHEDIT:
-                return Main.variables.preAuthEditProcessor.selectResponseType();
+                return Main.processVariables.preAuthEditProcessor.selectResponseType();
             case Constants.RN_FUELPURCHASEREQUESTFORCESALE:
                 break;
             case Constants.RN_PREAUTHORIZATION:
-                return Main.variables.preAuthProcessor.selectResponseType();
+                return Main.processVariables.preAuthProcessor.selectResponseType();
             default: throw new RuntimeException();
         }
-        return Main.variables.defaultError.getResponse();
+        return Main.processVariables.defaultError.getResponse();
     }
 }

@@ -18,14 +18,14 @@ public class PreAuthProcessor {
         logger.log(Level.DEBUG, "Selecting the response based on the configuration");
         if (Main.simulatorProperties.getPreAuthResponse().equals(Constants.RESPONSE_TYPE_RESPONSE)) {
             logger.log(Level.DEBUG, "Processing Approval response as configured.");
-            Main.variables.configuredTransactionResponse = Main.variables.preAuth.getResponse();
+            Main.processVariables.configuredTransactionResponse = Main.processVariables.preAuth.getResponse();
         } else if (Main.simulatorProperties.getPreAuthResponse().equals(Constants.RESPONSE_TYPE_ERROR_RESPONSE)) {
             logger.log(Level.DEBUG, "Processing error response as configured.");
-            Main.variables.configuredTransactionResponse = Main.variables.preAuth.getErrorResponse();
+            Main.processVariables.configuredTransactionResponse = Main.processVariables.preAuth.getErrorResponse();
         } else {
-            Main.variables.configuredTransactionResponse = null;
+            Main.processVariables.configuredTransactionResponse = null;
         }
-        return Main.variables.configuredTransactionResponse;
+        return Main.processVariables.configuredTransactionResponse;
     }
 
     public void generateResponseFields(String transactionType, Map<String, TransactionFieldProperties> transactionProperties) {
@@ -36,9 +36,9 @@ public class PreAuthProcessor {
             currentField = entry.getValue().getName();
             if (entry.getValue().isRequired()) {
                 try {
-                    if (Main.variables.requestPacketFields.containsKey(currentField)) {
+                    if (Main.processVariables.requestPacketFields.containsKey(currentField)) {
                         logger.log(Level.DEBUG, "Adding value from the request packet for %s".formatted(currentField));
-                        currentFieldValue = Main.variables.requestPacketFields.get(currentField);
+                        currentFieldValue = Main.processVariables.requestPacketFields.get(currentField);
                     } else {
                         logger.log(Level.DEBUG, "Adding value from the user configuration for %s".formatted(currentField));
                         currentFieldValue = entry.getValue().getDefaultValue();
@@ -46,10 +46,10 @@ public class PreAuthProcessor {
                 } catch (Exception e) {
                     currentFieldValue = entry.getValue().getDefaultValue();
                 }
-                Main.variables.transactionPacketField = new TransactionPacketField();
-                Main.variables.transactionPacketField.setFieldName(currentField);
-                Main.variables.transactionPacketField.setFieldValue(currentFieldValue);
-                Main.variables.responsePacketFields.add(Main.variables.transactionPacketField);
+                Main.processVariables.transactionPacketField = new TransactionPacketField();
+                Main.processVariables.transactionPacketField.setFieldName(currentField);
+                Main.processVariables.transactionPacketField.setFieldValue(currentFieldValue);
+                Main.processVariables.responsePacketFields.add(Main.processVariables.transactionPacketField);
                 logger.log(Level.DEBUG, "%s with value %s is added to the response packet fields map".formatted(currentField, currentFieldValue));
 
             } else {

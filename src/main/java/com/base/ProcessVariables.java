@@ -9,9 +9,8 @@ import com.transactiondetails.*;
 import java.net.ServerSocket;
 import java.util.*;
 
-public class Variables {
+public class ProcessVariables {
     public ServerInitializer server;
-    public ServerSocket serverSocket;
     public Map<String, String> requestPacketFields = new LinkedHashMap<String, String>();
     public Map<String, TransactionFieldProperties> configuredTransactionResponse;
     public TransactionPacketField transactionPacketField;

@@ -2,7 +2,6 @@ package com.transactionProcessor;
 
 import com.base.Constants;
 import com.base.Main;
-import com.transactiondetails.TransactionFieldProperties;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,16 +25,16 @@ public class ResponseGenerator {
             Decoder decoder = new Decoder();
             decoder.decodeRequestPacket(requestPacket);
             logger.log(Level.INFO, "Request Packet");
-            for (Map.Entry<String, String> entry : Main.variables.requestPacketFields.entrySet()) {
-                if (!Main.variables.exclusionFieldsList.contains(entry.getValue())) {
+            for (Map.Entry<String, String> entry : Main.processVariables.requestPacketFields.entrySet()) {
+                if (!Main.processVariables.exclusionFieldsList.contains(entry.getValue())) {
                     logger.log(Level.INFO, "%s  :   %s".formatted(entry.getKey(), entry.getValue()));
                 }
             }
             processBasedOnTransaction();
 
             logger.log(Level.INFO, "Response Packet");
-            for (TransactionPacketField currentTransactionField : Main.variables.responsePacketFields) {
-                if (!Main.variables.exclusionFieldsList.contains(currentTransactionField.getFieldValue())) {
+            for (TransactionPacketField currentTransactionField : Main.processVariables.responsePacketFields) {
+                if (!Main.processVariables.exclusionFieldsList.contains(currentTransactionField.getFieldValue())) {
                     logger.log(Level.INFO, "%s  :   %s".formatted(currentTransactionField.getFieldName(), currentTransactionField.getFieldValue()));
                 }
             }
@@ -43,10 +42,10 @@ public class ResponseGenerator {
             encoder.encodeResponse();
 
         } catch (Exception e) {
-            Main.variables.defaultErrorProcessor.generateResponseFields(Constants.TRANSACTION_NAME_DEFAULTERROR, Main.variables.defaultError.getResponse());
+            Main.processVariables.defaultErrorProcessor.generateResponseFields(Constants.TRANSACTION_NAME_DEFAULTERROR, Main.processVariables.defaultError.getResponse());
             logger.log(Level.INFO, "Response Packet");
-            for (TransactionPacketField currentTransactionField : Main.variables.responsePacketFields) {
-                if (!Main.variables.exclusionFieldsList.contains(currentTransactionField.getFieldValue())) {
+            for (TransactionPacketField currentTransactionField : Main.processVariables.responsePacketFields) {
+                if (!Main.processVariables.exclusionFieldsList.contains(currentTransactionField.getFieldValue())) {
                     logger.log(Level.INFO, "%s  :   %s".formatted(currentTransactionField.getFieldName(), currentTransactionField.getFieldValue()));
                 }
             }
@@ -55,10 +54,10 @@ public class ResponseGenerator {
     }
 
     private void processBasedOnTransaction() {
-        String transactionType = Main.variables.requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
+        String transactionType = Main.processVariables.requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
         switch (transactionType) {
             case Constants.RN_FUELPURCHASESALE:
-                Main.variables.fuelPurchaseRequestProcessor.generateResponseFields(Constants.TRANSACTION_NAME_FUEL_PURCHASE_REQUEST, Main.variables.fuelPurchaseRequestProcessor.selectResponseType());
+                Main.processVariables.fuelPurchaseRequestProcessor.generateResponseFields(Constants.TRANSACTION_NAME_FUEL_PURCHASE_REQUEST, Main.processVariables.fuelPurchaseRequestProcessor.selectResponseType());
                 break;
             case Constants.RN_FUELPURCHASECANCEL:
                 break;
@@ -71,15 +70,15 @@ public class ResponseGenerator {
             case Constants.RN_FUELPRICEUPDATE:
                 break;
             case Constants.RN_PREAUTHEDIT:
-                Main.variables.preAuthEditProcessor.generateResponseFields(Constants.TRANSACTION_NAME_PREAUTHEDIT, Main.variables.preAuthEditProcessor.selectResponseType());
+                Main.processVariables.preAuthEditProcessor.generateResponseFields(Constants.TRANSACTION_NAME_PREAUTHEDIT, Main.processVariables.preAuthEditProcessor.selectResponseType());
                 break;
             case Constants.RN_FUELPURCHASEREQUESTFORCESALE:
                 break;
             case Constants.RN_PREAUTHORIZATION:
-                Main.variables.preAuthProcessor.generateResponseFields(Constants.TRANSACTION_NAME_PREAUTH, Main.variables.preAuthProcessor.selectResponseType());
+                Main.processVariables.preAuthProcessor.generateResponseFields(Constants.TRANSACTION_NAME_PREAUTH, Main.processVariables.preAuthProcessor.selectResponseType());
                 break;
             default:
-                Main.variables.defaultErrorProcessor.generateResponseFields(Constants.TRANSACTION_NAME_DEFAULTERROR, Main.variables.defaultError.getResponse());
+                Main.processVariables.defaultErrorProcessor.generateResponseFields(Constants.TRANSACTION_NAME_DEFAULTERROR, Main.processVariables.defaultError.getResponse());
         }
     }
 

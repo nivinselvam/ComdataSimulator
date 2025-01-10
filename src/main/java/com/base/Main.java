@@ -1,7 +1,6 @@
 package com.base;
 
 import com.properties.SimulatorProperties;
-import com.socketprocessor.ServerInitializer;
 import com.transactionProcessor.ResponseGenerator;
 import com.utilities.Converter;
 import org.apache.logging.log4j.Level;
@@ -15,7 +14,7 @@ public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
     public static Converter converter = new Converter();
     public static SimulatorProperties simulatorProperties;
-    public static Variables variables = new Variables();
+    public static ProcessVariables processVariables = new ProcessVariables();
 
 
     public static void main(String[] args) {

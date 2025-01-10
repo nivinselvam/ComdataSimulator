@@ -1,7 +1,6 @@
 package com.transactionProcessor;
 
 
-import com.base.Constants;
 import com.base.Main;
 import com.transactiondetails.TransactionFieldProperties;
 import org.apache.logging.log4j.Level;
@@ -16,7 +15,7 @@ public class DefaultErrorProcessor {
 
     public Map<String, TransactionFieldProperties> selectResponseType() {
         logger.log(Level.DEBUG, "Selecting the response based on the configuration");
-        return Main.variables.defaultError.getResponse();
+        return Main.processVariables.defaultError.getResponse();
     }
 
     public void generateResponseFields(String transactionType, Map<String, TransactionFieldProperties> transactionProperties) {
@@ -27,9 +26,9 @@ public class DefaultErrorProcessor {
             currentField = entry.getValue().getName();
             if (entry.getValue().isRequired()) {
                 try {
-                    if (Main.variables.requestPacketFields.containsKey(currentField)) {
+                    if (Main.processVariables.requestPacketFields.containsKey(currentField)) {
                         logger.log(Level.DEBUG, "Adding value from the request packet for %s".formatted(currentField));
-                        currentFieldValue = Main.variables.requestPacketFields.get(currentField);
+                        currentFieldValue = Main.processVariables.requestPacketFields.get(currentField);
                     } else {
                         logger.log(Level.DEBUG, "Adding value from the user configuration for %s".formatted(currentField));
                         currentFieldValue = entry.getValue().getDefaultValue();
@@ -37,10 +36,10 @@ public class DefaultErrorProcessor {
                 } catch (Exception e) {
                     currentFieldValue = entry.getValue().getDefaultValue();
                 }
-                Main.variables.transactionPacketField = new TransactionPacketField();
-                Main.variables.transactionPacketField.setFieldName(currentField);
-                Main.variables.transactionPacketField.setFieldValue(currentFieldValue);
-                Main.variables.responsePacketFields.add(Main.variables.transactionPacketField);
+                Main.processVariables.transactionPacketField = new TransactionPacketField();
+                Main.processVariables.transactionPacketField.setFieldName(currentField);
+                Main.processVariables.transactionPacketField.setFieldValue(currentFieldValue);
+                Main.processVariables.responsePacketFields.add(Main.processVariables.transactionPacketField);
                 logger.log(Level.DEBUG, "%s with value %s is added to the response packet fields map".formatted(currentField, currentFieldValue));
 
             } else {
