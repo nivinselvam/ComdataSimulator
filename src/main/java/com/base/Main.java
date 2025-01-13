@@ -1,6 +1,7 @@
 package com.base;
 
 import com.properties.SimulatorProperties;
+import com.socketprocessor.ServerInitializer;
 import com.transactionProcessor.ResponseGenerator;
 import com.utilities.Converter;
 import org.apache.logging.log4j.Level;
@@ -23,12 +24,12 @@ public class Main {
         preReqRunner.configureLoggerFilePath();
         preReqRunner.loadUserConfigurations();
 
-        String request = "{EX777 TCPISP00007/00036/A5600171620532277=49121201271/22}";
-        ResponseGenerator responseGenerator = new ResponseGenerator(request);
-        responseGenerator.generateResponse();
+//        String request = "{EX777 TCPISP00007/00036/A5600171620532277=49121201271/22}";
+//        ResponseGenerator responseGenerator = new ResponseGenerator(request);
+//        responseGenerator.generateResponse();
 
-//        variables.server = new ServerInitializer();
-//        variables.server.start();
+        ServerInitializer server = new ServerInitializer();
+        server.start();
 
     }
 

@@ -20,12 +20,12 @@ public class ServerInitializer extends Thread {
     @Override
     public void run() {
         try {
-            serverSocket = new ServerSocket(Main.simulatorProperties.getPortNumber());
+            ServerSocket serverSocket = new ServerSocket(Main.simulatorProperties.getPortNumber());
             logger.log(Level.INFO, "Server started on the port number "+ Main.simulatorProperties.getPortNumber());
             logger.log(Level.INFO,"Waiting for client to connect...");
             while (true) {
                 Socket socket = serverSocket.accept();
-                clientHandler = new ClientHandler(socket);
+                ClientHandler clientHandler = new ClientHandler(socket);
                 clientHandler.start();
             }
         } catch (BindException e) {
