@@ -1,12 +1,10 @@
 package com.base;
 
 
-import com.socketprocessor.ServerInitializer;
 import com.transactionProcessor.*;
 import com.transactiondetails.*;
 
 
-import java.net.ServerSocket;
 import java.util.*;
 
 public class ProcessVariables {
@@ -15,7 +13,7 @@ public class ProcessVariables {
     public TransactionPacketField transactionPacketField;
     public List<TransactionPacketField> responsePacketFields = new ArrayList<>();
     public String responsePacket;
-    public String transactionName;
+    public String transactionType;
     public String errorMessage = "Error message configured";
     public List<String> exclusionFieldsList = new ArrayList<>(Arrays.asList("{", "/", "}"));
     public Header header;

@@ -6,26 +6,28 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 
 public class ResponseGenerator {
     private static final Logger logger = LogManager.getLogger(ResponseGenerator.class);
-    private String requestPacket;
+    private String requestPacketString;
+    private Map<String, String> requestPacketFields = new LinkedHashMap<String, String>();
 
 
-    public ResponseGenerator(String requestPacket) {
-        this.requestPacket = requestPacket;
+    public ResponseGenerator(String requestPacketString) {
+        this.requestPacketString = requestPacketString;
     }
 
     public void generateResponse() {
         try {
             logger.log(Level.DEBUG, "Processing the below transaction packet");
-            logger.log(Level.DEBUG, requestPacket);
+            logger.log(Level.DEBUG, requestPacketString);
             Decoder decoder = new Decoder();
-            decoder.decodeRequestPacket(requestPacket);
+            requestPacketFields = decoder.decodeRequestPacket(requestPacketString);
             logger.log(Level.INFO, "Request Packet");
-            for (Map.Entry<String, String> entry : Main.processVariables.requestPacketFields.entrySet()) {
+            for (Map.Entry<String, String> entry : requestPacketFields.entrySet()) {
                 if (!Main.processVariables.exclusionFieldsList.contains(entry.getValue())) {
                     logger.log(Level.INFO, "%s  :   %s".formatted(entry.getKey(), entry.getValue()));
                 }
@@ -54,7 +56,7 @@ public class ResponseGenerator {
     }
 
     private void processBasedOnTransaction() {
-        String transactionType = Main.processVariables.requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
+        String transactionType = requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
         switch (transactionType) {
             case Constants.RN_FUELPURCHASESALE:
                 Main.processVariables.fuelPurchaseRequestProcessor.generateResponseFields(Constants.TRANSACTION_NAME_FUEL_PURCHASE_REQUEST, Main.processVariables.fuelPurchaseRequestProcessor.selectResponseType());

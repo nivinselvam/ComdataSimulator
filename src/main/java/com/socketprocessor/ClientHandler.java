@@ -37,7 +37,6 @@ public class ClientHandler extends Thread {
             logger.log(Level.INFO, "                       Start of Transaction                          ");
             logger.log(Level.INFO, "---------------------------------------------------------------------");
             String transactionRequestPacket = readDataFromSocket();
-            transactionVariables = new TransactionVariables();
             ResponseGenerator responseGenerator = new ResponseGenerator(transactionRequestPacket);
             responseGenerator.generateResponse();
             writeToSocket(Main.processVariables.responsePacket);

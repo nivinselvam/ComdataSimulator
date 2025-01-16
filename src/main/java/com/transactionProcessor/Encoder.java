@@ -50,7 +50,7 @@ public class Encoder {
     }
 
     private Map<String, TransactionFieldProperties> selectTransactionResponse(){
-        switch (Main.processVariables.transactionName) {
+        switch (Main.processVariables.transactionType) {
             case Constants.RN_FUELPURCHASESALE:
                 return Main.processVariables.fuelPurchaseRequestProcessor.selectResponseType();
             case Constants.RN_FUELPURCHASECANCEL:
