@@ -13,9 +13,6 @@ import java.net.SocketException;
 
 public class ServerInitializer extends Thread {
     private static final Logger logger = LogManager.getLogger(ServerInitializer.class);
-    private ServerSocket serverSocket;
-    public ClientHandler clientHandler;
-
 
     @Override
     public void run() {

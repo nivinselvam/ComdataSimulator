@@ -32,19 +32,21 @@ public class ClientHandler extends Thread {
     @Override
     public void run() {
         logger.log(Level.INFO, "Client " + socket.getRemoteSocketAddress().toString() + " is connected.");
-        try {
-            logger.log(Level.INFO, "---------------------------------------------------------------------");
-            logger.log(Level.INFO, "                       Start of Transaction                          ");
-            logger.log(Level.INFO, "---------------------------------------------------------------------");
-            String transactionRequestPacket = readDataFromSocket();
-            ResponseGenerator responseGenerator = new ResponseGenerator(transactionRequestPacket);
-            writeToSocket(responseGenerator.generateResponse());
-            logger.log(Level.INFO, transactionRequestPacket);
-            logger.log(Level.INFO, "---------------------------------------------------------------------");
-            logger.log(Level.INFO, "                         End of Transaction                          ");
-            logger.log(Level.INFO, "---------------------------------------------------------------------");
-        } catch (IOException e) {
-            logger.log(Level.ERROR, e.toString());
+        while (socket.isConnected()) {
+            try {
+                logger.log(Level.INFO, "---------------------------------------------------------------------");
+                logger.log(Level.INFO, "                       Start of Transaction                          ");
+                logger.log(Level.INFO, "---------------------------------------------------------------------");
+                String transactionRequestPacket = readDataFromSocket();
+                ResponseGenerator responseGenerator = new ResponseGenerator(transactionRequestPacket);
+                writeToSocket(responseGenerator.generateResponse());
+                logger.log(Level.INFO, transactionRequestPacket);
+                logger.log(Level.INFO, "---------------------------------------------------------------------");
+                logger.log(Level.INFO, "                         End of Transaction                          ");
+                logger.log(Level.INFO, "---------------------------------------------------------------------");
+            } catch (IOException e) {
+                logger.log(Level.ERROR, e.toString());
+            }
         }
     }
 
