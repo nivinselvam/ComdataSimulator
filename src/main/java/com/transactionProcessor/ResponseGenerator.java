@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -14,13 +15,15 @@ public class ResponseGenerator {
     private static final Logger logger = LogManager.getLogger(ResponseGenerator.class);
     private String requestPacketString;
     private Map<String, String> requestPacketFields = new LinkedHashMap<String, String>();
+    private List<TransactionPacketField> responsePacketFields;
+    private TransactionSpecificProcessor transactionSpecificProcessor;
 
 
     public ResponseGenerator(String requestPacketString) {
         this.requestPacketString = requestPacketString;
     }
 
-    public void generateResponse() {
+    public String generateResponse() {
         try {
             logger.log(Level.DEBUG, "Processing the below transaction packet");
             logger.log(Level.DEBUG, requestPacketString);
@@ -32,34 +35,36 @@ public class ResponseGenerator {
                     logger.log(Level.INFO, "%s  :   %s".formatted(entry.getKey(), entry.getValue()));
                 }
             }
-            processBasedOnTransaction();
-
+            responsePacketFields = transactionTypeSpecificProcessing();
             logger.log(Level.INFO, "Response Packet");
-            for (TransactionPacketField currentTransactionField : Main.processVariables.responsePacketFields) {
+            for (TransactionPacketField currentTransactionField : responsePacketFields) {
                 if (!Main.processVariables.exclusionFieldsList.contains(currentTransactionField.getFieldValue())) {
                     logger.log(Level.INFO, "%s  :   %s".formatted(currentTransactionField.getFieldName(), currentTransactionField.getFieldValue()));
                 }
             }
             Encoder encoder = new Encoder();
-            encoder.encodeResponse();
+            return encoder.encodeResponse(responsePacketFields);
 
         } catch (Exception e) {
-            Main.processVariables.defaultErrorProcessor.generateResponseFields(Constants.TRANSACTION_NAME_DEFAULTERROR, Main.processVariables.defaultError.getResponse());
+            transactionSpecificProcessor = new DefaultErrorProcessor();
+            responsePacketFields = transactionSpecificProcessor.generateResponseFields(requestPacketFields);
             logger.log(Level.INFO, "Response Packet");
-            for (TransactionPacketField currentTransactionField : Main.processVariables.responsePacketFields) {
+            for (TransactionPacketField currentTransactionField : responsePacketFields) {
                 if (!Main.processVariables.exclusionFieldsList.contains(currentTransactionField.getFieldValue())) {
                     logger.log(Level.INFO, "%s  :   %s".formatted(currentTransactionField.getFieldName(), currentTransactionField.getFieldValue()));
                 }
             }
+            Encoder encoder = new Encoder();
+            return encoder.encodeResponse(responsePacketFields);
         }
-
     }
 
-    private void processBasedOnTransaction() {
+    private List<TransactionPacketField> transactionTypeSpecificProcessing() {
         String transactionType = requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
+
         switch (transactionType) {
             case Constants.RN_FUELPURCHASESALE:
-                Main.processVariables.fuelPurchaseRequestProcessor.generateResponseFields(Constants.TRANSACTION_NAME_FUEL_PURCHASE_REQUEST, Main.processVariables.fuelPurchaseRequestProcessor.selectResponseType());
+                transactionSpecificProcessor = new FuelPurchaseRequestProcessor();
                 break;
             case Constants.RN_FUELPURCHASECANCEL:
                 break;
@@ -72,17 +77,17 @@ public class ResponseGenerator {
             case Constants.RN_FUELPRICEUPDATE:
                 break;
             case Constants.RN_PREAUTHEDIT:
-                Main.processVariables.preAuthEditProcessor.generateResponseFields(Constants.TRANSACTION_NAME_PREAUTHEDIT, Main.processVariables.preAuthEditProcessor.selectResponseType());
+                transactionSpecificProcessor = new PreAuthEditProcessor();
                 break;
             case Constants.RN_FUELPURCHASEREQUESTFORCESALE:
                 break;
             case Constants.RN_PREAUTHORIZATION:
-                Main.processVariables.preAuthProcessor.generateResponseFields(Constants.TRANSACTION_NAME_PREAUTH, Main.processVariables.preAuthProcessor.selectResponseType());
+                transactionSpecificProcessor = new PreAuthProcessor();
                 break;
             default:
-                Main.processVariables.defaultErrorProcessor.generateResponseFields(Constants.TRANSACTION_NAME_DEFAULTERROR, Main.processVariables.defaultError.getResponse());
+                transactionSpecificProcessor = new DefaultErrorProcessor();
         }
+        return transactionSpecificProcessor.generateResponseFields(requestPacketFields);
     }
-
 
 }

@@ -38,8 +38,7 @@ public class ClientHandler extends Thread {
             logger.log(Level.INFO, "---------------------------------------------------------------------");
             String transactionRequestPacket = readDataFromSocket();
             ResponseGenerator responseGenerator = new ResponseGenerator(transactionRequestPacket);
-            responseGenerator.generateResponse();
-            writeToSocket(Main.processVariables.responsePacket);
+            writeToSocket(responseGenerator.generateResponse());
             logger.log(Level.INFO, transactionRequestPacket);
             logger.log(Level.INFO, "---------------------------------------------------------------------");
             logger.log(Level.INFO, "                         End of Transaction                          ");

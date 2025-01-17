@@ -8,40 +8,43 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 
 
-public class FuelPurchaseRequestProcessor {
+public class FuelPurchaseRequestProcessor extends TransactionSpecificProcessor{
     private static final Logger logger = LogManager.getLogger(FuelPurchaseRequestProcessor.class);
+    private List<TransactionPacketField> responsePacketFields = new ArrayList<>();
 
     public Map<String, TransactionFieldProperties> selectResponseType() {
         logger.log(Level.DEBUG, "Selecting the response based on the configuration");
         if (Main.simulatorProperties.getFuelPurchaseRequestResponse().equals(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER)) {
             logger.log(Level.DEBUG, "Processing %s Approval response as configured.".formatted(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER));
-            Main.processVariables.configuredTransactionResponse = Main.processVariables.fuelPurchaseRequest.getTruckStopServiceCenterResponse();
+            return Main.processVariables.fuelPurchaseRequest.getTruckStopServiceCenterResponse();
         } else if (Main.simulatorProperties.getFuelPurchaseRequestResponse().equals(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER_DUPLICATE_AUTH)) {
             logger.log(Level.DEBUG, "Processing %s Approval response as configured.".formatted(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER_DUPLICATE_AUTH));
-            Main.processVariables.configuredTransactionResponse = Main.processVariables.fuelPurchaseRequest.getTruckStopServiceCenterDuplicateAuthResponse();
+            return Main.processVariables.fuelPurchaseRequest.getTruckStopServiceCenterDuplicateAuthResponse();
         } else if (Main.simulatorProperties.getFuelPurchaseRequestResponse().equals(Constants.RESPONSE_TYPE_ERROR_RESPONSE)) {
             logger.log(Level.DEBUG, "Processing error response as configured.");
-            Main.processVariables.configuredTransactionResponse = Main.processVariables.fuelPurchaseRequest.getErrorResponse();
+            return Main.processVariables.fuelPurchaseRequest.getErrorResponse();
         } else {
-            Main.processVariables.configuredTransactionResponse = null;
+            return Collections.emptyMap();
         }
-        return Main.processVariables.configuredTransactionResponse;
     }
 
-    public void generateResponseFields(String transactionType, Map<String, TransactionFieldProperties> transactionProperties) {
-        logger.log(Level.DEBUG, "Starting to generate the response fields for %s".formatted(transactionType));
+    public List<TransactionPacketField> generateResponseFields(Map<String, String> requestPacketFields) {
+        logger.log(Level.DEBUG, "Starting to generate the response fields for Fuel purchase request");
         String currentField = "";
         String currentFieldValue = "";
-        for (Map.Entry<String, TransactionFieldProperties> entry : transactionProperties.entrySet()) {
+        for (Map.Entry<String, TransactionFieldProperties> entry : selectResponseType().entrySet()) {
             currentField = entry.getValue().getName();
             if (entry.getValue().isRequired()) {
                 try {
-                    if (Main.processVariables.requestPacketFields.containsKey(currentField)) {
+                    if (requestPacketFields.containsKey(currentField)) {
                         logger.log(Level.DEBUG, "Adding value from the request packet for %s".formatted(currentField));
-                        currentFieldValue = Main.processVariables.requestPacketFields.get(currentField);
+                        currentFieldValue = requestPacketFields.get(currentField);
                     } else {
                         logger.log(Level.DEBUG, "Adding value from the user configuration for %s".formatted(currentField));
                         currentFieldValue = entry.getValue().getDefaultValue();
@@ -49,10 +52,11 @@ public class FuelPurchaseRequestProcessor {
                 } catch (Exception e) {
                     currentFieldValue = entry.getValue().getDefaultValue();
                 }
-                Main.processVariables.transactionPacketField = new TransactionPacketField();
-                Main.processVariables.transactionPacketField.setFieldName(currentField);
-                Main.processVariables.transactionPacketField.setFieldValue(currentFieldValue);
-                Main.processVariables.responsePacketFields.add(Main.processVariables.transactionPacketField);
+                currentFieldValue = addPadding(currentField,currentFieldValue);
+                TransactionPacketField transactionPacketField = new TransactionPacketField();
+                transactionPacketField.setFieldName(currentField);
+                transactionPacketField.setFieldValue(currentFieldValue);
+                responsePacketFields.add(transactionPacketField);
                 logger.log(Level.DEBUG, "%s with value %s is added to the response packet fields map".formatted(currentField, currentFieldValue));
 
             } else {
@@ -60,6 +64,7 @@ public class FuelPurchaseRequestProcessor {
             }
 
         }
+        return responsePacketFields;
     }
 
 }

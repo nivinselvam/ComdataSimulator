@@ -8,37 +8,41 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 
-public class PreAuthEditProcessor {
+public class PreAuthEditProcessor extends TransactionSpecificProcessor{
     private static final Logger logger = LogManager.getLogger(PreAuthEditProcessor.class);
+    private List<TransactionPacketField> responsePacketFields = new ArrayList<>();
 
     public Map<String, TransactionFieldProperties> selectResponseType() {
         logger.log(Level.DEBUG, "Selecting the response based on the configuration");
         if (Main.simulatorProperties.getPreAuthEditResponse().equals(Constants.RESPONSE_TYPE_RESPONSE)) {
             logger.log(Level.DEBUG, "Processing Approval response as configured.");
-            Main.processVariables.configuredTransactionResponse = Main.processVariables.preAuthEdit.getResponse();
+            return Main.processVariables.preAuthEdit.getResponse();
         } else if (Main.simulatorProperties.getPreAuthEditResponse().equals(Constants.RESPONSE_TYPE_ERROR_RESPONSE)) {
             logger.log(Level.DEBUG, "Processing error response as configured.");
-            Main.processVariables.configuredTransactionResponse = Main.processVariables.preAuthEdit.getErrorResponse();
+            return Main.processVariables.preAuthEdit.getErrorResponse();
         } else {
-            Main.processVariables.configuredTransactionResponse = null;
+            return Collections.emptyMap();
         }
-        return Main.processVariables.configuredTransactionResponse;
     }
 
-    public void generateResponseFields(String transactionType, Map<String, TransactionFieldProperties> transactionProperties) {
-        logger.log(Level.DEBUG, "Starting to generate the response fields for %s".formatted(transactionType));
+    public List<TransactionPacketField> generateResponseFields(Map<String, String> requestPacketFields) {
+        logger.log(Level.DEBUG, "Starting to generate the response fields for Pre Auth Edit transaction");
         String currentField = "";
         String currentFieldValue = "";
-        for (Map.Entry<String, TransactionFieldProperties> entry : transactionProperties.entrySet()) {
+        for (Map.Entry<String, TransactionFieldProperties> entry : selectResponseType().entrySet()) {
             currentField = entry.getValue().getName();
             if (entry.getValue().isRequired()) {
                 try {
-                    if (Main.processVariables.requestPacketFields.containsKey(currentField)) {
+                    if (requestPacketFields.containsKey(currentField)) {
                         logger.log(Level.DEBUG, "Adding value from the request packet for %s".formatted(currentField));
-                        currentFieldValue = Main.processVariables.requestPacketFields.get(currentField);
+                        currentFieldValue = requestPacketFields.get(currentField);
                     } else {
                         logger.log(Level.DEBUG, "Adding value from the user configuration for %s".formatted(currentField));
                         currentFieldValue = entry.getValue().getDefaultValue();
@@ -46,17 +50,18 @@ public class PreAuthEditProcessor {
                 } catch (Exception e) {
                     currentFieldValue = entry.getValue().getDefaultValue();
                 }
-                Main.processVariables.transactionPacketField = new TransactionPacketField();
-                Main.processVariables.transactionPacketField.setFieldName(currentField);
-                Main.processVariables.transactionPacketField.setFieldValue(currentFieldValue);
-                Main.processVariables.responsePacketFields.add(Main.processVariables.transactionPacketField);
+                currentFieldValue = addPadding(currentField, currentFieldValue);
+                TransactionPacketField transactionPacketField = new TransactionPacketField();
+                transactionPacketField.setFieldName(currentField);
+                transactionPacketField.setFieldValue(currentFieldValue);
+                responsePacketFields.add(transactionPacketField);
                 logger.log(Level.DEBUG, "%s with value %s is added to the response packet fields map".formatted(currentField, currentFieldValue));
 
             } else {
                 logger.log(Level.DEBUG, "%s is not required for this transaction as per configuration.".formatted(currentField));
             }
-
         }
+        return responsePacketFields;
     }
 
 }
