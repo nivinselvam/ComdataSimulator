@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -16,17 +16,20 @@ public class Decoder {
     private int startPosition;
     private int endPosition;
     private List<String> pendingFields;
+    private String transactionType;
+    private Map<String, String> requestPacketFields = new LinkedHashMap<String, String>();
 
 
-    public void decodeRequestPacket(String requestPacket) {
-        processHeader(requestPacket);
-        String pendingString = requestPacket.substring(endPosition, requestPacket.length() - 1);
+    public Map<String, String> decodeRequestPacket(String requestPacketString) {
+        processHeader(requestPacketString);
+        String pendingString = requestPacketString.substring(endPosition, requestPacketString.length() - 1);
         pendingFields = List.of(pendingString.split(Constants.FIELDSEPARATOR, -1));
 
-        Main.variables.transactionName = Main.variables.requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
-        logger.log(Level.DEBUG, "Request is of transaction type %s".formatted(Main.variables.transactionName));
-        switch (Main.variables.transactionName) {
+        transactionType = requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
+        logger.log(Level.DEBUG, "Request is of transaction type %s".formatted(transactionType));
+        switch (transactionType) {
             case Constants.RN_FUELPURCHASESALE:
+                processTransactionBody(Constants.TRANSACTION_NAME_FUEL_PURCHASE_REQUEST, Main.processVariables.fuelPurchaseRequest.getRequest());
                 break;
             case Constants.RN_FUELPURCHASECANCEL:
                 break;
@@ -39,15 +42,16 @@ public class Decoder {
             case Constants.RN_FUELPRICEUPDATE:
                 break;
             case Constants.RN_PREAUTHEDIT:
-                processTransactionBody(Constants.TRANSACTION_NAME_PREAUTHEDIT, Main.variables.preAuthEdit.getRequest());
+                processTransactionBody(Constants.TRANSACTION_NAME_PREAUTHEDIT, Main.processVariables.preAuthEdit.getRequest());
                 break;
             case Constants.RN_FUELPURCHASEREQUESTFORCESALE:
                 break;
             case Constants.RN_PREAUTHORIZATION:
-                processTransactionBody(Constants.TRANSACTION_NAME_PREAUTH, Main.variables.preAuth.getRequest());
+                processTransactionBody(Constants.TRANSACTION_NAME_PREAUTH, Main.processVariables.preAuth.getRequest());
                 break;
             default: throw new RuntimeException();
         }
+        return requestPacketFields;
     }
 
     private void processHeader(String requestPacket) {
@@ -57,7 +61,7 @@ public class Decoder {
         String currentField = "";
         String currentFieldValue = "";
         logger.log(Level.DEBUG, "Starting to add the header fields into the request packet map");
-        for (Map.Entry<String, TransactionFieldProperties> entry : Main.variables.header.getRequest().entrySet()) {
+        for (Map.Entry<String, TransactionFieldProperties> entry : Main.processVariables.header.getRequest().entrySet()) {
             currentField = entry.getValue().getName();
             logger.log(Level.DEBUG, "Adding the value of %s to the request packet map".formatted(currentField));
             lengthOfField = ((int) entry.getValue().getLength());
@@ -65,7 +69,7 @@ public class Decoder {
             endPosition = endPosition + lengthOfField;
             currentFieldValue = requestPacket.substring(startPosition, endPosition);
             logger.log(Level.DEBUG, "Value of %s is %s".formatted(currentField, currentFieldValue));
-            Main.variables.requestPacketFields.put(currentField, currentFieldValue);
+            requestPacketFields.put(currentField, currentFieldValue);
             logger.log(Level.DEBUG, "%s is added to request packet map".formatted(currentField));
             startPosition = endPosition;
         }
@@ -91,9 +95,8 @@ public class Decoder {
                 position = position + 1;
             }
             logger.log(Level.DEBUG, "Value of %s is %s".formatted(currentField, currentFieldValue));
-            Main.variables.requestPacketFields.put(currentField, currentFieldValue);
+            requestPacketFields.put(currentField, currentFieldValue);
             logger.log(Level.DEBUG, "%s is added to request packet map".formatted(currentField));
-
         }
     }
 }

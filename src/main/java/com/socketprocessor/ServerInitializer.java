@@ -13,16 +13,18 @@ import java.net.SocketException;
 
 public class ServerInitializer extends Thread {
     private static final Logger logger = LogManager.getLogger(ServerInitializer.class);
+    private ServerSocket serverSocket;
+    public ClientHandler clientHandler;
 
 
     @Override
     public void run() {
         try {
-            Main.variables.serverSocket = new ServerSocket(Main.simulatorProperties.getPortNumber());
+            ServerSocket serverSocket = new ServerSocket(Main.simulatorProperties.getPortNumber());
             logger.log(Level.INFO, "Server started on the port number "+ Main.simulatorProperties.getPortNumber());
             logger.log(Level.INFO,"Waiting for client to connect...");
             while (true) {
-                Socket socket = Main.variables.serverSocket.accept();
+                Socket socket = serverSocket.accept();
                 ClientHandler clientHandler = new ClientHandler(socket);
                 clientHandler.start();
             }

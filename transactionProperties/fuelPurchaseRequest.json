@@ -1,0 +1,1697 @@
+{
+  "request": {
+    "cardNumber": {
+      "name": "Card Number",
+      "type": "C",
+      "length": 40,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator3": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "unitNumber": {
+      "name": "Unit Number",
+      "type": "C",
+      "length": 10,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator4": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "productCode1": {
+      "name": "Product Code - 1",
+      "type": "C",
+      "length": 2,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator5": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "productCode2": {
+      "name": "Product Code - 2",
+      "type": "C",
+      "length": 2,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator6": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "productCode3": {
+      "name": "Product Code - 3",
+      "type": "C",
+      "length": 2,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator7": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "invoiceNumber": {
+      "name": "Invoice Number",
+      "type": "C",
+      "length": 8,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator8": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "tractorGallons2": {
+      "name": "Tractor Gallons #2",
+      "type": "N",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator9": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "tractorCost2": {
+      "name": "Tractor Cost #2",
+      "type": "N",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator10": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reeferGallons": {
+      "name": "Reefer Gallons",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator11": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reeferCost": {
+      "name": "Reefer Cost",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator12": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "otherGallons": {
+      "name": "Other Gallons",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator13": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "otherCost": {
+      "name": "Other Cost",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator14": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "oilQuarts": {
+      "name": "Oil Quarts",
+      "type": "N",
+      "length": 2,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator15": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "oilCost": {
+      "name": "Oil Cost",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator16": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "cashAdvance": {
+      "name": "Cash Advance",
+      "type": "N",
+      "length": 7,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator17": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "productCode1Amount": {
+      "name": "Product Code -1 Amount",
+      "type": "N",
+      "length": 7,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator18": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "productCode2Amount": {
+      "name": "Product Code -2 Amount",
+      "type": "N",
+      "length": 7,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator19": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "productCode3Amount": {
+      "name": "Product Code -3 Amount",
+      "type": "N",
+      "length": 7,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator20": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "invoiceTotal": {
+      "name": "Invoice Total",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator21": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "tripNumber": {
+      "name": "Trip Number",
+      "type": "C",
+      "length": 20,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator22": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "tractorHubReading": {
+      "name": "Tractor Hub Reading",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator23": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "checkNumber": {
+      "name": "Check Number",
+      "type": "N",
+      "length": 10,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator24": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "driverLicenseNumber": {
+      "name": "Driver License Number",
+      "type": "C",
+      "length": 20,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator25": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "driverLicenseState": {
+      "name": "Driver License State",
+      "type": "C",
+      "length": 2,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator26": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "trailerNumber": {
+      "name": "Trailer Number",
+      "type": "C",
+      "length": 10,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator27": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "trailerHubReading": {
+      "name": "Trailer Hub Reading",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator28": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "purchaseOrderNumber": {
+      "name": "Purchase Order Number",
+      "type": "C",
+      "length": 10,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator29": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "driverNumber": {
+      "name": "Driver Number",
+      "type": "C",
+      "length": 10,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator30": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "diesel1Gallons": {
+      "name": "Diesel #1 Gallons",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator31": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "diesel1Cost": {
+      "name": "Diesel #1 Cost",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator32": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "securityCard": {
+      "name": "Security Card",
+      "type": "C",
+      "length": 40,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator33": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "securityPinNumber": {
+      "name": "Security Pin Number",
+      "type": "C",
+      "length": 4,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator34": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "canadianTax": {
+      "name": "Canadian Tax",
+      "type": "N",
+      "length": 6,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator35": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "trailerReeferHours": {
+      "name": "trailerReeferHours",
+      "type": "N",
+      "length": 7,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator36": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "cardExpirationDate": {
+      "name": "Card Expiration Date",
+      "type": "C",
+      "length": 4,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator37": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "2DieselSubProductCode": {
+      "name": "#2 Diesel Sub Product Code",
+      "type": "C",
+      "length": 15,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator38": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reeferSubProductCode": {
+      "name": "Reefer Sub Product Code",
+      "type": "C",
+      "length": 15,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator39": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "otherFuelSubProductCode": {
+      "name": "Other Fuel Sub Product Code",
+      "type": "C",
+      "length": 15,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator40": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "1DieselSubProductCode": {
+      "name": "#1 Diesel Sub Product Code",
+      "type": "C",
+      "length": 15,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator41": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProduct1": {
+      "name": "Sub Product 1",
+      "type": "C",
+      "length": 15,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator42": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subProduct2": {
+      "name": "Sub Product 2",
+      "type": "C",
+      "length": 15,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator43": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "SubProduct3": {
+      "name": "Sub Product 3",
+      "type": "C",
+      "length": 15,
+      "required": false,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    }
+  },
+  "truckStopServiceCenterResponse": {
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "{"
+      ],
+      "defaultValue": "{",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationAccountCode": {
+      "name": "Location or Account Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subId": {
+      "name": "Sub Id",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "deviceType": {
+      "name": "Device Type",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [
+        "TCPI",
+        "TCPJ"
+      ],
+      "defaultValue": "TCPI",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportSystemId": {
+      "name": "Report System ID",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [
+        "SP"
+      ],
+      "defaultValue": "SP",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportNumber": {
+      "name": "Report Number",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00007"
+      ],
+      "defaultValue": "00007",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "responseCode": {
+      "name": "Response Code",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00000"
+      ],
+      "defaultValue": "00000",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fixedMessageHeader": {
+      "name": "Fixed Message Header",
+      "type": "C",
+      "length": 18,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "OK: DRV. MSG...> ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "driverMessage": {
+      "name": "Driver Message",
+      "type": "C",
+      "length": 80,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "This is driver message.",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal1": {
+      "name": "Literal",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": " ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal2": {
+      "name": "Literal",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "CTL#",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "controlNumber": {
+      "name": "Control Number",
+      "type": "N",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "123456",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "bridge": {
+      "name": "Bridge",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": ["DB", "DBF", "RC", "RCF", " "],
+      "defaultValue": "DB",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "dollarSign": {
+      "name": "Dollar Sign",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": ["$"],
+      "defaultValue": "$",
+      "justification": "right",
+      "paddingWith": " "
+    },
+    "invoiceTotal": {
+      "name": "Invoice Total",
+      "type": "N",
+      "length": 9,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "9.99",
+      "justification": "right",
+      "paddingWith": " "
+    },
+    "literal3": {
+      "name": "Literal",
+      "type": "C",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "TAX -",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "taxTotal": {
+      "name": "Tax Total",
+      "type": "N",
+      "length": 8,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "9.99",
+      "justification": "right",
+      "paddingWith": " "
+    },
+    "literal4": {
+      "name": "Literal",
+      "type": "C",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "CUST:",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "customerName": {
+      "name": "Customer Name",
+      "type": "C",
+      "length": 25,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "Test Customer name",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "customerCity": {
+      "name": "Customer City",
+      "type": "C",
+      "length": 15,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "Test City",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "customerState": {
+      "name": "Customer State",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "ST",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "customerID": {
+      "name": "Customer ID",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal5": {
+      "name": "Literal",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": " ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal6": {
+      "name": "Literal",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": " ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal7": {
+      "name": "Literal",
+      "type": "C",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "DATE:",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "variable": {
+      "name": "Variable",
+      "type": "C",
+      "length": 10,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "YYYY-MM-DD",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal8": {
+      "name": "Literal",
+      "type": "C",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "SUR -",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "merchantSurcharge": {
+      "name": "Merchant Surcharge",
+      "type": "C",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "9.99",
+      "justification": "right",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "defaultValue": "}",
+      "justification": "left",
+      "paddingWith": " "
+    }
+  },
+  "truckStopServiceCenterDuplicateAuthResponse": {
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "{"
+      ],
+      "defaultValue": "{",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationAccountCode": {
+      "name": "Location or Account Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subId": {
+      "name": "Sub Id",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "deviceType": {
+      "name": "Device Type",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [
+        "TCPI",
+        "TCPJ"
+      ],
+      "defaultValue": "TCPI",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportSystemId": {
+      "name": "Report System ID",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [
+        "SP"
+      ],
+      "defaultValue": "SP",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportNumber": {
+      "name": "Report Number",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00007"
+      ],
+      "defaultValue": "00007",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "responseCode": {
+      "name": "Response Code",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00000"
+      ],
+      "defaultValue": "00000",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal1": {
+      "name": "Literal",
+      "type": "C",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "AMOUNT",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "invoiceTotal": {
+      "name": "Invoice Total",
+      "type": "N",
+      "length": 10,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "9.99",
+      "justification": "right",
+      "paddingWith": " "
+    },
+    "literal2": {
+      "name": "Literal",
+      "type": "C",
+      "length": 10,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "CTL#-",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "controlNumber": {
+      "name": "Control Number",
+      "type": "N",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "123456",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal3": {
+      "name": "Literal",
+      "type": "C",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "AUTH#-",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "authNumber": {
+      "name": "Auth Number",
+      "type": "N",
+      "length": 4,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "1234",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal4": {
+      "name": "Literal",
+      "type": "C",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "TAX -",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "taxTotal": {
+      "name": "Tax Total",
+      "type": "N",
+      "length": 8,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "9.99",
+      "justification": "right",
+      "paddingWith": " "
+    },
+    "literal5": {
+      "name": "Literal",
+      "type": "C",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "CUST:",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "customerName": {
+      "name": "Customer Name",
+      "type": "C",
+      "length": 25,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "Test Customer name",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "customerCity": {
+      "name": "Customer City",
+      "type": "C",
+      "length": 15,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "Test City",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "customerState": {
+      "name": "Customer State",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "ST",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "customerID": {
+      "name": "Customer ID",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal6": {
+      "name": "Literal",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": " ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal7": {
+      "name": "Literal",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": " ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal8": {
+      "name": "Literal",
+      "type": "C",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "DATE:",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "variable": {
+      "name": "Variable",
+      "type": "C",
+      "length": 10,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "YYYY-MM-DD",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal9": {
+      "name": "Literal",
+      "type": "C",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "SUR -",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "merchantSurcharge": {
+      "name": "Merchant Surcharge",
+      "type": "C",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "9.99",
+      "justification": "right",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "defaultValue": "}",
+      "justification": "left",
+      "paddingWith": " "
+    }
+  },
+  "errorResponse": {
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "{"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationAccountCode": {
+      "name": "Location or Account Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subId": {
+      "name": "Sub Id",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "deviceType": {
+      "name": "Device Type",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [
+        "TCPI",
+        "TCPJ"
+      ],
+      "defaultValue": "TCPI",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportSystemId": {
+      "name": "Report System ID",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [
+        "SP"
+      ],
+      "defaultValue": "SP",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportNumber": {
+      "name": "Report Number",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00007"
+      ],
+      "defaultValue": "00007",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "responseCode": {
+      "name": "Response Code",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00007"
+      ],
+      "defaultValue": "00007",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "message": {
+      "name": "Message",
+      "type": "C",
+      "length": 99,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "Error response configured.",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    }
+  }
+}
