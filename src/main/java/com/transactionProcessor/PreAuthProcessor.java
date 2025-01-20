@@ -8,10 +8,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 public class PreAuthProcessor extends TransactionSpecificProcessor{
@@ -35,6 +32,8 @@ public class PreAuthProcessor extends TransactionSpecificProcessor{
         logger.log(Level.DEBUG, "Starting to generate the response fields for Pre Auth transaction");
         String currentField = "";
         String currentFieldValue = "";
+        String productCount = "";
+        String subProductName ="";
         for (Map.Entry<String, TransactionFieldProperties> entry : selectResponseType().entrySet()) {
             currentField = entry.getValue().getName();
             if (entry.getValue().isRequired()) {
@@ -44,7 +43,18 @@ public class PreAuthProcessor extends TransactionSpecificProcessor{
                         currentFieldValue = requestPacketFields.get(currentField);
                     } else {
                         logger.log(Level.DEBUG, "Adding value from the user configuration for %s".formatted(currentField));
-                        currentFieldValue = entry.getValue().getDefaultValue();
+                        if(currentField.contains("Max Dollar Limit")||currentField.contains("Max Quantity Limit")||currentField.contains("Purchase Category")){
+                            productCount = String.valueOf(currentField.charAt(currentField.length()-1));
+                            subProductName = "Sub Product Code"+productCount;
+                            if(!requestPacketFields.get(subProductName).equals("")){
+                                currentFieldValue = entry.getValue().getDefaultValue();
+                            }else{
+                                currentFieldValue = "";
+                            }
+                        }else{
+                            currentFieldValue = entry.getValue().getDefaultValue();
+                        }
+
                     }
                 } catch (Exception e) {
                     currentFieldValue = entry.getValue().getDefaultValue();

@@ -38,7 +38,7 @@ public class JsonProcessor {
             logger.log(Level.DEBUG, "Converting the default error json into Java object");
             Main.processVariables.defaultError = objectMapper.readValue(defaultErrorJsonFile, DefaultError.class);
         } catch (IOException e) {
-            logger.log(Level.ERROR, "Unable to load the default error properties due to error "+e.toString());
+            logger.log(Level.ERROR, "Unable to load the default error properties due to error " + e.toString());
         }
     }
 
@@ -50,7 +50,7 @@ public class JsonProcessor {
             logger.log(Level.DEBUG, "Converting the header json into Java object");
             Main.processVariables.header = objectMapper.readValue(headerJsonFile, Header.class);
         } catch (IOException e) {
-            logger.log(Level.ERROR, "Unable to load the header properties due to error "+e.toString());
+            logger.log(Level.ERROR, "Unable to load the header properties due to error " + e.toString());
         }
     }
 
@@ -62,7 +62,7 @@ public class JsonProcessor {
             logger.log(Level.DEBUG, "Converting the pre auth edit json into Java object");
             Main.processVariables.preAuthEdit = objectMapper.readValue(preAuthEditJsonFile, PreAuthEdit.class);
         } catch (IOException e) {
-            logger.log(Level.ERROR, "Unable to load the pre auth edit properties due to error "+e.toString());
+            logger.log(Level.ERROR, "Unable to load the pre auth edit properties due to error " + e.toString());
         }
     }
 
@@ -74,7 +74,7 @@ public class JsonProcessor {
             logger.log(Level.DEBUG, "Converting the pre auth json into Java object");
             Main.processVariables.preAuth = objectMapper.readValue(preAuthJsonFile, PreAuth.class);
         } catch (IOException e) {
-            logger.log(Level.ERROR, "Unable to load the pre auth properties due to error "+e.toString());
+            logger.log(Level.ERROR, "Unable to load the pre auth properties due to error " + e.toString());
         }
     }
 
@@ -86,7 +86,7 @@ public class JsonProcessor {
             logger.log(Level.DEBUG, "Converting the fuel purchase request json into Java object");
             Main.processVariables.fuelPurchaseRequest = objectMapper.readValue(fuelPurchaseRequestJsonFile, FuelPurchaseRequest.class);
         } catch (IOException e) {
-            logger.log(Level.ERROR, "Unable to load the fuel purchase request properties due to error "+e.toString());
+            logger.log(Level.ERROR, "Unable to load the fuel purchase request properties due to error " + e.toString());
         }
     }
 

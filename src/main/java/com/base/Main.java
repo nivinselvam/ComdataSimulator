@@ -24,12 +24,12 @@ public class Main {
         preReqRunner.configureLoggerFilePath();
         preReqRunner.loadUserConfigurations();
 
-//        String request = "{EX777 TCPISP00001/00048/A5600171620532277=49121201271/22////010258///1.14/2.77/10.14/34.91///////93.13//11111/000258///123ABC///2277/22.69/55.45////5///056/819/019///}";
-//        ResponseGenerator responseGenerator = new ResponseGenerator(request);
-//        responseGenerator.generateResponse();
+        String request = "{12345TTCPISP00014/00085/A5567356026892497=25091015380000000015/2277/123/46/54/56/456/7/65//852/C/101///////////////////}";
+        ResponseGenerator responseGenerator = new ResponseGenerator(request);
+        responseGenerator.generateResponse();
 
-        ServerInitializer server = new ServerInitializer();
-        server.start();
+//        ServerInitializer server = new ServerInitializer();
+//        server.start();
 
     }
 

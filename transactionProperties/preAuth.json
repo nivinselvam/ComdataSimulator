@@ -243,7 +243,7 @@
       "paddingWith": " "
     },
     "subProductCode1Indicator": {
-      "name": "Sub Product Code 1 Indicator",
+      "name": "Sub Product Code1 Indicator",
       "type": "C",
       "length": 1,
       "required": true,
@@ -265,7 +265,7 @@
       "paddingWith": " "
     },
     "subProductCode1": {
-      "name": "Sub Product Code 1",
+      "name": "Sub Product Code1",
       "type": "C",
       "length": 3,
       "required": true,
@@ -287,7 +287,7 @@
       "paddingWith": " "
     },
     "subProductCode2Indicator": {
-      "name": "Sub Product Code 2 Indicator",
+      "name": "Sub Product Code2 Indicator",
       "type": "C",
       "length": 1,
       "required": true,
@@ -309,7 +309,7 @@
       "paddingWith": " "
     },
     "subProductCode2": {
-      "name": "Sub Product Code 2",
+      "name": "Sub Product Code2",
       "type": "C",
       "length": 3,
       "required": true,
@@ -331,7 +331,7 @@
       "paddingWith": " "
     },
     "subProductCode3Indicator": {
-      "name": "Sub Product Code 3 Indicator",
+      "name": "Sub Product Code3 Indicator",
       "type": "C",
       "length": 1,
       "required": true,
@@ -353,7 +353,7 @@
       "paddingWith": " "
     },
     "subProductCode3": {
-      "name": "Sub Product Code 3",
+      "name": "Sub Product Code3",
       "type": "C",
       "length": 3,
       "required": true,
@@ -375,7 +375,7 @@
       "paddingWith": " "
     },
     "subProductCode4Indicator": {
-      "name": "Sub Product Code 4 Indicator",
+      "name": "Sub Product Code4 Indicator",
       "type": "C",
       "length": 1,
       "required": true,
@@ -397,7 +397,7 @@
       "paddingWith": " "
     },
     "subProductCode4": {
-      "name": "Sub Product Code 4",
+      "name": "Sub Product Code4",
       "type": "C",
       "length": 3,
       "required": true,
@@ -419,7 +419,7 @@
       "paddingWith": " "
     },
     "subProductCode5Indicator": {
-      "name": "Sub Product Code 5 Indicator",
+      "name": "Sub Product Code5 Indicator",
       "type": "C",
       "length": 1,
       "required": true,
@@ -441,7 +441,7 @@
       "paddingWith": " "
     },
     "subProductCode5": {
-      "name": "Sub Product Code 5",
+      "name": "Sub Product Code5",
       "type": "C",
       "length": 3,
       "required": true,
@@ -463,7 +463,7 @@
       "paddingWith": " "
     },
     "subProductCode6Indicator": {
-      "name": "Sub Product Code 6 Indicator",
+      "name": "Sub Product Code6 Indicator",
       "type": "C",
       "length": 1,
       "required": true,
@@ -485,7 +485,7 @@
       "paddingWith": " "
     },
     "subProductCode6": {
-      "name": "Sub Product Code 6",
+      "name": "Sub Product Code6",
       "type": "C",
       "length": 3,
       "required": true,
@@ -507,7 +507,7 @@
       "paddingWith": " "
     },
     "subProductCode7Indicator": {
-      "name": "Sub Product Code 7 Indicator",
+      "name": "Sub Product Code7 Indicator",
       "type": "C",
       "length": 1,
       "required": true,
@@ -529,7 +529,7 @@
       "paddingWith": " "
     },
     "subProductCode7": {
-      "name": "Sub Product Code 7",
+      "name": "Sub Product Code7",
       "type": "C",
       "length": 3,
       "required": true,
@@ -551,7 +551,7 @@
       "paddingWith": " "
     },
     "subProductCode8Indicator": {
-      "name": "Sub Product Code 8 Indicator",
+      "name": "Sub Product Code8 Indicator",
       "type": "C",
       "length": 1,
       "required": true,
@@ -573,7 +573,7 @@
       "paddingWith": " "
     },
     "subProductCode8": {
-      "name": "Sub Product Code 8",
+      "name": "Sub Product Code8",
       "type": "C",
       "length": 3,
       "required": true,
@@ -595,7 +595,7 @@
       "paddingWith": " "
     },
     "subProductCode9Indicator": {
-      "name": "Sub Product Code 9 Indicator",
+      "name": "Sub Product Code9 Indicator",
       "type": "C",
       "length": 1,
       "required": true,
@@ -617,7 +617,7 @@
       "paddingWith": " "
     },
     "subProductCode9": {
-      "name": "Sub Product Code 9",
+      "name": "Sub Product Code9",
       "type": "C",
       "length": 3,
       "required": true,
@@ -639,7 +639,7 @@
       "paddingWith": " "
     },
     "subProductCode10Indicator": {
-      "name": "Sub Product Code 10 Indicator",
+      "name": "Sub Product Code10 Indicator",
       "type": "C",
       "length": 1,
       "required": true,
@@ -661,7 +661,7 @@
       "paddingWith": " "
     },
     "subProductCode10": {
-      "name": "Sub Product Code 10",
+      "name": "Sub Product Code10",
       "type": "C",
       "length": 3,
       "required": true,
@@ -917,7 +917,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode1": {
       "name": "Sub Product Code1",
@@ -927,7 +927,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit1": {
       "name": "Max Dollar Limit1",
@@ -957,7 +957,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode2": {
       "name": "Sub Product Code2",
@@ -967,7 +967,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit2": {
       "name": "Max Dollar Limit2",
@@ -997,7 +997,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode3": {
       "name": "Sub Product Code3",
@@ -1007,7 +1007,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit3": {
       "name": "Max Dollar Limit3",
@@ -1037,7 +1037,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode4": {
       "name": "Sub Product Code4",
@@ -1047,7 +1047,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit4": {
       "name": "Max Dollar Limit4",
@@ -1077,7 +1077,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode5": {
       "name": "Sub Product Code5",
@@ -1087,7 +1087,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit5": {
       "name": "Max Dollar Limit5",
@@ -1117,7 +1117,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode6": {
       "name": "Sub Product Code6",
@@ -1127,7 +1127,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit6": {
       "name": "Max Dollar Limit6",
@@ -1157,7 +1157,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode7": {
       "name": "Sub Product Code7",
@@ -1167,7 +1167,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit7": {
       "name": "Max Dollar Limit7",
@@ -1197,7 +1197,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode8": {
       "name": "Sub Product Code8",
@@ -1207,7 +1207,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit8": {
       "name": "Max Dollar Limit8",
@@ -1237,7 +1237,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode9": {
       "name": "Sub Product Code9",
@@ -1247,7 +1247,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit9": {
       "name": "Max Dollar Limit9",
@@ -1277,7 +1277,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode10": {
       "name": "Sub Product Code10",
@@ -1287,7 +1287,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit10": {
       "name": "Max Dollar Limit10",
@@ -1607,7 +1607,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode1": {
       "name": "Sub Product Code1",
@@ -1617,7 +1617,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit1": {
       "name": "Max Dollar Limit1",
@@ -1647,7 +1647,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode2": {
       "name": "Sub Product Code2",
@@ -1657,7 +1657,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit2": {
       "name": "Max Dollar Limit2",
@@ -1687,7 +1687,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode3": {
       "name": "Sub Product Code3",
@@ -1697,7 +1697,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit3": {
       "name": "Max Dollar Limit3",
@@ -1727,7 +1727,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode4": {
       "name": "Sub Product Code4",
@@ -1737,7 +1737,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit4": {
       "name": "Max Dollar Limit4",
@@ -1767,7 +1767,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode5": {
       "name": "Sub Product Code5",
@@ -1777,7 +1777,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit5": {
       "name": "Max Dollar Limit5",
@@ -1807,7 +1807,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode6": {
       "name": "Sub Product Code6",
@@ -1817,7 +1817,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit6": {
       "name": "Max Dollar Limit6",
@@ -1847,7 +1847,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode7": {
       "name": "Sub Product Code7",
@@ -1857,7 +1857,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit7": {
       "name": "Max Dollar Limit7",
@@ -1887,7 +1887,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode8": {
       "name": "Sub Product Code8",
@@ -1897,7 +1897,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit8": {
       "name": "Max Dollar Limit8",
@@ -1927,7 +1927,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode9": {
       "name": "Sub Product Code9",
@@ -1937,7 +1937,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit9": {
       "name": "Max Dollar Limit9",
@@ -1967,7 +1967,7 @@
       "presetOptions": [],
       "defaultValue": "20004",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "subProductCode10": {
       "name": "Sub Product Code10",
@@ -1977,7 +1977,7 @@
       "presetOptions": [],
       "defaultValue": "819",
       "justification": "right",
-      "paddingWith": "0"
+      "paddingWith": " "
     },
     "maxDollarLimit10": {
       "name": "Max Dollar Limit10",
