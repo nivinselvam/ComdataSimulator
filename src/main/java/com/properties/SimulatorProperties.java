@@ -5,7 +5,7 @@ public class SimulatorProperties {
     private int portNumber;
     private String preAuthEditResponse;
     private String preAuthResponse;
-    private String fuelPurchaseRequestResponse;
+    private String fuelPurchaseResponse;
 
     public int getPortNumber() {
         return portNumber;
@@ -31,11 +31,11 @@ public class SimulatorProperties {
         this.preAuthResponse = preAuthResponse;
     }
 
-    public String getFuelPurchaseRequestResponse() {
-        return fuelPurchaseRequestResponse;
+    public String getFuelPurchaseResponse() {
+        return fuelPurchaseResponse;
     }
 
-    public void setFuelPurchaseRequestResponse(String fuelPurchaseRequestResponse) {
-        this.fuelPurchaseRequestResponse = fuelPurchaseRequestResponse;
+    public void setFuelPurchaseResponse(String fuelPurchaseResponse) {
+        this.fuelPurchaseResponse = fuelPurchaseResponse;
     }
 }

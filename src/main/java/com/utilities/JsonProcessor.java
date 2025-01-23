@@ -84,7 +84,7 @@ public class JsonProcessor {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             logger.log(Level.DEBUG, "Converting the fuel purchase request json into Java object");
-            Main.processVariables.fuelPurchaseRequest = objectMapper.readValue(fuelPurchaseRequestJsonFile, FuelPurchaseRequest.class);
+            Main.processVariables.fuelPurchase = objectMapper.readValue(fuelPurchaseRequestJsonFile, FuelPurchase.class);
         } catch (IOException e) {
             logger.log(Level.ERROR, "Unable to load the fuel purchase request properties due to error " + e.toString());
         }

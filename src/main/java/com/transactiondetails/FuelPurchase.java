@@ -2,7 +2,7 @@ package com.transactiondetails;
 
 import java.util.Map;
 
-public class FuelPurchaseRequest {
+public class FuelPurchase {
     private Map<String, TransactionFieldProperties> request;
     private Map<String, TransactionFieldProperties> truckStopServiceCenterResponse;
     private Map<String, TransactionFieldProperties> truckStopServiceCenterDuplicateAuthResponse;

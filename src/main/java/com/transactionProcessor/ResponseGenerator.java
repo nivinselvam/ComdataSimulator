@@ -64,7 +64,7 @@ public class ResponseGenerator {
 
         switch (transactionType) {
             case Constants.RN_FUELPURCHASESALE:
-                transactionSpecificProcessor = new FuelPurchaseRequestProcessor();
+                transactionSpecificProcessor = new FuelPurchaseProcessor();
                 break;
             case Constants.RN_FUELPURCHASECANCEL:
                 break;

@@ -1,7 +1,6 @@
 package com.base;
 
 
-import com.transactionProcessor.*;
 import com.transactiondetails.*;
 
 
@@ -14,6 +13,6 @@ public class ProcessVariables {
     public DefaultError defaultError;
     public PreAuthEdit preAuthEdit;
     public PreAuth preAuth;
-    public FuelPurchaseRequest fuelPurchaseRequest;
+    public FuelPurchase fuelPurchase;
 
 }

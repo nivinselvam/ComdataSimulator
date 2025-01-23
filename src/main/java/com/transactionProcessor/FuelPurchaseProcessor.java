@@ -14,21 +14,21 @@ import java.util.List;
 import java.util.Map;
 
 
-public class FuelPurchaseRequestProcessor extends TransactionSpecificProcessor{
-    private static final Logger logger = LogManager.getLogger(FuelPurchaseRequestProcessor.class);
+public class FuelPurchaseProcessor extends TransactionSpecificProcessor{
+    private static final Logger logger = LogManager.getLogger(FuelPurchaseProcessor.class);
     private List<TransactionPacketField> responsePacketFields = new ArrayList<>();
 
     public Map<String, TransactionFieldProperties> selectResponseType() {
         logger.log(Level.DEBUG, "Selecting the response based on the configuration");
-        if (Main.simulatorProperties.getFuelPurchaseRequestResponse().equals(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER)) {
+        if (Main.simulatorProperties.getFuelPurchaseResponse().equals(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER)) {
             logger.log(Level.DEBUG, "Processing %s Approval response as configured.".formatted(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER));
-            return Main.processVariables.fuelPurchaseRequest.getTruckStopServiceCenterResponse();
-        } else if (Main.simulatorProperties.getFuelPurchaseRequestResponse().equals(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER_DUPLICATE_AUTH)) {
+            return Main.processVariables.fuelPurchase.getTruckStopServiceCenterResponse();
+        } else if (Main.simulatorProperties.getFuelPurchaseResponse().equals(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER_DUPLICATE_AUTH)) {
             logger.log(Level.DEBUG, "Processing %s Approval response as configured.".formatted(Constants.RESPONSE_TRUCK_STOP_SERVICE_CENTER_DUPLICATE_AUTH));
-            return Main.processVariables.fuelPurchaseRequest.getTruckStopServiceCenterDuplicateAuthResponse();
-        } else if (Main.simulatorProperties.getFuelPurchaseRequestResponse().equals(Constants.RESPONSE_TYPE_ERROR_RESPONSE)) {
+            return Main.processVariables.fuelPurchase.getTruckStopServiceCenterDuplicateAuthResponse();
+        } else if (Main.simulatorProperties.getFuelPurchaseResponse().equals(Constants.RESPONSE_TYPE_ERROR_RESPONSE)) {
             logger.log(Level.DEBUG, "Processing error response as configured.");
-            return Main.processVariables.fuelPurchaseRequest.getErrorResponse();
+            return Main.processVariables.fuelPurchase.getErrorResponse();
         } else {
             return Collections.emptyMap();
         }
