@@ -24,7 +24,8 @@ public class Constants {
     public static final String FILE_HEADER_PROPERTIES = "header.json";
     public static final String FILE_PRE_AUTH_EDIT_PROPERTIES = "preAuthEdit.json";
     public static final String FILE_PRE_AUTH_PROPERTIES = "preAuth.json";
-    public static final String FILE_FUEL_PURCHASE_REQUEST_PROPERTIES = "fuelPurchaseRequest.json";
+    public static final String FILE_FUEL_PURCHASE_PROPERTIES = "fuelPurchase.json";
+    public static final String FILE_FUEL_PURCHASE_CANCEL_PROPERTIES = "fuelPurchaseCancel.json";
 
     /*
     -----------------------------------    Path     -----------------------------------------
@@ -35,7 +36,8 @@ public class Constants {
     public static final String PATH_HEADER_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_HEADER_PROPERTIES);
     public static final String PATH_PRE_AUTH_EDIT_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_PRE_AUTH_EDIT_PROPERTIES);
     public static final String PATH_PRE_AUTH_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_PRE_AUTH_PROPERTIES);
-    public static final String PATH_FUEL_PURCHASE_REQUEST_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_FUEL_PURCHASE_REQUEST_PROPERTIES);
+    public static final String PATH_FUEL_PURCHASE_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_FUEL_PURCHASE_PROPERTIES);
+    public static final String PATH_FUEL_PURCHASE_CANCEL_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_FUEL_PURCHASE_CANCEL_PROPERTIES);
     /*
     -----------------------------------Justification----------------------------------------
      */
@@ -45,14 +47,14 @@ public class Constants {
     /*
     -----------------------------------Report Numbers----------------------------------------
      */
-    public static final String RN_FUELPURCHASESALE = "00001";
+    public static final String RN_FUELPURCHASE = "00001";
     public static final String RN_FUELPURCHASECANCEL = "00002";
     public static final String RN_SETTLEMENT = "00003";
     public static final String RN_EXPRESSCHECKENCASHMENT = "00004";
     public static final String RN_CHECKAUTHORIZATIONUPDATECHECK = "00005";
     public static final String RN_FUELPRICEUPDATE = "00006";
     public static final String RN_PREAUTHEDIT = "00007";
-    public static final String RN_FUELPURCHASEREQUESTFORCESALE = "00011";
+    public static final String RN_FUELPURCHASEFORCESALE = "00011";
     public static final String RN_PREAUTHORIZATION = "00014";
     /*
     -----------------------------------Operators----------------------------------------
@@ -66,6 +68,7 @@ public class Constants {
    */
     public static final String FLD_NAME_REPORTNUMBER = "Report Number";
     public static final String FLD_NAME_FIELDSEPARATOR = "Field Separator";
+    public static final String FLD_NAME_MESSAGE = "Message";
     public static final String FLD_NAME_CLOSEBRACKET = "Close Bracket";
     /*
     -----------------------------------Transaction Type names----------------------------------
@@ -73,7 +76,8 @@ public class Constants {
     public static final String TRANSACTION_NAME_DEFAULTERROR = "Default Error";
     public static final String TRANSACTION_NAME_PREAUTHEDIT = "Pre Auth Edit";
     public static final String TRANSACTION_NAME_PREAUTH = "Pre Auth";
-    public static final String TRANSACTION_NAME_FUEL_PURCHASE_REQUEST = "Fuel Purchase Request";
+    public static final String TRANSACTION_NAME_FUEL_PURCHASE = "Fuel Purchase";
+    public static final String TRANSACTION_NAME_FUEL_PURCHASE_CANCEL = "Fuel Purchase Cancel";
     /*
     -----------------------------------Response Type names----------------------------------
    */

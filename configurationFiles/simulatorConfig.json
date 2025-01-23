@@ -2,5 +2,6 @@
   "portNumber": "41107",
   "preAuthEditResponse": "response",
   "preAuthResponse": "response",
-  "fuelPurchaseRequestResponse": "truckStopServiceCenterResponse"
+  "fuelPurchaseResponse": "truckStopServiceCenterResponse",
+  "fuelPurchaseCancelResponse": "errorResponse"
 }

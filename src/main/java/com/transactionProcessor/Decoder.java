@@ -28,10 +28,11 @@ public class Decoder {
         transactionType = requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
         logger.log(Level.DEBUG, "Request is of transaction type %s".formatted(transactionType));
         switch (transactionType) {
-            case Constants.RN_FUELPURCHASESALE:
-                processTransactionBody(Constants.TRANSACTION_NAME_FUEL_PURCHASE_REQUEST, Main.processVariables.fuelPurchase.getRequest());
+            case Constants.RN_FUELPURCHASE:
+                processTransactionBody(Constants.TRANSACTION_NAME_FUEL_PURCHASE, Main.processVariables.fuelPurchase.getRequest());
                 break;
             case Constants.RN_FUELPURCHASECANCEL:
+                processTransactionBody(Constants.TRANSACTION_NAME_FUEL_PURCHASE_CANCEL, Main.processVariables.fuelPurchaseCancel.getRequest());
                 break;
             case Constants.RN_SETTLEMENT:
                 break;
@@ -44,7 +45,7 @@ public class Decoder {
             case Constants.RN_PREAUTHEDIT:
                 processTransactionBody(Constants.TRANSACTION_NAME_PREAUTHEDIT, Main.processVariables.preAuthEdit.getRequest());
                 break;
-            case Constants.RN_FUELPURCHASEREQUESTFORCESALE:
+            case Constants.RN_FUELPURCHASEFORCESALE:
                 break;
             case Constants.RN_PREAUTHORIZATION:
                 processTransactionBody(Constants.TRANSACTION_NAME_PREAUTH, Main.processVariables.preAuth.getRequest());

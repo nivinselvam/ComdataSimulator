@@ -63,10 +63,11 @@ public class ResponseGenerator {
         String transactionType = requestPacketFields.get(Constants.FLD_NAME_REPORTNUMBER);
 
         switch (transactionType) {
-            case Constants.RN_FUELPURCHASESALE:
+            case Constants.RN_FUELPURCHASE:
                 transactionSpecificProcessor = new FuelPurchaseProcessor();
                 break;
             case Constants.RN_FUELPURCHASECANCEL:
+                transactionSpecificProcessor = new FuelPurchaseCancelProcessor();
                 break;
             case Constants.RN_SETTLEMENT:
                 break;
@@ -79,7 +80,7 @@ public class ResponseGenerator {
             case Constants.RN_PREAUTHEDIT:
                 transactionSpecificProcessor = new PreAuthEditProcessor();
                 break;
-            case Constants.RN_FUELPURCHASEREQUESTFORCESALE:
+            case Constants.RN_FUELPURCHASEFORCESALE:
                 break;
             case Constants.RN_PREAUTHORIZATION:
                 transactionSpecificProcessor = new PreAuthProcessor();

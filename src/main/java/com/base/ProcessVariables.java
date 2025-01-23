@@ -14,5 +14,6 @@ public class ProcessVariables {
     public PreAuthEdit preAuthEdit;
     public PreAuth preAuth;
     public FuelPurchase fuelPurchase;
+    public FuelPurchaseCancel fuelPurchaseCancel;
 
 }

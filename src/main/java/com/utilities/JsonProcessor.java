@@ -78,15 +78,27 @@ public class JsonProcessor {
         }
     }
 
-    public void loadFuelPurchaseRequestProperties() {
+    public void loadFuelPurchaseProperties() {
         logger.log(Level.DEBUG, "Trying to open the fuelPurchaseRequest.json file");
-        File fuelPurchaseRequestJsonFile = new File(Constants.PATH_FUEL_PURCHASE_REQUEST_PROPERTIES);
+        File fuelPurchaseJsonFile = new File(Constants.PATH_FUEL_PURCHASE_PROPERTIES);
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             logger.log(Level.DEBUG, "Converting the fuel purchase request json into Java object");
-            Main.processVariables.fuelPurchase = objectMapper.readValue(fuelPurchaseRequestJsonFile, FuelPurchase.class);
+            Main.processVariables.fuelPurchase = objectMapper.readValue(fuelPurchaseJsonFile, FuelPurchase.class);
         } catch (IOException e) {
             logger.log(Level.ERROR, "Unable to load the fuel purchase request properties due to error " + e.toString());
+        }
+    }
+
+    public void loadFuelPurchaseCancelProperties() {
+        logger.log(Level.DEBUG, "Trying to open the fuelPurchaseCancel.json file");
+        File fuelPurchaseCancelJsonFile = new File(Constants.PATH_FUEL_PURCHASE_CANCEL_PROPERTIES);
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            logger.log(Level.DEBUG, "Converting the fuel purchase cancel request json into Java object");
+            Main.processVariables.fuelPurchaseCancel = objectMapper.readValue(fuelPurchaseCancelJsonFile, FuelPurchaseCancel.class);
+        } catch (IOException e) {
+            logger.log(Level.ERROR, "Unable to load the fuel purchase cancel request properties due to error " + e.toString());
         }
     }
 

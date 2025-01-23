@@ -1,0 +1,396 @@
+{
+  "request": {
+    "cardNumber": {
+      "name": "Card Number",
+      "type": "C",
+      "length": 40,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator3": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "controlNumber": {
+      "name": "Control Number",
+      "type": "N",
+      "length": 6,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    }
+  },
+  "response": {
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "{"
+      ],
+      "defaultValue": "{",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationAccountCode": {
+      "name": "Location or Account Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subId": {
+      "name": "Sub Id",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "deviceType": {
+      "name": "Device Type",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [
+        "TCPI",
+        "TCPJ"
+      ],
+      "defaultValue": "TCPI",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportSystemId": {
+      "name": "Report System ID",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [
+        "SP"
+      ],
+      "defaultValue": "SP",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportNumber": {
+      "name": "Report Number",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00002"
+      ],
+      "defaultValue": "00002",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "responseCode": {
+      "name": "Response Code",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00000"
+      ],
+      "defaultValue": "00000",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "blankSpace1": {
+      "name": "Blank Space",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": " ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal1": {
+      "name": "Literal",
+      "type": "C",
+      "length": 16,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "TRANS. CANCELLED",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "blankSpace2": {
+      "name": "Blank Space",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "  ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal2": {
+      "name": "Literal",
+      "type": "C",
+      "length": 8,
+      "required": true,
+      "presetOptions": ["GALLONS:", "LITERS.:"],
+      "defaultValue": "GALLONS:",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "blankSpace3": {
+      "name": "Blank Space",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": " ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "gallons": {
+      "name": "Gallons",
+      "type": "N",
+      "length": 8,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "00005.05",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "blankSpace4": {
+      "name": "Blank Space",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "  ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal3": {
+      "name": "Literal",
+      "type": "C",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "AMOUNT:",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "blankSpace5": {
+      "name": "Blank Space",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": " ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "amount": {
+      "name": "Amount",
+      "type": "N",
+      "length": 8,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "00010.48",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    }
+  },
+  "errorResponse": {
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "{"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationAccountCode": {
+      "name": "Location or Account Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subId": {
+      "name": "Sub Id",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "deviceType": {
+      "name": "Device Type",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [
+        "TCPI",
+        "TCPJ"
+      ],
+      "defaultValue": "TCPI",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportSystemId": {
+      "name": "Report System ID",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [
+        "SP"
+      ],
+      "defaultValue": "SP",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportNumber": {
+      "name": "Report Number",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00002"
+      ],
+      "defaultValue": "00002",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "responseCode": {
+      "name": "Response Code",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00038"
+      ],
+      "defaultValue": "00038",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "message": {
+      "name": "Message",
+      "type": "C",
+      "length": 99,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "CANCEL INVALID",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    }
+  }
+}
