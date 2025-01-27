@@ -4,5 +4,5 @@
   "preAuthResponse": "response",
   "fuelPurchaseResponse": "truckStopServiceCenterResponse",
   "fuelPurchaseCancelResponse": "response",
-  "expressCheckEncashmentResponse": "errorResponse"
+  "expressCheckEncashmentResponse": "response"
 }
