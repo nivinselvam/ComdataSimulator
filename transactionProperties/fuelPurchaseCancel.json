@@ -162,7 +162,7 @@
       "paddingWith": " "
     },
     "literal1": {
-      "name": "Literal",
+      "name": "Literal1",
       "type": "C",
       "length": 16,
       "required": true,
@@ -182,7 +182,7 @@
       "paddingWith": " "
     },
     "literal2": {
-      "name": "Literal",
+      "name": "Literal2",
       "type": "C",
       "length": 8,
       "required": true,
@@ -222,7 +222,7 @@
       "paddingWith": " "
     },
     "literal3": {
-      "name": "Literal",
+      "name": "Literal3",
       "type": "C",
       "length": 7,
       "required": true,

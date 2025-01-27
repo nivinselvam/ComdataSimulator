@@ -3,5 +3,5 @@
   "preAuthEditResponse": "response",
   "preAuthResponse": "response",
   "fuelPurchaseResponse": "truckStopServiceCenterResponse",
-  "fuelPurchaseCancelResponse": "errorResponse"
+  "fuelPurchaseCancelResponse": "response"
 }
