@@ -1,0 +1,731 @@
+{
+  "request": {
+    "expressCheckNumber": {
+      "name": "Express Check Number",
+      "type": "C",
+      "length": 25,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "payeesName": {
+      "name": "Payees Name",
+      "type": "C",
+      "length": 20,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "amount": {
+      "name": "Amount",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [9999.99],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator3": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "driverNumber": {
+      "name": "Driver Number",
+      "type": "C",
+      "length": 16,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator4": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "unitNumber": {
+      "name": "Unit Number",
+      "type": "C",
+      "length": 10,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator5": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "tripNumber": {
+      "name": "Trip Number",
+      "type": "C",
+      "length": 10,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator6": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "checkNumber": {
+      "name": "Check Number",
+      "type": "C",
+      "length": 10,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator7": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "oneCheckFlag": {
+      "name": "One-Check Flag",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator8": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "additionalChecks": {
+      "name": "Additional Checks",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator9": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    }
+  },
+  "response": {
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "{"
+      ],
+      "defaultValue": "{",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationAccountCode": {
+      "name": "Location or Account Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subId": {
+      "name": "Sub Id",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "deviceType": {
+      "name": "Device Type",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [
+        "TCPI",
+        "TCPJ"
+      ],
+      "defaultValue": "TCPI",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportSystemId": {
+      "name": "Report System ID",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [
+        "SP"
+      ],
+      "defaultValue": "SP",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportNumber": {
+      "name": "Report Number",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00004"
+      ],
+      "defaultValue": "00004",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "responseCode": {
+      "name": "Response Code",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00000"
+      ],
+      "defaultValue": "00000",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal1": {
+      "name": "Literal1",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": ["AMT: "],
+      "defaultValue": "AMT: ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "amount": {
+      "name": "Amount",
+      "type": "N",
+      "length": 9,
+      "required": true,
+      "presetOptions": ["$0,099.99"],
+      "defaultValue": "$0,099.99",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal2": {
+      "name": "Literal2",
+      "type": "C",
+      "length": 9,
+      "required": true,
+      "presetOptions": [" AUTH:"],
+      "defaultValue": " AUTH:",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "authorizationNumber": {
+      "name": "Authorization Number",
+      "type": "N",
+      "length": 4,
+      "required": true,
+      "presetOptions": ["9999"],
+      "defaultValue": "9999",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal3": {
+      "name": "Literal3",
+      "type": "C",
+      "length": 7,
+      "required": true,
+      "presetOptions": ["CTL#: "],
+      "defaultValue": "CTL#: ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "controlNumber": {
+      "name": "Control Number",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": ["9999999"],
+      "defaultValue": "9999999",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal4": {
+      "name": "Literal4",
+      "type": "C",
+      "length": 7,
+      "required": true,
+      "presetOptions": ["CHK#: "],
+      "defaultValue": "CHK#: ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "checkNumber": {
+      "name": "Check Number",
+      "type": "N",
+      "length": 10,
+      "required": true,
+      "presetOptions": ["9999999999"],
+      "defaultValue": "9999999999",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "defaultValue": "}",
+      "justification": "left",
+      "paddingWith": " "
+    }
+  },
+  "additionalChecksResponse": {
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "{"
+      ],
+      "defaultValue": "{",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationAccountCode": {
+      "name": "Location or Account Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subId": {
+      "name": "Sub Id",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "deviceType": {
+      "name": "Device Type",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [
+        "TCPI",
+        "TCPJ"
+      ],
+      "defaultValue": "TCPI",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportSystemId": {
+      "name": "Report System ID",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [
+        "SP"
+      ],
+      "defaultValue": "SP",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportNumber": {
+      "name": "Report Number",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00004"
+      ],
+      "defaultValue": "00004",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "responseCode": {
+      "name": "Response Code",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00000"
+      ],
+      "defaultValue": "00000",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal1": {
+      "name": "Literal1",
+      "type": "C",
+      "length": 3,
+      "required": true,
+      "presetOptions": ["CK#"],
+      "defaultValue": "CK#",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "lastFourOfFirstAdditionalCheck": {
+      "name": "Last 4 of 1st Additional Check#",
+      "type": "N",
+      "length": 4,
+      "required": true,
+      "presetOptions": ["9999"],
+      "defaultValue": "9999",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal2": {
+      "name": "Literal2",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [" $"],
+      "defaultValue": " $",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "amount": {
+      "name": "Amount",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": ["0099.99"],
+      "defaultValue": "0099.99",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal3": {
+      "name": "Literal3",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [" "],
+      "defaultValue": " ",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "literal4": {
+      "name": "Literal4",
+      "type": "C",
+      "length": 9,
+      "required": true,
+      "presetOptions": ["AUTH#"],
+      "defaultValue": "AUTH#",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "authNumber": {
+      "name": "Auth Number",
+      "type": "N",
+      "length": 4,
+      "required": true,
+      "presetOptions": ["9999"],
+      "defaultValue": "9999",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "defaultValue": "}",
+      "justification": "left",
+      "paddingWith": " "
+    }
+  },
+  "errorResponse": {
+    "openBracket": {
+      "name": "Open Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "{"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "locationAccountCode": {
+      "name": "Location or Account Code",
+      "type": "C",
+      "length": 5,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "subId": {
+      "name": "Sub Id",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "deviceType": {
+      "name": "Device Type",
+      "type": "C",
+      "length": 4,
+      "required": true,
+      "presetOptions": [
+        "TCPI",
+        "TCPJ"
+      ],
+      "defaultValue": "TCPI",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportSystemId": {
+      "name": "Report System ID",
+      "type": "C",
+      "length": 2,
+      "required": true,
+      "presetOptions": [
+        "SP"
+      ],
+      "defaultValue": "SP",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "reportNumber": {
+      "name": "Report Number",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00007"
+      ],
+      "defaultValue": "00007",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator1": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "responseCode": {
+      "name": "Response Code",
+      "type": "N",
+      "length": 5,
+      "required": true,
+      "presetOptions": [
+        "00007"
+      ],
+      "defaultValue": "00007",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator2": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "/",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "message": {
+      "name": "Message",
+      "type": "C",
+      "length": 99,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "Error response configured.",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "closeBracket": {
+      "name": "Close Bracket",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "}"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    }
+  }
+}

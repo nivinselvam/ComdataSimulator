@@ -72,6 +72,7 @@ public class ResponseGenerator {
             case Constants.RN_SETTLEMENT:
                 break;
             case Constants.RN_EXPRESSCHECKENCASHMENT:
+                transactionSpecificProcessor = new ExpressCheckProcessor();
                 break;
             case Constants.RN_CHECKAUTHORIZATIONUPDATECHECK:
                 break;

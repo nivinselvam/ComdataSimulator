@@ -26,6 +26,7 @@ public class Constants {
     public static final String FILE_PRE_AUTH_PROPERTIES = "preAuth.json";
     public static final String FILE_FUEL_PURCHASE_PROPERTIES = "fuelPurchase.json";
     public static final String FILE_FUEL_PURCHASE_CANCEL_PROPERTIES = "fuelPurchaseCancel.json";
+    public static final String FILE_EXPRESS_CHECK_PROPERTIES = "expressCheck.json";
 
     /*
     -----------------------------------    Path     -----------------------------------------
@@ -38,6 +39,7 @@ public class Constants {
     public static final String PATH_PRE_AUTH_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_PRE_AUTH_PROPERTIES);
     public static final String PATH_FUEL_PURCHASE_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_FUEL_PURCHASE_PROPERTIES);
     public static final String PATH_FUEL_PURCHASE_CANCEL_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_FUEL_PURCHASE_CANCEL_PROPERTIES);
+    public static final String PATH_EXPRESS_CHECK_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_EXPRESS_CHECK_PROPERTIES);
     /*
     -----------------------------------Justification----------------------------------------
      */
@@ -78,6 +80,7 @@ public class Constants {
     public static final String TRANSACTION_NAME_PREAUTH = "Pre Auth";
     public static final String TRANSACTION_NAME_FUEL_PURCHASE = "Fuel Purchase";
     public static final String TRANSACTION_NAME_FUEL_PURCHASE_CANCEL = "Fuel Purchase Cancel";
+    public static final String TRANSACTION_NAME_EXPRESS_CHECK = "Express Check encashment";
     /*
     -----------------------------------Response Type names----------------------------------
    */
@@ -85,5 +88,6 @@ public class Constants {
     public static final String RESPONSE_TYPE_ERROR_RESPONSE = "errorResponse";
     public static final String RESPONSE_TRUCK_STOP_SERVICE_CENTER = "truckStopServiceCenterResponse";
     public static final String RESPONSE_TRUCK_STOP_SERVICE_CENTER_DUPLICATE_AUTH = "truckStopServiceCenterDuplicateAuthResponse";
+    public static final String RESPONSE_TYPE_ADDITIONAL_CHECKS = "additionalChecksResponse";
 
 }

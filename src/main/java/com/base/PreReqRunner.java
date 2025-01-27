@@ -29,7 +29,7 @@ public class PreReqRunner {
     /*
     This method is used for loading all the transaction property JSONS.
      */
-    public void loadUserConfigurations(){
+    public void loadUserConfigurations() {
         JsonProcessor jsonProcessor = new JsonProcessor();
         jsonProcessor.loadSimulatorProperties();
         jsonProcessor.loadDefaultErrorProperties();
@@ -38,6 +38,7 @@ public class PreReqRunner {
         jsonProcessor.loadPreAuthProperties();
         jsonProcessor.loadFuelPurchaseProperties();
         jsonProcessor.loadFuelPurchaseCancelProperties();
+        jsonProcessor.loadExpressCheckProperties();
     }
 
 

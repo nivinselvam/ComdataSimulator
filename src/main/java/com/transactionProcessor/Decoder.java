@@ -37,6 +37,7 @@ public class Decoder {
             case Constants.RN_SETTLEMENT:
                 break;
             case Constants.RN_EXPRESSCHECKENCASHMENT:
+                processTransactionBody(Constants.TRANSACTION_NAME_EXPRESS_CHECK, Main.processVariables.expressCheck.getRequest());
                 break;
             case Constants.RN_CHECKAUTHORIZATIONUPDATECHECK:
                 break;

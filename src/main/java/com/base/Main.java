@@ -24,7 +24,7 @@ public class Main {
         preReqRunner.configureLoggerFilePath();
         preReqRunner.loadUserConfigurations();
 
-        String request = "{EX777 TCPISP00014/00085/A5600171620532277=49121201271/2277/22/123ABC/11111//5/////P/056/P/819/P/019//////////////}";
+        String request = "{EX777 TCPISP00004/00085/1234567890123456789012345/Payee Name is notset/9999.99/1234567890123456/1234567890/1234567890/1234567890/T/T/}";
         ResponseGenerator responseGenerator = new ResponseGenerator(request);
         responseGenerator.generateResponse();
 

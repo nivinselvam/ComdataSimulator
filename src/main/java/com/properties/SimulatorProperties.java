@@ -7,6 +7,7 @@ public class SimulatorProperties {
     private String preAuthResponse;
     private String fuelPurchaseResponse;
     private String fuelPurchaseCancelResponse;
+    private String expressCheckEncashmentResponse;
 
     public int getPortNumber() {
         return portNumber;
@@ -46,5 +47,13 @@ public class SimulatorProperties {
 
     public void setFuelPurchaseCancelResponse(String fuelPurchaseCancelResponse) {
         this.fuelPurchaseCancelResponse = fuelPurchaseCancelResponse;
+    }
+
+    public String getExpressCheckEncashmentResponse() {
+        return expressCheckEncashmentResponse;
+    }
+
+    public void setExpressCheckEncashmentResponse(String expressCheckEncashmentResponse) {
+        this.expressCheckEncashmentResponse = expressCheckEncashmentResponse;
     }
 }

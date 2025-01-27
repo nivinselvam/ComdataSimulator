@@ -102,4 +102,16 @@ public class JsonProcessor {
         }
     }
 
+    public void loadExpressCheckProperties() {
+        logger.log(Level.DEBUG, "Trying to open the expressCheck.json file");
+        File expressCheckFile = new File(Constants.PATH_EXPRESS_CHECK_PROPERTIES);
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            logger.log(Level.DEBUG, "Converting the express check encashment request json into Java object");
+            Main.processVariables.expressCheck = objectMapper.readValue(expressCheckFile, ExpressCheck.class);
+        } catch (IOException e) {
+            logger.log(Level.ERROR, "Unable to load the express check encashment request properties due to error " + e.toString());
+        }
+    }
+
 }

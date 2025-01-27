@@ -3,5 +3,6 @@
   "preAuthEditResponse": "response",
   "preAuthResponse": "response",
   "fuelPurchaseResponse": "truckStopServiceCenterResponse",
-  "fuelPurchaseCancelResponse": "response"
+  "fuelPurchaseCancelResponse": "response",
+  "expressCheckEncashmentResponse": "errorResponse"
 }
