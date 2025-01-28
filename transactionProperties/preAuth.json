@@ -859,6 +859,26 @@
       "justification": "right",
       "paddingWith": "0"
     },
+    "maxPurchaseDiesel#1DollarLimit": {
+      "name": "Max Purchase Diesel #1 Dollar Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "0",
+      "justification": "right",
+      "paddingWith": "0"
+    },
+    "maxPurchaseDiesel#1QuantityLimit": {
+      "name": "Max Purchase Diesel #1 Quantity Limit",
+      "type": "N",
+      "length": 7,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "182576",
+      "justification": "right",
+      "paddingWith": "0"
+    },
     "maxPurchaseReeferDollarLimit": {
       "name": "Max Purchase Reefer Dollar Limit",
       "type": "N",
