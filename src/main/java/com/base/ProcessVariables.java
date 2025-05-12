@@ -16,5 +16,5 @@ public class ProcessVariables {
     public FuelPurchase fuelPurchase;
     public FuelPurchaseCancel fuelPurchaseCancel;
     public ExpressCheck expressCheck;
-
+    public ProductDetails productDetails = new ProductDetails();
 }
