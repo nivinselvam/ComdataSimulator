@@ -24,7 +24,7 @@ public class Main {
         preReqRunner.configureLoggerFilePath();
         preReqRunner.loadUserConfigurations();
 
-        String request = "{NY526TTCPISP00014/00085/A5567356201386315=27121011110000000011/788846/1234/////123ABC/1620789745/NJ//P/053//////////////////}";
+        String request = "{NY526TTCPISP00014/00085/A5567356201386315=27121011110000000011/788846/1234/////123ABC/1620789745/NJ//P/101//////////////////}";
         ResponseGenerator responseGenerator = new ResponseGenerator(request);
         responseGenerator.generateResponse();
 

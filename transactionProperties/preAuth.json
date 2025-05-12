@@ -935,7 +935,7 @@
       "length": 5,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "20004",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -945,7 +945,7 @@
       "length": 3,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "819",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -955,7 +955,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "182576",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -965,7 +965,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "0",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -975,7 +975,7 @@
       "length": 5,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "20004",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -985,7 +985,7 @@
       "length": 3,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "819",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -995,7 +995,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "182576",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1005,7 +1005,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "0",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1015,7 +1015,7 @@
       "length": 5,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "20004",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1025,7 +1025,7 @@
       "length": 3,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "819",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1035,7 +1035,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "182576",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1045,7 +1045,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "0",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1055,7 +1055,7 @@
       "length": 5,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "20004",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1065,7 +1065,7 @@
       "length": 3,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "819",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1075,7 +1075,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "182576",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1085,7 +1085,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "0",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1095,7 +1095,7 @@
       "length": 5,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "20004",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1105,7 +1105,7 @@
       "length": 3,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "819",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1115,7 +1115,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "182576",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1125,7 +1125,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "0",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1135,7 +1135,7 @@
       "length": 5,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "20004",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1145,7 +1145,7 @@
       "length": 3,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "819",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1155,7 +1155,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "182576",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1165,7 +1165,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "0",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1175,7 +1175,7 @@
       "length": 5,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "20004",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1185,7 +1185,7 @@
       "length": 3,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "819",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1195,7 +1195,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "182576",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1205,7 +1205,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "0",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1215,7 +1215,7 @@
       "length": 5,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "20004",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1225,7 +1225,7 @@
       "length": 3,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "819",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1235,7 +1235,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "182576",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1245,7 +1245,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "0",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1255,7 +1255,7 @@
       "length": 5,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "20004",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1265,7 +1265,7 @@
       "length": 3,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "819",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1275,7 +1275,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "182576",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1285,7 +1285,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "0",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1295,7 +1295,7 @@
       "length": 5,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "20004",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1305,7 +1305,7 @@
       "length": 3,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "819",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": " "
     },
@@ -1315,7 +1315,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "182576",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },
@@ -1325,7 +1325,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "0",
+      "defaultValue": "",
       "justification": "right",
       "paddingWith": "0"
     },

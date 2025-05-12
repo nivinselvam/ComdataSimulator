@@ -18,5 +18,5 @@ public class ProcessVariables {
     public ExpressCheck expressCheck;
     public Limit limit;
     public Map<String, Limit> limits;
-    public ProductDetails productDetails = new ProductDetails();
+    public List<ProductDetails> productDetailsList = new ArrayList<>();
 }

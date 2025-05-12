@@ -3,6 +3,7 @@ package com.xmlProcessor;
 import com.base.Constants;
 import com.base.Main;
 import com.base.PreReqRunner;
+import com.transactiondetails.ProductDetails;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
@@ -26,10 +27,13 @@ public class ProcessXML {
 
         ProductTranslation pt = (ProductTranslation) jaxbUnmarshaller.unmarshal(file);
         TranslationRow row = pt.getTranslationRow();
+        ProductDetails productDetails;
         for (Translation t : row.getTranslations()) {
-            Main.processVariables.productDetails.setProductList(generateProductsList(t.getProductList()));
-            Main.processVariables.productDetails.setTranslationCode(t.getTranslationCode());
-            Main.processVariables.productDetails.setSubCategoryCode(t.getSubCategoryCode());
+            productDetails = new ProductDetails();
+            productDetails.setProductList(generateProductsList(t.getProductList()));
+            productDetails.setTranslationCode(t.getTranslationCode());
+            productDetails.setSubCategoryCode(t.getSubCategoryCode());
+            Main.processVariables.productDetailsList.add(productDetails);
         }
     }
 
