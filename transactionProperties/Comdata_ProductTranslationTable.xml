@@ -1,0 +1,35 @@
+<ProductTranslation>
+  <TranslationRow>
+    <CardType>CD</CardType>
+    <Translations ProductList="019|020|04[5-9]|05[0-6]|060|061|06[7-9]|070|231|324|339|342" TranslationCode="053" SubCategoryCode="20001"/>
+    <Translations ProductList="021|300|305" TranslationCode="019" SubCategoryCode="20002"/>
+    <Translations ProductList="03[2-4]|306|307|31[1-9]|320|33[3-8]" TranslationCode="056" SubCategoryCode="20003"/>
+    <Translations ProductList="062" TranslationCode="819" SubCategoryCode="20004"/>
+	<Translations ProductList="063" TranslationCode="083" SubCategoryCode="20003"/>
+    <Translations ProductList="138|603" TranslationCode="00" SubCategoryCode="20005"/>
+	<Translations ProductList="652" TranslationCode="01" SubCategoryCode="20005"/>
+	<Translations ProductList="133" TranslationCode="02" SubCategoryCode="20005"/>
+	<Translations ProductList="101|128" TranslationCode="03" SubCategoryCode="20005"/>
+	<Translations ProductList="109" TranslationCode="04" SubCategoryCode="20005"/>
+	<Translations ProductList="133" TranslationCode="06" SubCategoryCode="20005"/>
+	<Translations ProductList="119" TranslationCode="07" SubCategoryCode="20005"/>
+	<Translations ProductList="654|660" TranslationCode="10" SubCategoryCode="20005"/>
+	<Translations ProductList="650" TranslationCode="11" SubCategoryCode="20005"/>
+	<Translations ProductList="135" TranslationCode="12" SubCategoryCode="20005"/>
+	<Translations ProductList="653" TranslationCode="13" SubCategoryCode="20005"/>
+	<Translations ProductList="115" TranslationCode="15" SubCategoryCode="20005"/>
+	<Translations ProductList="470" TranslationCode="16" SubCategoryCode="20005"/>
+	<Translations ProductList="651" TranslationCode="17" SubCategoryCode="20005"/>
+	<Translations ProductList="659" TranslationCode="19" SubCategoryCode="20005"/>
+	<Translations ProductList="120" TranslationCode="21" SubCategoryCode="20005"/>
+	<Translations ProductList="180" TranslationCode="22" SubCategoryCode="20005"/>
+	<Translations ProductList="600" TranslationCode="24" SubCategoryCode="20005"/>
+	<Translations ProductList="107" TranslationCode="25" SubCategoryCode="20005"/>
+	<Translations ProductList="650" TranslationCode="27" SubCategoryCode="20005"/>
+	<Translations ProductList="175" TranslationCode="28" SubCategoryCode="20005"/>
+	<Translations ProductList="101" TranslationCode="29" SubCategoryCode="20005"/>
+	<Translations ProductList="106" TranslationCode="32" SubCategoryCode="20005"/>
+	<Translations ProductList="605" TranslationCode="33" SubCategoryCode="20005"/>	
+	<Translations ProductList="955|956" TranslationCode="CADV"/>
+   </TranslationRow>	
+  </ProductTranslation>

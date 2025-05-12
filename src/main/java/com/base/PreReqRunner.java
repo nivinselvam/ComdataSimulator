@@ -8,6 +8,8 @@
 package com.base;
 
 import com.utilities.JsonProcessor;
+import com.xmlProcessor.ProcessXML;
+import jakarta.xml.bind.JAXBException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -39,6 +41,15 @@ public class PreReqRunner {
         jsonProcessor.loadFuelPurchaseProperties();
         jsonProcessor.loadFuelPurchaseCancelProperties();
         jsonProcessor.loadExpressCheckProperties();
+
+        ProcessXML processXML = new ProcessXML();
+        try{
+            processXML.processProductTranslation();
+        } catch (JAXBException e) {
+            logger.log(Level.FATAL, "Unable to load the product translation configuration");
+        }
+
+
     }
 
 
