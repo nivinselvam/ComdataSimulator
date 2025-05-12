@@ -164,7 +164,7 @@
         "O",
         "X"
       ],
-      "defaultValue": "C",
+      "defaultValue": "V",
       "justification": "left",
       "paddingWith": " "
     },
@@ -179,7 +179,7 @@
         "*",
         "letter or number"
       ],
-      "defaultValue": "",
+      "defaultValue": "788846",
       "justification": "left",
       "paddingWith": " "
     },
@@ -196,7 +196,7 @@
         "O",
         "X"
       ],
-      "defaultValue": "C",
+      "defaultValue": "N",
       "justification": "left",
       "paddingWith": " "
     },
@@ -211,7 +211,7 @@
         "*",
         "letter or number"
       ],
-      "defaultValue": "#",
+      "defaultValue": "",
       "justification": "left",
       "paddingWith": " "
     },
@@ -225,7 +225,7 @@
         "N",
         "R"
       ],
-      "defaultValue": "C",
+      "defaultValue": "N",
       "justification": "left",
       "paddingWith": " "
     },
@@ -258,7 +258,7 @@
         "C",
         "N"
       ],
-      "defaultValue": "C",
+      "defaultValue": "N",
       "justification": "left",
       "paddingWith": " "
     },
@@ -275,7 +275,7 @@
         "O",
         "X"
       ],
-      "defaultValue": "C",
+      "defaultValue": "N",
       "justification": "left",
       "paddingWith": " "
     },
@@ -292,7 +292,7 @@
         "O",
         "X"
       ],
-      "defaultValue": "C",
+      "defaultValue": "E",
       "justification": "left",
       "paddingWith": " "
     },
@@ -302,7 +302,7 @@
       "length": 2,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "",
+      "defaultValue": "00",
       "justification": "left",
       "paddingWith": " "
     },
@@ -317,7 +317,7 @@
         "*",
         "letter or number"
       ],
-      "defaultValue": "",
+      "defaultValue": "###@@@",
       "justification": "left",
       "paddingWith": " "
     },
@@ -334,7 +334,7 @@
         "O",
         "X"
       ],
-      "defaultValue": "C",
+      "defaultValue": "V",
       "justification": "left",
       "paddingWith": " "
     },
@@ -349,7 +349,7 @@
         "*",
         "letter or number"
       ],
-      "defaultValue": "",
+      "defaultValue": "1620789745",
       "justification": "left",
       "paddingWith": " "
     },
@@ -364,7 +364,7 @@
         "*",
         "letter or number"
       ],
-      "defaultValue": "",
+      "defaultValue": "NJ",
       "justification": "left",
       "paddingWith": " "
     },
@@ -381,7 +381,7 @@
         "O",
         "X"
       ],
-      "defaultValue": "C",
+      "defaultValue": "N",
       "justification": "left",
       "paddingWith": " "
     },

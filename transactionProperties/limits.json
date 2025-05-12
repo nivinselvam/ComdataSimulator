@@ -1,0 +1,34 @@
+{
+  "20000": {
+    "maxDollar":"0010000",
+    "maxQuantity": "0001000"
+  },
+  "20001": {
+    "maxDollar":"0020000",
+    "maxQuantity": "0002000"
+  },
+  "20002": {
+    "maxDollar":"0030000",
+    "maxQuantity": "0003000"
+  },
+  "20003": {
+    "maxDollar":"0040000",
+    "maxQuantity": "0004000"
+  },
+  "20004": {
+    "maxDollar":"0050000",
+    "maxQuantity": "0005000"
+  },
+  "20005": {
+    "maxDollar":"0060000",
+    "maxQuantity": "0006000"
+  },
+  "20006": {
+    "maxDollar":"0070000",
+    "maxQuantity": "0007000"
+  },
+  "40000": {
+    "maxDollar":"0080000",
+    "maxQuantity": "0008000"
+  }
+}

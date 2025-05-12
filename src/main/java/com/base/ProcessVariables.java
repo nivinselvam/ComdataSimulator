@@ -16,5 +16,7 @@ public class ProcessVariables {
     public FuelPurchase fuelPurchase;
     public FuelPurchaseCancel fuelPurchaseCancel;
     public ExpressCheck expressCheck;
+    public Limit limit;
+    public Map<String, Limit> limits;
     public ProductDetails productDetails = new ProductDetails();
 }

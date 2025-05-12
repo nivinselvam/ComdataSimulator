@@ -27,6 +27,7 @@ public class Constants {
     public static final String FILE_FUEL_PURCHASE_PROPERTIES = "fuelPurchase.json";
     public static final String FILE_FUEL_PURCHASE_CANCEL_PROPERTIES = "fuelPurchaseCancel.json";
     public static final String FILE_EXPRESS_CHECK_PROPERTIES = "expressCheck.json";
+    public static final String FILE_LIMITS_PROPERTIES = "limits.json";
     public static final String FILE_PRODUCT_TRANSLATION = "Comdata_ProductTranslationTable.xml";
 
     /*
@@ -41,6 +42,7 @@ public class Constants {
     public static final String PATH_FUEL_PURCHASE_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_FUEL_PURCHASE_PROPERTIES);
     public static final String PATH_FUEL_PURCHASE_CANCEL_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_FUEL_PURCHASE_CANCEL_PROPERTIES);
     public static final String PATH_EXPRESS_CHECK_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_EXPRESS_CHECK_PROPERTIES);
+    public static final String PATH_LIMITS_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_LIMITS_PROPERTIES);
     public static final String PATH_PRODUCT_TRANSLATION_FILE = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_PRODUCT_TRANSLATION);
     /*
     -----------------------------------Justification----------------------------------------
