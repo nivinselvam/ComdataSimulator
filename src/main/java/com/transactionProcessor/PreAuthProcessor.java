@@ -78,15 +78,6 @@ public class PreAuthProcessor extends TransactionSpecificProcessor {
     }
 
     public List<TransactionPacketField> updateResponsePacketFields(List<TransactionPacketField> responsePacketFields, List<TransactionPacketField> configuredCategoryLimits) {
-//        Iterator<TransactionPacketField> transactionPacketFieldIterator = responsePacketFields.iterator();
-//        while (transactionPacketFieldIterator.hasNext()) {
-//            TransactionPacketField transactionPacketField = transactionPacketFieldIterator.next();
-//            for (TransactionPacketField currentTransactionPacketField : configuredCategoryLimits) {
-//                if (transactionPacketField.getFieldName().equals(currentTransactionPacketField.getFieldName())) {
-//
-//                }
-//            }
-//        }
         int index;
         for(TransactionPacketField currentTransactionPacketField : responsePacketFields){
             for(TransactionPacketField expectedTransactionPacketField : configuredCategoryLimits){

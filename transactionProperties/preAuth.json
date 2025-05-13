@@ -805,7 +805,7 @@
       "length": 7,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "0",
+      "defaultValue": "0001000",
       "justification": "right",
       "paddingWith": "0"
     },
