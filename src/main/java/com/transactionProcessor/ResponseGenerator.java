@@ -75,6 +75,7 @@ public class ResponseGenerator {
                 transactionSpecificProcessor = new ExpressCheckProcessor();
                 break;
             case Constants.RN_CHECKAUTHORIZATIONUPDATECHECK:
+                transactionSpecificProcessor = new CheckAuthorizationProcessor();
                 break;
             case Constants.RN_FUELPRICEUPDATE:
                 break;

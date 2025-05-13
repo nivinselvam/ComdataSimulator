@@ -40,6 +40,7 @@ public class Decoder {
                 processTransactionBody(Constants.TRANSACTION_NAME_EXPRESS_CHECK, Main.processVariables.expressCheck.getRequest());
                 break;
             case Constants.RN_CHECKAUTHORIZATIONUPDATECHECK:
+                processTransactionBody(Constants.TRANSACTION_NAME_CHECK_AUTHORIZATION_UPDATE, Main.processVariables.checkAuthorizationUpdate.getRequest());
                 break;
             case Constants.RN_FUELPRICEUPDATE:
                 break;

@@ -22,10 +22,54 @@
       "justification": "left",
       "paddingWith": " "
     },
-    "controlNumber": {
-      "name": "Control Number",
+    "unitNumber": {
+      "name": "Unit Number",
+      "type": "C",
+      "length": 10,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "fieldSeparator4": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "checkAmount": {
+      "name": "Check Amount",
       "type": "N",
-      "length": 6,
+      "length": 10,
+      "required": true,
+      "presetOptions": [],
+      "defaultValue": "",
+      "justification": "right",
+      "paddingWith": " "
+    },
+    "fieldSeparator5": {
+      "name": "Field Separator",
+      "type": "C",
+      "length": 1,
+      "required": true,
+      "presetOptions": [
+        "/"
+      ],
+      "defaultValue": "",
+      "justification": "left",
+      "paddingWith": " "
+    },
+    "transactionID": {
+      "name": "Transaction ID",
+      "type": "N",
+      "length": 10,
       "required": true,
       "presetOptions": [],
       "defaultValue": "",
@@ -151,103 +195,13 @@
       "justification": "left",
       "paddingWith": " "
     },
-    "blankSpace1": {
-      "name": "Blank Space",
+    "message": {
+      "name": "Message",
       "type": "C",
-      "length": 1,
+      "length": 99,
       "required": true,
       "presetOptions": [],
-      "defaultValue": " ",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "literal1": {
-      "name": "Literal1",
-      "type": "C",
-      "length": 16,
-      "required": true,
-      "presetOptions": [],
-      "defaultValue": "TRANS. CANCELLED",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "blankSpace2": {
-      "name": "Blank Space",
-      "type": "C",
-      "length": 2,
-      "required": true,
-      "presetOptions": [],
-      "defaultValue": "  ",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "literal2": {
-      "name": "Literal2",
-      "type": "C",
-      "length": 8,
-      "required": true,
-      "presetOptions": ["GALLONS:", "LITERS.:"],
-      "defaultValue": "GALLONS:",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "blankSpace3": {
-      "name": "Blank Space",
-      "type": "C",
-      "length": 1,
-      "required": true,
-      "presetOptions": [],
-      "defaultValue": " ",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "gallons": {
-      "name": "Gallons",
-      "type": "N",
-      "length": 8,
-      "required": true,
-      "presetOptions": [],
-      "defaultValue": "00005.05",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "blankSpace4": {
-      "name": "Blank Space",
-      "type": "C",
-      "length": 2,
-      "required": true,
-      "presetOptions": [],
-      "defaultValue": "  ",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "literal3": {
-      "name": "Literal3",
-      "type": "C",
-      "length": 7,
-      "required": true,
-      "presetOptions": [],
-      "defaultValue": "AMOUNT:",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "blankSpace5": {
-      "name": "Blank Space",
-      "type": "C",
-      "length": 1,
-      "required": true,
-      "presetOptions": [],
-      "defaultValue": " ",
-      "justification": "left",
-      "paddingWith": " "
-    },
-    "amount": {
-      "name": "Amount",
-      "type": "N",
-      "length": 8,
-      "required": true,
-      "presetOptions": [],
-      "defaultValue": "00010.48",
+      "defaultValue": "Check Authorization Successful",
       "justification": "left",
       "paddingWith": " "
     },
@@ -376,7 +330,7 @@
       "length": 99,
       "required": true,
       "presetOptions": [],
-      "defaultValue": "CANCEL INVALID",
+      "defaultValue": "Check Authorization INVALID",
       "justification": "left",
       "paddingWith": " "
     },
