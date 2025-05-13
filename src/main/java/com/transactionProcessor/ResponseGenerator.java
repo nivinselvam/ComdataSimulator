@@ -70,6 +70,7 @@ public class ResponseGenerator {
                 transactionSpecificProcessor = new FuelPurchaseCancelProcessor();
                 break;
             case Constants.RN_SETTLEMENT:
+                transactionSpecificProcessor = new SettlementProcessor();
                 break;
             case Constants.RN_EXPRESSCHECKENCASHMENT:
                 transactionSpecificProcessor = new ExpressCheckProcessor();

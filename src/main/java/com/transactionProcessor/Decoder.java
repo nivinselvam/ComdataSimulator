@@ -35,6 +35,7 @@ public class Decoder {
                 processTransactionBody(Constants.TRANSACTION_NAME_FUEL_PURCHASE_CANCEL, Main.processVariables.fuelPurchaseCancel.getRequest());
                 break;
             case Constants.RN_SETTLEMENT:
+                processTransactionBody(Constants.TRANSACTION_NAME_SETTLEMENT, Main.processVariables.settlement.getRequest());
                 break;
             case Constants.RN_EXPRESSCHECKENCASHMENT:
                 processTransactionBody(Constants.TRANSACTION_NAME_EXPRESS_CHECK, Main.processVariables.expressCheck.getRequest());

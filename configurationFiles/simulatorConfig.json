@@ -6,5 +6,6 @@
   "fuelPurchaseCancelResponse": "response",
   "expressCheckEncashmentResponse": "response",
   "checkAuthorizationResponse": "response",
-  "fuelPriceUpdateResponse": "response"
+  "fuelPriceUpdateResponse": "response",
+  "settlementResponse": "response"
 }

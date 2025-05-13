@@ -43,6 +43,7 @@ public class PreReqRunner {
         jsonProcessor.loadExpressCheckProperties();
         jsonProcessor.loadCheckAuthorizationProperties();
         jsonProcessor.loadFuelPriceUpdateProperties();
+        jsonProcessor.loadSettlementProperties();
         jsonProcessor.loadLimits();
 
         ProcessXML processXML = new ProcessXML();

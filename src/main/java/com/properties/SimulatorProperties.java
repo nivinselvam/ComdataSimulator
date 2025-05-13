@@ -10,6 +10,7 @@ public class SimulatorProperties {
     private String expressCheckEncashmentResponse;
     private String checkAuthorizationResponse;
     private String fuelPriceUpdateResponse;
+    private String settlementResponse;
 
     public int getPortNumber() {
         return portNumber;
@@ -73,5 +74,13 @@ public class SimulatorProperties {
 
     public void setFuelPriceUpdateResponse(String fuelPriceUpdateResponse) {
         this.fuelPriceUpdateResponse = fuelPriceUpdateResponse;
+    }
+
+    public String getSettlementResponse() {
+        return settlementResponse;
+    }
+
+    public void setSettlementResponse(String settlementResponse) {
+        this.settlementResponse = settlementResponse;
     }
 }

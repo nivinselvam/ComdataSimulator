@@ -18,6 +18,7 @@ public class ProcessVariables {
     public ExpressCheck expressCheck;
     public CheckAuthorizationUpdate checkAuthorizationUpdate;
     public FuelPriceUpdate fuelPriceUpdate;
+    public Settlement settlement;
     public Limit limit;
     public Map<String, Limit> limits;
     public List<ProductDetails> productDetailsList = new ArrayList<>();

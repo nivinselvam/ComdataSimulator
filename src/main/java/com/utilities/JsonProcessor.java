@@ -140,6 +140,18 @@ public class JsonProcessor {
         }
     }
 
+    public void loadSettlementProperties() {
+        logger.log(Level.DEBUG, "Trying to open the settlement.json file");
+        File settlementFile = new File(Constants.PATH_SETTLEMENT_PROPERTIES);
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            logger.log(Level.DEBUG, "Converting the settlement json into Java object");
+            Main.processVariables.settlement = objectMapper.readValue(settlementFile, Settlement.class);
+        } catch (IOException e) {
+            logger.log(Level.ERROR, "Unable to load the settlement properties due to error " + e.toString());
+        }
+    }
+
     public void loadLimits(){
         logger.log(Level.DEBUG, "Trying to open the limits.json file");
         File limitsFile = new File(Constants.PATH_LIMITS_PROPERTIES);
