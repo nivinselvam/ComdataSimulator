@@ -100,27 +100,29 @@ public class PreAuthProcessor extends TransactionSpecificProcessor {
         TransactionPacketField configuredTransactionField4;
         for (TransactionPacketField transactionPacketField : responsePacketFields) {
             if (transactionPacketField.getFieldName().contains("Sub Product Code")) {
-                productCount = String.valueOf(transactionPacketField.getFieldName().charAt(transactionPacketField.getFieldName().length() - 1));
                 productCode = transactionPacketField.getFieldValue();
-                categoryCode = getProductCategory(productCode);
-                limit = getLimits(categoryCode);
-                configuredTransactionField1 = new TransactionPacketField();
-                configuredTransactionField2 = new TransactionPacketField();
-                configuredTransactionField3 = new TransactionPacketField();
-                configuredTransactionField4 = new TransactionPacketField();
+                if(!productCode.matches(" *")){
+                    productCount = String.valueOf(transactionPacketField.getFieldName().charAt(transactionPacketField.getFieldName().length() - 1));
+                    categoryCode = getProductCategory(productCode);
+                    limit = getLimits(categoryCode);
+                    configuredTransactionField1 = new TransactionPacketField();
+                    configuredTransactionField2 = new TransactionPacketField();
+                    configuredTransactionField3 = new TransactionPacketField();
+                    configuredTransactionField4 = new TransactionPacketField();
 
-                configuredTransactionField1.setFieldName("Purchase Category" + productCount);
-                configuredTransactionField1.setFieldValue(categoryCode);
-                configuredTransactionFields.add(configuredTransactionField1);
-                configuredTransactionField2.setFieldName("Sub Product Code" + productCount);
-                configuredTransactionField2.setFieldValue(productCode);
-                configuredTransactionFields.add(configuredTransactionField2);
-                configuredTransactionField3.setFieldName("Max Dollar Limit" + productCount);
-                configuredTransactionField3.setFieldValue(limit.getMaxDollar());
-                configuredTransactionFields.add(configuredTransactionField3);
-                configuredTransactionField4.setFieldName("Max Quantity Limit" + productCount);
-                configuredTransactionField4.setFieldValue(limit.getMaxQuantity());
-                configuredTransactionFields.add(configuredTransactionField4);
+                    configuredTransactionField1.setFieldName("Purchase Category" + productCount);
+                    configuredTransactionField1.setFieldValue(categoryCode);
+                    configuredTransactionFields.add(configuredTransactionField1);
+                    configuredTransactionField2.setFieldName("Sub Product Code" + productCount);
+                    configuredTransactionField2.setFieldValue(productCode);
+                    configuredTransactionFields.add(configuredTransactionField2);
+                    configuredTransactionField3.setFieldName("Max Dollar Limit" + productCount);
+                    configuredTransactionField3.setFieldValue(limit.getMaxDollar());
+                    configuredTransactionFields.add(configuredTransactionField3);
+                    configuredTransactionField4.setFieldName("Max Quantity Limit" + productCount);
+                    configuredTransactionField4.setFieldValue(limit.getMaxQuantity());
+                    configuredTransactionFields.add(configuredTransactionField4);
+                }
             }
         }
         return configuredTransactionFields;
