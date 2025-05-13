@@ -28,6 +28,7 @@ public class Constants {
     public static final String FILE_FUEL_PURCHASE_CANCEL_PROPERTIES = "fuelPurchaseCancel.json";
     public static final String FILE_EXPRESS_CHECK_PROPERTIES = "expressCheck.json";
     public static final String FILE_CHECK_AUTHORIZATION_PROPERTIES = "checkAuthorization.json";
+    public static final String FILE_FUEL_PRICE_UPDATE_PROPERTIES = "fuelPriceUpdate.json";
     public static final String FILE_LIMITS_PROPERTIES = "limits.json";
     public static final String FILE_PRODUCT_TRANSLATION = "Comdata_ProductTranslationTable.xml";
 
@@ -44,6 +45,7 @@ public class Constants {
     public static final String PATH_FUEL_PURCHASE_CANCEL_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_FUEL_PURCHASE_CANCEL_PROPERTIES);
     public static final String PATH_EXPRESS_CHECK_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_EXPRESS_CHECK_PROPERTIES);
     public static final String PATH_CHECK_AUTHORIZATION_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_CHECK_AUTHORIZATION_PROPERTIES);
+    public static final String PATH_FUEL_PRICE_UPDATE_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_FUEL_PRICE_UPDATE_PROPERTIES);
     public static final String PATH_LIMITS_PROPERTIES = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_LIMITS_PROPERTIES);
     public static final String PATH_PRODUCT_TRANSLATION_FILE = "%s\\%s\\%s".formatted(Main.getApplicationPath(), FOLDER_TRANSACTION_PROPERTY_FILES, FILE_PRODUCT_TRANSLATION);
     /*
@@ -88,6 +90,7 @@ public class Constants {
     public static final String TRANSACTION_NAME_FUEL_PURCHASE_CANCEL = "Fuel Purchase Cancel";
     public static final String TRANSACTION_NAME_EXPRESS_CHECK = "Express Check encashment";
     public static final String TRANSACTION_NAME_CHECK_AUTHORIZATION_UPDATE = "checkAuthorizationUpdate";
+    public static final String TRANSACTION_NAME_FUEL_PRICE_UPDATE = "fuelPriceUpdate";
     /*
     -----------------------------------Response Type names----------------------------------
    */

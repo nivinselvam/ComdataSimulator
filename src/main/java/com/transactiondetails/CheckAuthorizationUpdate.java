@@ -2,7 +2,7 @@ package com.transactiondetails;
 
 import java.util.Map;
 
-public class checkAuthorizationUpdate {
+public class CheckAuthorizationUpdate {
     private Map<String, TransactionFieldProperties> request;
     private Map<String, TransactionFieldProperties> response;
     private Map<String, TransactionFieldProperties> errorResponse;

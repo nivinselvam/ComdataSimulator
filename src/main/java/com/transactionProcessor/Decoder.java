@@ -43,6 +43,7 @@ public class Decoder {
                 processTransactionBody(Constants.TRANSACTION_NAME_CHECK_AUTHORIZATION_UPDATE, Main.processVariables.checkAuthorizationUpdate.getRequest());
                 break;
             case Constants.RN_FUELPRICEUPDATE:
+                processTransactionBody(Constants.TRANSACTION_NAME_FUEL_PRICE_UPDATE, Main.processVariables.fuelPriceUpdate.getRequest());
                 break;
             case Constants.RN_PREAUTHEDIT:
                 processTransactionBody(Constants.TRANSACTION_NAME_PREAUTHEDIT, Main.processVariables.preAuthEdit.getRequest());

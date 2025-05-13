@@ -78,6 +78,7 @@ public class ResponseGenerator {
                 transactionSpecificProcessor = new CheckAuthorizationProcessor();
                 break;
             case Constants.RN_FUELPRICEUPDATE:
+                transactionSpecificProcessor = new FuelPriceUpdateProcessor();
                 break;
             case Constants.RN_PREAUTHEDIT:
                 transactionSpecificProcessor = new PreAuthEditProcessor();

@@ -122,9 +122,21 @@ public class JsonProcessor {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             logger.log(Level.DEBUG, "Converting the check authorization json into Java object");
-            Main.processVariables.checkAuthorizationUpdate = objectMapper.readValue(checkAuthorizationFile, checkAuthorizationUpdate.class);
+            Main.processVariables.checkAuthorizationUpdate = objectMapper.readValue(checkAuthorizationFile, CheckAuthorizationUpdate.class);
         } catch (IOException e) {
             logger.log(Level.ERROR, "Unable to load the check authorization properties due to error " + e.toString());
+        }
+    }
+
+    public void loadFuelPriceUpdateProperties() {
+        logger.log(Level.DEBUG, "Trying to open the fuelPriceUpdate.json file");
+        File fuelPriceUpdateFile = new File(Constants.PATH_FUEL_PRICE_UPDATE_PROPERTIES);
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            logger.log(Level.DEBUG, "Converting the fuel price update json into Java object");
+            Main.processVariables.fuelPriceUpdate = objectMapper.readValue(fuelPriceUpdateFile, FuelPriceUpdate.class);
+        } catch (IOException e) {
+            logger.log(Level.ERROR, "Unable to load the fuel price update properties due to error " + e.toString());
         }
     }
 
